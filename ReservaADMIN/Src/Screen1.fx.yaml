@@ -113,7 +113,7 @@ Screen1 As screen:
         ZIndex: =6
 
     Dropdown2 As dropdown:
-        Items: =EspaciosDeportivos
+        Items: =EspaciosDeportivos.EspacioDeportivo
         X: =161
         Y: =159
         ZIndex: =7

@@ -33,17 +33,17 @@
       "https://udeconce-my.sharepoint.com/personal/jchavarria2018_udec_cl": {
         "dataSources": {
           "EspaciosDeportivos": {
-            "tableName": "08112559-e3e6-45fd-a701-d6d6e4775c81"
+            "tableName": "6869ef84-b3e8-4371-8fdd-0017e762aed3"
           },
-          "Reservas-app": {
-            "tableName": "0fb5ceee-ae85-4311-ac82-fd2591c6eb2d"
+          "Reservas": {
+            "tableName": "93f5da21-7700-4bf0-9f7b-438ace867e3c"
           }
         }
       }
     },
     "dataSources": [
       "EspaciosDeportivos",
-      "Reservas-app"
+      "Reservas"
     ],
     "dependencies": {},
     "dependents": [],

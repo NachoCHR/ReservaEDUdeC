@@ -197,7 +197,7 @@
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Value\":\"ComplianceAssetId\"}",
+          "NameMap": "{\"Value\":\"EspacioDeportivo\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },

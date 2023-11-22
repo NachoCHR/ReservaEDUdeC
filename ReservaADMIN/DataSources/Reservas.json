@@ -29,8 +29,10 @@
       "Created": "Creado",
       "Editor": "Modificado por",
       "Editor#Claims": "Modificado por Claims",
-      "EspacioD": "EspacioD",
-      "FechaHoraReserva": "FechaHoraReserva",
+      "EspacioDeportivo": "EspacioDeportivo",
+      "EspacioDeportivo#Id": "EspacioDeportivo Id",
+      "Fechainicio": "Fecha inicio",
+      "Fechatermino": "Fecha termino",
       "ID": "ID",
       "Modified": "Modificado",
       "OData__ColorTag": "Etiqueta de color",
@@ -42,7 +44,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "Reservas-app",
+    "Name": "Reservas",
     "Type": "ConnectedDataSourceInfo"
   }
 ]
