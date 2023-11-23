@@ -11,7 +11,7 @@ Screen4 As screen:
         Text: |-
             ="Correo: " & CorreoUsuario
         X: =32
-        Y: =81
+        Y: =89
         ZIndex: =2
 
     FechaInicio As datepicker:
@@ -29,11 +29,44 @@ Screen4 As screen:
     Label5 As label:
         Text: ="Fecha Termino"
         X: =32
-        Y: =263
+        Y: =368
         ZIndex: =5
 
     FechaTermino As datepicker:
         X: =32
-        Y: =303
+        Y: =408
         ZIndex: =6
+
+    Button1 As button:
+        Text: ="Enviar"
+        X: =32
+        Y: =541
+        ZIndex: =7
+
+    Label6 As label:
+        Text: =Text( DateValue( FechaInicio ),"dd/mm/yyyy")
+        Width: =236
+        X: =398
+        Y: =191
+        ZIndex: =8
+
+    Label7 As label:
+        Text: ="Hora de incio"
+        X: =32
+        Y: =259
+        ZIndex: =10
+
+    aaaa As dropdown:
+        Items: =HorasDisponibles
+        OnSelect: =Set(HoraInicio, aaaa.Selected.Value)
+        X: =32
+        Y: =299
+        ZIndex: =11
+
+    Label9 As label:
+        Text: =Text(HoraInicio)
+        Width: =174
+        X: =398
+        Y: =299
+        ZIndex: =12
 
