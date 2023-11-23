@@ -1,7 +1,7 @@
 App As appinfo:
     BackEnabled: =true
     Formulas: =
-    OnStart: |
+    OnStart: |+
         =ClearCollect(deportivos, ["Futbol","Basquet","Voley","Handball"]);
         //ClearCollect(deportivos; ["F";"B";"V";"H"]);;
         
@@ -9,8 +9,8 @@ App As appinfo:
         
         
         Set(CorreoUsuario, User().Email);
-        Set(NombreUsuario, User().FullName);
-        Set(HorasSeparadas,Split(HoraInicio.Value, "-")
+        Set(NombreUsuario, User().FullName)
+        
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
