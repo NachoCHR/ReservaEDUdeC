@@ -9,6 +9,7 @@ Screen1 As screen:
         Set(_calendarVisible,true)
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+        BorderThickness: =1
         DelayItemLoading: =true
         Items: |-
             =SortByColumns(
@@ -60,11 +61,42 @@ Screen1 As screen:
             ZIndex: =3
 
         Rectangle2 As rectangle:
+            BorderThickness: =4
             Height: =Parent.TemplateHeight - Separator2.Height
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =4
             ZIndex: =5
+
+        Title2_2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =39
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Usuario.DisplayName
+            VerticalAlign: =VerticalAlign.Top
+            Width: =308
+            X: =16
+            Y: =25
+            ZIndex: =6
+
+        Title2_3 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =39
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Usuario.Email
+            VerticalAlign: =VerticalAlign.Top
+            Width: =308
+            X: =16
+            Y: =51
+            ZIndex: =7
 
     WeekdayGallery1_1 As gallery.WeekdayGallery:
         AccessibleLabel: ="Días de la semana"
@@ -108,17 +140,6 @@ Screen1 As screen:
         X: =7
         Y: =339
         ZIndex: =5
-
-        Circle1_1 As circle:
-            Height: =Self.Width
-            OnSelect: =Select(Parent)
-            Visible: |-
-                =/*Visible if calendar events are found on this day*/               
-                //CountRows(Filter(MyCalendarEvents; DateValue(Text(Start)) = DateAdd(_firstDayInView;ThisItem.Value; TimeUnit.Days))) > 0 && !Subcircle1_1.Visible && Title2_1.Visible
-            Width: =6.5
-            X: =MonthDayGallery1_1.TemplateWidth / 2 - Self.Width / 2
-            Y: =MonthDayGallery1_1.TemplateHeight * (0.75)
-            ZIndex: =1
 
         Subcircle1_1 As circle:
             Height: =3 * Title2_1.Size
@@ -251,7 +272,7 @@ Screen1 As screen:
         Height: =38
         Text: ="Espacio Deportivo"
         Width: =332
-        X: =161
+        X: =157
         Y: =118
         ZIndex: =8
 
