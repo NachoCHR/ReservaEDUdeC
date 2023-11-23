@@ -1,0 +1,9 @@
+Screen4 As screen:
+
+    Label2 As label:
+        Text: |-
+            ="Reserva: " & CorreoUsuario
+        X: =32
+        Y: =28
+        ZIndex: =1
+
