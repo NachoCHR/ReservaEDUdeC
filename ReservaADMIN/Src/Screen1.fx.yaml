@@ -10,7 +10,8 @@ Screen1 As screen:
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         DelayItemLoading: =true
-        Items: =HorasDisponibles
+        Items: |
+            =SortByColumns(Filter(Reservas, Text(FechaInicio, DateTimeFormat.ShortDate) = Text(_dateSelected, DateTimeFormat.ShortDate)), "Fechainicio")
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
@@ -27,7 +28,8 @@ Screen1 As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.Value
+            Text: |
+                =Text(ThisItem.FechaInicio, "HH:mm") & " - " & Text(ThisItem.FechaTermino, "HH:mm")
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 86
             X: =16
