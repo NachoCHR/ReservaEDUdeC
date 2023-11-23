@@ -96,7 +96,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 4,
+    "BindingErrorCount": 2,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -131,6 +131,7 @@
   },
   "ScreenOrder": [
     "Screen1",
-    "Screen4"
+    "Screen4",
+    "Screen2"
   ]
 }

@@ -285,9 +285,13 @@ Screen1 As screen:
         Y: =12
         ZIndex: =9
 
-    Label8 As label:
-        Text: =EspacioSeleccionado
-        X: =763
-        Y: =86
+    Button2 As button:
+        OnSelect: |-
+            =ResetForm(Form4);
+            NewForm(Form4);
+            Navigate(Screen2)
+        Text: ="Botón"
+        X: =1157
+        Y: =96
         ZIndex: =10
 
