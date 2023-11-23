@@ -163,7 +163,8 @@ Screen1 As screen:
 
     Dropdown2 As dropdown:
         Items: =EspaciosDeportivos.EspacioDeportivo
-        OnSelect: =Set(EspacioSeleccionado,Dropdown2.Selected.EspacioDeportivo)
+        OnChange: =Set(EspacioSeleccionado,Dropdown2.Selected.EspacioDeportivo)
+        OnSelect: =
         X: =161
         Y: =159
         ZIndex: =7

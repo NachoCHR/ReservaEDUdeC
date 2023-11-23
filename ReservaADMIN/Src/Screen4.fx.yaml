@@ -29,18 +29,19 @@ Screen4 As screen:
     Label5 As label:
         Text: ="Fecha Termino"
         X: =32
-        Y: =368
+        Y: =279
         ZIndex: =5
 
     FechaTermino As datepicker:
         X: =32
-        Y: =408
+        Y: =319
         ZIndex: =6
 
     Button1 As button:
+        OnSelect: =path
         Text: ="Enviar"
         X: =32
-        Y: =541
+        Y: =658
         ZIndex: =7
 
     Label6 As label:
@@ -51,22 +52,16 @@ Screen4 As screen:
         ZIndex: =8
 
     Label7 As label:
-        Text: ="Hora de incio"
+        Text: ="Intervalo de hora"
         X: =32
-        Y: =259
+        Y: =406
         ZIndex: =10
 
     aaaa As dropdown:
         Items: =HorasDisponibles
-        OnSelect: =Set(HoraInicio, aaaa.Selected.Value)
+        OnChange: =Set(HorasSeparadas, Split(aaaa.Selected.Value,"-"))
+        OnSelect: =
         X: =32
-        Y: =299
+        Y: =446
         ZIndex: =11
-
-    Label9 As label:
-        Text: =Text(HoraInicio)
-        Width: =174
-        X: =398
-        Y: =299
-        ZIndex: =12
 
