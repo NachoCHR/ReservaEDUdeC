@@ -8,7 +8,7 @@
     "Controls\\1.json": "C8_/tKDRXRVc5SBQadmVGfo8xIAag+jOtKkTfqgcsUIRgE=",
     "Controls\\26.json": "C8_87EFwPLjKzROfNGNWrr+1LDyG8XMprpNdq/LhNC4V/Y=",
     "Controls\\4.json": "C8_fncEYEMEUp0UwAoPNnx5Brg4Xjub3EXeXT1xuQLg+jU=",
-    "Header.json": "C8_jZWJ7SbOE5KTXKadmk9dHiMKG7Ebe0lDA3d/Ir6iqaM=",
+    "Header.json": "C8_Sbt2IjOMT+79JoshhjlRDDAmSoVMM+1KivAWAWk0wb8=",
     "Properties.json": "C8_YecoHqAcKQpXudJ61ppRHfTJYA9mNbJ0etTLHkF+LLM=",
     "References\\DataSources.json": "C8_TiI2xAUDHnupipI8p5BgFzTSNj4W7s/WClZGUKYryv8=",
     "References\\ModernThemes.json": "C8_KDQJ/3t27vgKx25iCQB/PGqxkWE34ZB7Eyb+RxNxY0k=",
@@ -17,13 +17,13 @@
     "References\\Themes.json": "C8_zuMgLpz3IJQlVgGqo3GtyhriL3PR35GxXf+rtPR4Gfc=",
     "Resources\\PublishInfo.json": "C8_xBSHd7bCJtJuVyE3HbDc0i73dIbUL15Cf9bd2FH+zFI="
   },
-  "ClientStampedChecksum": "C8_NMELec5x7iJfpbt/yDcIV359TglYf2VQTdxNKaAyLwk=",
+  "ClientStampedChecksum": "C8_GS6mlkuMcd0GVlp3fP0WmkZubxfRMVwaRTp9HRfyuiA=",
   "ServerPerFileChecksums": {
     "AppCheckerResult.sarif": "C8_j58iRWOB/LOTC3onQ5zZ5Sde91vML1Yvr8KN8jw2xSo=",
     "Controls\\1.json": "C8_/tKDRXRVc5SBQadmVGfo8xIAag+jOtKkTfqgcsUIRgE=",
     "Controls\\26.json": "C8_87EFwPLjKzROfNGNWrr+1LDyG8XMprpNdq/LhNC4V/Y=",
     "Controls\\4.json": "C8_fncEYEMEUp0UwAoPNnx5Brg4Xjub3EXeXT1xuQLg+jU=",
-    "Header.json": "C8_jZWJ7SbOE5KTXKadmk9dHiMKG7Ebe0lDA3d/Ir6iqaM=",
+    "Header.json": "C8_Sbt2IjOMT+79JoshhjlRDDAmSoVMM+1KivAWAWk0wb8=",
     "Properties.json": "C8_YecoHqAcKQpXudJ61ppRHfTJYA9mNbJ0etTLHkF+LLM=",
     "References\\DataSources.json": "C8_TiI2xAUDHnupipI8p5BgFzTSNj4W7s/WClZGUKYryv8=",
     "References\\ModernThemes.json": "C8_KDQJ/3t27vgKx25iCQB/PGqxkWE34ZB7Eyb+RxNxY0k=",
@@ -32,5 +32,5 @@
     "References\\Themes.json": "C8_zuMgLpz3IJQlVgGqo3GtyhriL3PR35GxXf+rtPR4Gfc=",
     "Resources\\PublishInfo.json": "C8_xBSHd7bCJtJuVyE3HbDc0i73dIbUL15Cf9bd2FH+zFI="
   },
-  "ServerStampedChecksum": "C8_NMELec5x7iJfpbt/yDcIV359TglYf2VQTdxNKaAyLwk="
+  "ServerStampedChecksum": "C8_GS6mlkuMcd0GVlp3fP0WmkZubxfRMVwaRTp9HRfyuiA="
 }
