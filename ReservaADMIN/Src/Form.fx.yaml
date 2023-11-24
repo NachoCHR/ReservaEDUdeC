@@ -1,4 +1,4 @@
-Screen4 As screen:
+Form As screen:
 
     Label2 As label:
         Height: =42
