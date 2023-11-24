@@ -14,7 +14,7 @@ Main As screen:
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
-        TemplateSize: =90
+        TemplateSize: =103
         X: =726
         Y: =193
         ZIndex: =1
@@ -31,7 +31,7 @@ Main As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 86
             X: =16
-            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2.Size * 1.8)) / 2
+            Y: =12
             ZIndex: =1
 
         Subtitle2 As label:
@@ -88,6 +88,25 @@ Main As screen:
             X: =551
             Y: =23
             ZIndex: =6
+
+        Icon4 As icon.Person:
+            DisplayMode: =DisplayMode.disable
+            Height: =31
+            Icon: =Icon.Person
+            OnSelect: =Select(Parent)
+            Width: =25
+            X: =16
+            Y: =61
+            ZIndex: =7
+
+        Label12 As label:
+            Height: =33
+            OnSelect: =Select(Parent)
+            Text: =
+            Width: =328
+            X: =41
+            Y: =61
+            ZIndex: =8
 
     Encabezado_1 As button:
         DisplayMode: =DisplayMode.View
