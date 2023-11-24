@@ -78,7 +78,7 @@ Main As screen:
             DisplayMode: =If(Subtitle2.Text = "Reservado", DisplayMode.Disabled, DisplayMode.Edit)
             Height: =47
             Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
+            OnSelect: =Navigate(Form)
             Width: =51
             X: =551
             Y: =23
