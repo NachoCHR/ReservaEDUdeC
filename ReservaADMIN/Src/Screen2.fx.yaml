@@ -328,7 +328,7 @@ Screen2 As screen:
 
             DataCardValue2 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
+                DefaultSelectedItems: =First(Filter(Choices([@Reservas].EspacioDeportivo), Value = EspacioSeleccionado))
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 IsSearchable: =false

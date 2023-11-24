@@ -295,3 +295,19 @@ Screen1 As screen:
         Y: =96
         ZIndex: =10
 
+    Label8 As label:
+        Height: =32
+        Text: =User().Email
+        Width: =240
+        X: =748
+        Y: =86
+        ZIndex: =11
+
+    Image1 As image:
+        Height: =65
+        Image: =User().Image
+        Width: =71
+        X: =665
+        Y: =69
+        ZIndex: =12
+
