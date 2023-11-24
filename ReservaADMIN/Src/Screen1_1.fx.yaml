@@ -88,10 +88,10 @@ Screen1_1 As screen:
         BorderThickness: =2
         Fill: =RGBA(0, 134, 208, 1)
         Height: =42
-        Items: =Calendar.WeekdaysLong()
+        Items: =Calendar.WeekdaysShort()
         ShowScrollbar: =false
         TemplatePadding: =0
-        TemplateSize: =147
+        TemplateSize: =103
         Visible: =_calendarVisible
         Width: =703
         X: =7
@@ -140,7 +140,7 @@ Screen1_1 As screen:
             BorderColor: =RGBA(56, 96, 178, 1)
             Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(47, 41, 43, 1), LblMonthSelected1_2.Color)
             DisabledFill: =
-            DisplayMode: |-
+            DisplayMode: |
                 =With(
                     {
                         calendarDate: DateAdd(
@@ -151,7 +151,8 @@ Screen1_1 As screen:
                     If(
                         Or(
                             calendarDate < Today(),
-                            Weekday(calendarDate) in [1.7]
+                            Weekday(calendarDate) in [1.7] ||
+                            Abs(Self.Text - ThisItem.Value) > 10
                         ),
                         DisplayMode.Disabled,
                         DisplayMode.Edit
