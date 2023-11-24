@@ -134,12 +134,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Main.Gallery2.Subtitle2.Text"
+                  "fullyQualifiedName": "Main.GalaeriaFechas.Subtitle2.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Main.Gallery2.Subtitle2.Text",
+                  "fullyQualifiedName": "Main.GalaeriaFechas.Subtitle2.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -153,7 +153,7 @@
               "properties": {
                 "member": "Text",
                 "module": "Main",
-                "type": "Main.Gallery2.Subtitle2"
+                "type": "Main.GalaeriaFechas.Subtitle2"
               }
             }
           ],
@@ -174,12 +174,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Main.Gallery2.Subtitle2.Text"
+                  "fullyQualifiedName": "Main.GalaeriaFechas.Subtitle2.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Main.Gallery2.Subtitle2.Text",
+                  "fullyQualifiedName": "Main.GalaeriaFechas.Subtitle2.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -193,7 +193,7 @@
               "properties": {
                 "member": "Text",
                 "module": "Main",
-                "type": "Main.Gallery2.Subtitle2"
+                "type": "Main.GalaeriaFechas.Subtitle2"
               }
             }
           ],
@@ -214,12 +214,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Main.Gallery2.Subtitle2.Text"
+                  "fullyQualifiedName": "Main.GalaeriaFechas.Subtitle2.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Main.Gallery2.Subtitle2.Text",
+                  "fullyQualifiedName": "Main.GalaeriaFechas.Subtitle2.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -233,7 +233,7 @@
               "properties": {
                 "member": "Text",
                 "module": "Main",
-                "type": "Main.Gallery2.Subtitle2"
+                "type": "Main.GalaeriaFechas.Subtitle2"
               }
             }
           ],
@@ -254,19 +254,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Main.Gallery2.Icon3.AccessibleLabel"
+                  "fullyQualifiedName": "Main.GalaeriaFechas.Icon3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Main.Gallery2.Icon3.AccessibleLabel",
+                  "fullyQualifiedName": "Main.GalaeriaFechas.Icon3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Main",
-                "type": "Main.Gallery2.Icon3"
+                "type": "Main.GalaeriaFechas.Icon3"
               }
             }
           ],
@@ -912,19 +912,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Main.Gallery2.AccessibleLabel"
+                  "fullyQualifiedName": "Main.GalaeriaFechas.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Main.Gallery2.AccessibleLabel",
+                  "fullyQualifiedName": "Main.GalaeriaFechas.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Main",
-                "type": "Main.Gallery2"
+                "type": "Main.GalaeriaFechas"
               }
             }
           ],
@@ -942,19 +942,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Main.Gallery2.TabIndex"
+                  "fullyQualifiedName": "Main.GalaeriaFechas.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Main.Gallery2.TabIndex",
+                  "fullyQualifiedName": "Main.GalaeriaFechas.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Main",
-                "type": "Main.Gallery2"
+                "type": "Main.GalaeriaFechas"
               }
             }
           ],
@@ -1092,19 +1092,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Main.Gallery2.Icon3.TabIndex"
+                  "fullyQualifiedName": "Main.GalaeriaFechas.Icon3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Main.Gallery2.Icon3.TabIndex",
+                  "fullyQualifiedName": "Main.GalaeriaFechas.Icon3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Main",
-                "type": "Main.Gallery2.Icon3"
+                "type": "Main.GalaeriaFechas.Icon3"
               }
             }
           ],
