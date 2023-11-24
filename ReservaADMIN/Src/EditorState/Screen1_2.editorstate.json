@@ -866,7 +866,15 @@
         "Y",
         "Width",
         "Height",
-        "ZIndex"
+        "ZIndex",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "BorderThickness",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "GalleryTemplateChildName": "galleryTemplate2_3",
       "HasDynamicProperties": false,
@@ -1005,6 +1013,11 @@
         {
           "Category": "Design",
           "PropertyName": "ZIndex",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "BorderThickness",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -1332,7 +1345,14 @@
         "PressedBorderColor",
         "HoverBorderColor",
         "FocusedBorderColor",
-        "OnSelect",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Select(Parent)",
+          "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ZIndex",
         "BorderThickness",
         "FocusedBorderThickness"
@@ -3145,7 +3165,14 @@
         "PressedFill",
         "HoverFill",
         "BorderColor",
-        "BorderStyle",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "BorderStyle",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "FocusedBorderColor",
         "DisplayMode",
         "X",
@@ -3155,7 +3182,14 @@
         "OnSelect",
         "ZIndex",
         "Visible",
-        "BorderThickness",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "BorderThickness",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "TabIndex"
       ],
       "HasDynamicProperties": false,
@@ -3365,7 +3399,14 @@
         "Height",
         "OnSelect",
         "ZIndex",
-        "BorderThickness",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "BorderThickness",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "TabIndex"
       ],
       "HasDynamicProperties": false,
