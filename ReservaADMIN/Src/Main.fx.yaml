@@ -90,7 +90,7 @@ Main As screen:
             ZIndex: =6
 
         Icon4 As icon.Person:
-            DisplayMode: =DisplayMode.disable
+            DisplayMode: =DisplayMode.disabled
             Height: =31
             Icon: =Icon.Person
             OnSelect: =Select(Parent)

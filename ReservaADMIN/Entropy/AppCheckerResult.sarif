@@ -263,10 +263,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 8,
+                  "charLength": 9,
                   "charOffset": 11,
                   "snippet": {
-                    "text": ".disable"
+                    "text": ".disabled"
                   }
                 }
               },
@@ -279,7 +279,7 @@
           ],
           "message": {
             "arguments": [
-              "disable"
+              "disabled"
             ],
             "id": "issue"
           },
