@@ -332,7 +332,7 @@ Screen2 As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 IsSearchable: =false
-                Items: =Choices([@Reservas].EspacioDeportivo)
+                Items: =Filter(Choices([@Reservas].EspacioDeportivo), Value = EspacioSeleccionado)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
                 SearchItems: =[]
