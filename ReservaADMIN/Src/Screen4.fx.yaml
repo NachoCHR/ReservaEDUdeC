@@ -1,15 +1,19 @@
 Screen4 As screen:
 
     Label2 As label:
+        Height: =45
         Text: |-
             ="Reserva: " & NombreUsuario
+        Width: =230
         X: =32
         Y: =28
         ZIndex: =1
 
     Label3 As label:
+        Height: =45
         Text: |-
             ="Correo: " & CorreoUsuario
+        Width: =252
         X: =32
         Y: =89
         ZIndex: =2

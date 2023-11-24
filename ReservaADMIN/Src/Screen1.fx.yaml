@@ -290,7 +290,7 @@ Screen1 As screen:
             =ResetForm(Form4);
             NewForm(Form4);
             Navigate(Screen2)
-        Text: ="Botón"
+        Text: ="Crear Evento"
         X: =1157
         Y: =96
         ZIndex: =10
@@ -299,15 +299,15 @@ Screen1 As screen:
         Height: =32
         Text: =User().Email
         Width: =240
-        X: =748
-        Y: =86
+        X: =791
+        Y: =70
         ZIndex: =11
 
     Image1 As image:
         Height: =65
         Image: =User().Image
         Width: =71
-        X: =665
-        Y: =69
+        X: =703
+        Y: =70
         ZIndex: =12
 

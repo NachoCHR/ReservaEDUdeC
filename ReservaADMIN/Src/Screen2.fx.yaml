@@ -38,10 +38,11 @@ Screen2 As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["DisplayName","Email","Picture"]
                 DisplayMode: =Parent.DisplayMode
-                Items: =Choices([@Reservas].Usuario)
+                IsSearchable: =false
+                Items: =Filter(Choices([@Reservas].Usuario), Email = User().Email)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["DisplayName"]
-                SearchItems: =Choices(Reservas.Usuario,DataCardValue1.SearchText)
+                SearchItems: =[]
                 SelectMultiple: =false
                 Template: =ListItemTemplate.Person
                 Tooltip: =Parent.DisplayName
