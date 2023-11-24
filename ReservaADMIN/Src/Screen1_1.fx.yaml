@@ -75,6 +75,7 @@ Screen1_1 As screen:
             ZIndex: =5
 
         Icon3 As icon.ChevronRight:
+            DisplayMode: =If(Subtitle2.Text = "Reservado", DisplayMode.Disabled, DisplayMode.Edit)
             Height: =47
             Icon: =Icon.ChevronRight
             OnSelect: =Select(Parent)
