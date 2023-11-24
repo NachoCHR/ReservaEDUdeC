@@ -1,4 +1,4 @@
-Screen1_1 As screen:
+Main As screen:
     Fill: =
     OnVisible: |-
         =/*resets calendar view and date selection to today*/
