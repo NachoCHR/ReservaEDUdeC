@@ -62,7 +62,7 @@ Screen1 As screen:
 
         Rectangle2 As rectangle:
             BorderThickness: =4
-            Height: =Parent.TemplateHeight - Separator2.Height
+            Height: =90
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =4
