@@ -154,6 +154,8 @@ Screen1 As screen:
             Align: =Align.Center
             BorderColor: =RGBA(56, 96, 178, 1)
             Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(47, 41, 43, 1), LblMonthSelected1_1.Color)
+            DisplayMode: |
+                =
             Fill: |-
                 =/*Fill value changes if the gallery item day = today, or if it lies outside of the current month*/             
                 If(
