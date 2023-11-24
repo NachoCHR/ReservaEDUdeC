@@ -2939,14 +2939,7 @@
         "LoadingSpinner",
         "LoadingSpinnerColor",
         "AccessibleLabel",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "DisplayMode.Edit",
-          "InvariantPropertyName": "DisplayMode",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "DisplayMode",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -4106,7 +4099,14 @@
         },
         "FocusedBorderColor",
         "Fill",
-        "DisabledFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 0, 0, 0)",
+          "InvariantPropertyName": "DisabledFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "PressedFill",
         "HoverFill",
         {

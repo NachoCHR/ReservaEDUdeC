@@ -87,11 +87,11 @@ Screen1_2 As screen:
         AccessibleLabel: ="Días de la semana"
         BorderThickness: =2
         Fill: =RGBA(0, 134, 208, 1)
-        Height: =44
-        Items: =Calendar.WeekdaysShort()
+        Height: =42
+        Items: =Calendar.WeekdaysLong()
         ShowScrollbar: =false
         TemplatePadding: =0
-        TemplateSize: =103
+        TemplateSize: =147
         Visible: =_calendarVisible
         Width: =703
         X: =7
@@ -113,7 +113,6 @@ Screen1_2 As screen:
         AccessibleLabel: ="Días del mes seleccionado"
         BorderColor: =RGBA(39, 67, 125, 1)
         BorderThickness: =2
-        DisplayMode: =true
         Height: =425
         Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
         Layout: =Layout.Vertical
@@ -140,6 +139,7 @@ Screen1_2 As screen:
             Align: =Align.Center
             BorderColor: =RGBA(56, 96, 178, 1)
             Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(47, 41, 43, 1), LblMonthSelected1_3.Color)
+            DisabledFill: =
             DisplayMode: |-
                 =With(
                     {

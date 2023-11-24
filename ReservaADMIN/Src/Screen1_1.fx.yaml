@@ -139,6 +139,7 @@ Screen1_1 As screen:
             Align: =Align.Center
             BorderColor: =RGBA(56, 96, 178, 1)
             Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(47, 41, 43, 1), LblMonthSelected1_2.Color)
+            DisabledFill: =
             DisplayMode: |-
                 =With(
                     {
