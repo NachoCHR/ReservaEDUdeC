@@ -122,3 +122,17 @@ Form As screen:
         Y: =158
         ZIndex: =27
 
+    DataCardValue6 As combobox:
+        DefaultSelectedItems: =LookUp(Reservas,Usuario.Email = User().Email)
+        DisplayFields: =["DisplayName","Email","Picture"]
+        Height: =37
+        Items: =Choices([@Reservas].Usuario)
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        SearchFields: =["DisplayName"]
+        SearchItems: =Choices(Reservas.Usuario,DataCardValue6.SearchText)
+        SelectMultiple: =false
+        Template: =ListItemTemplate.Person
+        X: =683
+        Y: =247
+        ZIndex: =28
+
