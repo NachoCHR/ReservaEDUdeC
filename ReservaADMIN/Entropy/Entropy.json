@@ -56,12 +56,11 @@
     "Title1_2": 35,
     "Title2_7": 38,
     "Title3": 24,
-    "User": 45,
     "WeekdayGallery1_2": 33
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/25/2023 20:38:09",
+  "HeaderLastSavedDateTimeUTC": "11/25/2023 20:44:18",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "4c352f40-aa62-4a4e-9744-a74c22565a3b": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/66771953837f4dd98a962dafc0abc1f6\"",
@@ -173,7 +172,6 @@
     "Title1_2": {},
     "Title2_7": {},
     "Title3": {},
-    "User": {},
     "WeekdayGallery1_2": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
@@ -233,7 +231,6 @@
     "Title1_2": 37,
     "Title2_7": 40,
     "Title3": 25,
-    "User": 1,
     "WeekdayGallery1_2": 35
   },
   "ResourcesJsonIndices": {

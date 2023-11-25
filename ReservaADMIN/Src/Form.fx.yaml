@@ -81,41 +81,28 @@ Form As screen:
     Button1 As button:
         OnSelect: |-
             =Patch(
-                Prueba,
-                Defaults(Prueba),
+                Reservas,
+                Defaults(Reservas),
                 {
                     Usuario: {
-              Claims: Concatenate(
-                      "i:0#.f|membership|",
-                      User().Email // Person email
-                      ),
-                      Department: "",
-                      DisplayName: User().FullName,
-                      Email: User().Email, // Person email
-                      JobTitle: "",
-                      Picture: ""
-            }
+                        Claims: Concatenate(
+                            "i:0#.f|membership|",
+                            User().Email// Person email
+                        ),
+                        Department: "",
+                        DisplayName: User().FullName,
+                        Email: User().Email,
+                        JobTitle: "",
+                        Picture: ""
+                    }
+                
+            
                 }
             )
         Text: ="Reservar"
         X: =1104
         Y: =692
         ZIndex: =26
-
-    User As combobox:
-        DefaultSelectedItems: =
-        DisplayFields: =["DisplayName","Email","Picture"]
-        Height: =37
-        IsSearchable: =false
-        Items: =Choices([@Prueba].Usuario)
-        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-        SearchFields: =["DisplayName"]
-        SearchItems: =[]
-        SelectMultiple: =false
-        Template: =ListItemTemplate.Person
-        X: =672
-        Y: =136
-        ZIndex: =28
 
     DateValue1 As datepicker:
         EndYear: =Year(Today())+100
@@ -161,7 +148,7 @@ Form As screen:
         Height: =30
         Text: =LookUp(Choices([@Prueba].Usuario), "SEAGUILA2019@UDEC.CL" = Email, Department)
         Width: =331
-        X: =476
-        Y: =273
+        X: =672
+        Y: =203
         ZIndex: =32
 
