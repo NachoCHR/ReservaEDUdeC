@@ -95,7 +95,7 @@ Form As screen:
                         JobTitle: "",
                         Picture: ""
                     },
-            
+                    FechaInicio: DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value)
                 }
             )
         Text: ="Reservar"
