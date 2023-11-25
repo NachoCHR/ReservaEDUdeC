@@ -53,7 +53,7 @@ Main As screen:
                         CountRows(
                             Filter(
                                 Reservas,
-                                DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5))
+                                DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
                             )
                         ) > 0,
                         "Reservado",
@@ -101,7 +101,17 @@ Main As screen:
         Label12 As label:
             Height: =33
             OnSelect: =Select(Parent)
-            Text: =
+            Text: |
+                =If(
+                    !IsBlank(
+                        Filter(
+                            TablaFiltrada,
+                            DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
+                        )
+                    ),
+                    "Ocupado",
+                    "No Ocupado"
+                )
             Width: =328
             X: =41
             Y: =61
@@ -155,6 +165,12 @@ Main As screen:
         X: =703
         Y: =70
         ZIndex: =12
+
+    Label10 As label:
+        Text: =EspacioSeleccionado
+        X: =489
+        Y: =82
+        ZIndex: =13
 
     Calendario As group:
         Height: =5
