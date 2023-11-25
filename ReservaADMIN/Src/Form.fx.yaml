@@ -8,78 +8,95 @@ Form As screen:
         ZIndex: =13
 
     Label1 As label:
-        Height: =30
+        Height: =55
         Text: |-
             ="Usuario:  " & User().Email
         Width: =305
-        X: =104
-        Y: =130
+        X: =106
+        Y: =151
         ZIndex: =14
 
     Label2 As label:
-        Height: =43
+        Height: =54
         Text: |-
             ="Nombre:  " & User().FullName
         Width: =326
         X: =104
-        Y: =160
+        Y: =206
         ZIndex: =15
 
     Label3 As label:
+        Height: =50
         Text: |-
             ="Fecha de Inicio:"
-        X: =104
-        Y: =238
+        X: =106
+        Y: =333
         ZIndex: =16
 
     DatePicker1 As datepicker:
-        X: =102
-        Y: =278
+        Height: =50
+        X: =104
+        Y: =373
         ZIndex: =17
 
     Dropdown1 As dropdown:
+        Height: =50
         Items: |-
             =["08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00"]
         Width: =119
-        X: =447
-        Y: =278
+        X: =449
+        Y: =373
         ZIndex: =18
 
     Label3_2 As label:
+        Height: =50
         Text: |-
             ="Fecha de Termino:"
         Width: =178
-        X: =104
-        Y: =344
+        X: =106
+        Y: =439
         ZIndex: =19
 
     DatePicker1_1 As datepicker:
-        X: =102
-        Y: =384
+        Height: =50
+        X: =104
+        Y: =479
         ZIndex: =20
 
     Dropdown1_1 As dropdown:
+        Height: =50
         Items: |-
             =["08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00"]
         Width: =119
-        X: =447
-        Y: =384
+        X: =449
+        Y: =479
         ZIndex: =21
 
     Label4 As label:
+        Height: =50
         Text: |-
             ="Dias a repetir:"
-        X: =104
-        Y: =462
+        X: =106
+        Y: =548
         ZIndex: =23
 
     ComboBox1 As combobox:
-        DisplayFields: =["ComplianceAssetId"]
+        DisplayFields: =["Value"]
+        Height: =50
         IsSearchable: =false
         Items: =Choices([@Reservas].Dias)
-        SearchFields: =["ComplianceAssetId"]
+        SearchFields: =["Value"]
         SearchItems: =[]
-        X: =104
-        Y: =517
+        X: =106
+        Y: =603
         ZIndex: =24
+
+    Label5 As label:
+        Height: =58
+        Text: |-
+            ="Espacio Deportivo:  " & EspacioSeleccionado
+        Width: =464
+        X: =104
+        Y: =260
+        ZIndex: =25
 
