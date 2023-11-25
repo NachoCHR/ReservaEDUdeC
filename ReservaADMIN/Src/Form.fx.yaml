@@ -9,8 +9,7 @@ Form As screen:
 
     Label1 As label:
         Height: =55
-        Text: |-
-            ="Usuario:  " & User().Email
+        Text: =User().Email
         Width: =305
         X: =106
         Y: =151
@@ -18,8 +17,7 @@ Form As screen:
 
     Label2 As label:
         Height: =54
-        Text: |-
-            ="Nombre:  " & User().FullName
+        Text: =User().FullName
         Width: =326
         X: =104
         Y: =206
@@ -103,7 +101,16 @@ Form As screen:
 
     Button1 As button:
         OnSelect: |-
-            =Patch(TuLista, TuGaleria.Selected, {Campo1: TextInput1.Text, Campo2: TextInput2.Text})
+            =Patch(
+                Reservas,
+                Defaults(Reservas),
+                {
+                    Usuario: Label1.Text,
+                    FechaInicio: DateValue(DatePicker1.SelectedDate) + TimeValue(Dropdown1.Selected.Value),
+                    FechaTermino: DateValue(DatePicker1_1.SelectedDate) + TimeValue(Dropdown1_1.Selected.Value),
+                    Dias: ComboBox1.Selected.Value
+                }
+            ),
         Text: ="Reservar"
         X: =1104
         Y: =692
