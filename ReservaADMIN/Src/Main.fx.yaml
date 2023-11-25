@@ -363,3 +363,9 @@ Main As screen:
             Y: =118
             ZIndex: =8
 
+    Label11 As label:
+        Text: =_dateSelected
+        X: =505
+        Y: =151
+        ZIndex: =14
+
