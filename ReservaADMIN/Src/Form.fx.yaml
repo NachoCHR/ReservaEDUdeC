@@ -31,3 +31,8 @@ Form As screen:
         Y: =238
         ZIndex: =16
 
+    DatePicker1 As datepicker:
+        X: =102
+        Y: =278
+        ZIndex: =17
+
