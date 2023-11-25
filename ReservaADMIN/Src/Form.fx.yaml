@@ -81,8 +81,8 @@ Form As screen:
     Button1 As button:
         OnSelect: |-
             =Patch(
-                Reservas,
-                Defaults(Reservas),
+                Prueba,
+                Defaults(Prueba),
                 {
                     Usuario: {
                         Claims: Concatenate(
@@ -94,8 +94,7 @@ Form As screen:
                         Email: User().Email,
                         JobTitle: "",
                         Picture: ""
-                    }
-                
+                    },
             
                 }
             )
