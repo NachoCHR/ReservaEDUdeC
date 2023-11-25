@@ -26,7 +26,8 @@ Form As screen:
         ZIndex: =15
 
     Label3 As label:
-        Text: ="Fecha de Inicio"
+        Text: |-
+            ="Fecha de Inicio:"
         X: =104
         Y: =238
         ZIndex: =16
@@ -45,7 +46,8 @@ Form As screen:
         ZIndex: =18
 
     Label3_2 As label:
-        Text: ="Fecha de Termino"
+        Text: |-
+            ="Fecha de Termino:"
         Width: =178
         X: =104
         Y: =344
@@ -63,4 +65,17 @@ Form As screen:
         X: =447
         Y: =384
         ZIndex: =21
+
+    Dropdown2 As dropdown:
+        Items: =DropDownSample
+        X: =103
+        Y: =502
+        ZIndex: =22
+
+    Label4 As label:
+        Text: |-
+            ="Dias a repetir:"
+        X: =104
+        Y: =462
+        ZIndex: =23
 
