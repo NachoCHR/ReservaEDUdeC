@@ -10,9 +10,18 @@ Form As screen:
     Label1 As label:
         Height: =30
         Text: |-
-            ="Usuario: " & User().Email
+            ="Usuario:  " & User().Email
         Width: =305
         X: =104
         Y: =130
         ZIndex: =14
+
+    Label2 As label:
+        Height: =43
+        Text: |-
+            ="Nombre:  " & User().FullName
+        Width: =326
+        X: =104
+        Y: =160
+        ZIndex: =15
 
