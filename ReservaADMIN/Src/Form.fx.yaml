@@ -25,3 +25,9 @@ Form As screen:
         Y: =160
         ZIndex: =15
 
+    Label3 As label:
+        Text: ="Fecha de Incio"
+        X: =104
+        Y: =238
+        ZIndex: =16
+
