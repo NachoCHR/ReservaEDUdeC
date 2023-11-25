@@ -23,8 +23,14 @@ Form_Delete As screen:
             =If(
                 IsBlank(TextInput1.Text),
                 Notify("Falta rellenar el motivo", NotificationType.Error),
-                RemoveIf(Reservas, ID = Last(NuevaColeccion).ID, powerapps.Run(Text(Last(NuevaColeccion).Usuario.Email),Text(Last(NuevaColeccion).EspacioDeportivo.Value),Text(Last(NuevaColeccion).Usuario.DisplayName),TextInput1.Text,Text(Last(NuevaColeccion).FechaInicio),Text(Last(NuevaColeccion).FechaTermino)) 
+                RemoveIf(Reservas, ID = Last(NuevaColeccion).ID)
             );
+            If(
+                IsBlank(TextInput1.Text),
+                Notify("Falta rellenar el motivo", NotificationType.Error),
+                powerapps.Run(Text(Last(NuevaColeccion).Usuario.Email),Text(Last(NuevaColeccion).EspacioDeportivo.Value),Text(Last(NuevaColeccion).Usuario.DisplayName),TextInput1.Text,Text(Last(NuevaColeccion).FechaInicio),Text(Last(NuevaColeccion).FechaTermino))
+            );
+            
             
         Text: ="Enviar"
         X: =605
