@@ -66,16 +66,20 @@ Form As screen:
         Y: =384
         ZIndex: =21
 
-    Dropdown2 As dropdown:
-        Items: =Choices([@Reservas].Dias)
-        X: =103
-        Y: =502
-        ZIndex: =22
-
     Label4 As label:
         Text: |-
             ="Dias a repetir:"
         X: =104
         Y: =462
         ZIndex: =23
+
+    ComboBox1 As combobox:
+        DisplayFields: =["ComplianceAssetId"]
+        IsSearchable: =false
+        Items: =Choices([@Reservas].Dias)
+        SearchFields: =["ComplianceAssetId"]
+        SearchItems: =[]
+        X: =104
+        Y: =517
+        ZIndex: =24
 
