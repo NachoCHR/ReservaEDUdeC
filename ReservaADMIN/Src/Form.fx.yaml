@@ -7,7 +7,7 @@ Form As screen:
         Y: =40
         ZIndex: =13
 
-    Label1 As label:
+    LabelUsuario As label:
         Height: =55
         Text: =User().Email
         Width: =305
@@ -90,10 +90,9 @@ Form As screen:
         Y: =603
         ZIndex: =24
 
-    Label5 As label:
+    LabelEspacioDeportivo As label:
         Height: =58
-        Text: |-
-            ="Espacio Deportivo:  " & EspacioSeleccionado
+        Text: =EspacioSeleccionado
         Width: =464
         X: =104
         Y: =260
@@ -105,14 +104,21 @@ Form As screen:
                 Reservas,
                 Defaults(Reservas),
                 {
-                    Usuario: Label1.Text,
-                    FechaInicio: DateValue(DatePicker1.SelectedDate) + TimeValue(Dropdown1.Selected.Value),
-                    FechaTermino: DateValue(DatePicker1_1.SelectedDate) + TimeValue(Dropdown1_1.Selected.Value),
-                    Dias: ComboBox1.Selected.Value
+                    
                 }
             ),
         Text: ="Reservar"
         X: =1104
         Y: =692
         ZIndex: =26
+
+    ComboBox2 As combobox:
+        DisplayFields: =["DisplayName","Email","Picture"]
+        IsSearchable: =false
+        Items: =Choices([@Reservas].Usuario)
+        SearchFields: =["DisplayName"]
+        SearchItems: =[]
+        X: =683
+        Y: =158
+        ZIndex: =27
 
