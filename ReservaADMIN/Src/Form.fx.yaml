@@ -84,11 +84,17 @@ Form As screen:
                 Reservas,
                 Defaults(Reservas),
                 {
-                    Usuario: User,
-                    FechaInicio: DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value),
-                    FechaTermino: DateValue(DateValue1_1.SelectedDate) + TimeValue(Dropdown1_1.Selected.Value),
-                    EspacioDeportivo: EDeportivos,
-                    Dias: ComboBox1
+                    Usuario: {
+              Claims: Concatenate(
+                      "i:0#.f|membership|",
+                      User().Email // Person email
+                      ),
+                      Department: "",
+                      DisplayName: User().FullName,
+                      Email: User().Email, // Person email
+                      JobTitle: "",
+                      Picture: ""
+            }
                 }
             )
         Text: ="Reservar"
@@ -101,13 +107,14 @@ Form As screen:
         DisplayFields: =["DisplayName","Email","Picture"]
         Height: =37
         IsSearchable: =false
+        Items: =Choices([@Prueba].Usuario)
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
         SearchFields: =["DisplayName"]
         SearchItems: =[]
         SelectMultiple: =false
         Template: =ListItemTemplate.Person
-        X: =388
-        Y: =160
+        X: =672
+        Y: =136
         ZIndex: =28
 
     DateValue1 As datepicker:
