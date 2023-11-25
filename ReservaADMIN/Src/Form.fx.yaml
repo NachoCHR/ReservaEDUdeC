@@ -67,7 +67,7 @@ Form As screen:
         ZIndex: =21
 
     Dropdown2 As dropdown:
-        Items: =Choices([@Reservas].Dias
+        Items: =Choices([@Reservas].Dias)
         X: =103
         Y: =502
         ZIndex: =22
