@@ -38,6 +38,7 @@ App As appinfo:
             NombreUsuario,
             User().FullName
         );
+        Set(EspacioSeleccionado, "Bascket");
         Collect(
             TablaFiltrada,
             Filter(
@@ -45,7 +46,6 @@ App As appinfo:
                 DateValue(FechaInicio) = DateValue(_dateSelected) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
             )
         );
-        Set(EspacioSeleccionado, "Bascket")
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
