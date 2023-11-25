@@ -102,7 +102,7 @@ Main As screen:
             ZIndex: =7
 
         Label12 As label:
-            Height: =33
+            Height: =34
             OnSelect: =Select(Parent)
             Text: |-
                 =If(
@@ -120,7 +120,7 @@ Main As screen:
                     ).Usuario.DisplayName),
                     "No Ocupado"
                 )
-            Width: =328
+            Width: =492
             X: =41
             Y: =61
             ZIndex: =8

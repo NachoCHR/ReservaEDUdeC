@@ -102,20 +102,25 @@ Main_1 As screen:
             ZIndex: =7
 
         Label12_1 As label:
-            Height: =33
+            Height: =34
             OnSelect: =Select(Parent)
-            Text: |
+            Text: |-
                 =If(
                     !IsBlank(
                         Filter(
-                            TablaFiltrada,
+                            Reservas,
                             DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
                         )
                     ),
-                    "Ocupado",
+                    Text(First(
+                        Filter(
+                            Reservas,
+                            DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
+                        )
+                    ).Usuario.DisplayName),
                     "No Ocupado"
                 )
-            Width: =328
+            Width: =492
             X: =41
             Y: =61
             ZIndex: =8
