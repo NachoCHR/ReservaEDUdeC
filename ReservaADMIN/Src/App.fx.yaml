@@ -44,7 +44,8 @@ App As appinfo:
                 Reservas,
                 DateValue(FechaInicio) = DateValue(_dateSelected) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
             )
-        )
+        );
+        Set(EspacioSeleccionado, "Bascket")
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
