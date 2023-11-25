@@ -58,7 +58,7 @@ Main As screen:
                         ) > 0,
                         "Reservado",
                         "Disponible"
-                    )
+                    )   
             VerticalAlign: =VerticalAlign.Top
             Width: =107
             X: =Title3.X
@@ -90,7 +90,6 @@ Main As screen:
             ZIndex: =6
 
         Icon4 As icon.Person:
-            DisplayMode: =DisplayMode.disabled
             Height: =31
             Icon: =Icon.Person
             OnSelect: =Select(Parent)
