@@ -13,7 +13,7 @@
     "dependents": [],
     "id": "4c352f40-aa62-4a4e-9744-a74c22565a3b"
   },
-  "701f1624-0af4-4fac-8be7-f9742ab9ac23": {
+  "7fff231c-1e48-4901-a622-eb1f0123b7ff": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
@@ -39,7 +39,7 @@
       "shared_office365": "d298d328-ed39-4ffb-aae3-490b3c25cb97"
     },
     "dependents": [],
-    "id": "701f1624-0af4-4fac-8be7-f9742ab9ac23"
+    "id": "7fff231c-1e48-4901-a622-eb1f0123b7ff"
   },
   "d298d328-ed39-4ffb-aae3-490b3c25cb97": {
     "appActions": [],
@@ -56,7 +56,9 @@
       "Office365Outlook"
     ],
     "dependencies": {},
-    "dependents": [],
+    "dependents": [
+      "7fff231c-1e48-4901-a622-eb1f0123b7ff"
+    ],
     "id": "d298d328-ed39-4ffb-aae3-490b3c25cb97"
   },
   "ffeb0f8c-310f-44b7-9e26-769efdd5ee95": {

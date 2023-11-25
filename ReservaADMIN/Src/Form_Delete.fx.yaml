@@ -19,12 +19,13 @@ Form_Delete As screen:
         ZIndex: =2
 
     Button1_1 As button:
-        OnSelect: |
+        OnSelect: |+
             =If(
                 IsBlank(TextInput1.Text),
                 Notify("Falta rellenar el motivo", NotificationType.Error),
-                RemoveIf(Reservas, ID = Last(NuevaColeccion).ID)
+                RemoveIf(Reservas, ID = Last(NuevaColeccion).ID, powerapps.Run(Text(Last(NuevaColeccion).Usuario.Email),Text(Last(NuevaColeccion).EspacioDeportivo.Value),Text(Last(NuevaColeccion).Usuario.DisplayName),TextInput1.Text,Text(Last(NuevaColeccion).FechaInicio),Text(Last(NuevaColeccion).FechaTermino)) 
             );
+            
         Text: ="Enviar"
         X: =605
         Y: =576
