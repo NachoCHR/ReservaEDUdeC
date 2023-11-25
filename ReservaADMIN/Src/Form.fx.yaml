@@ -87,6 +87,7 @@ Form As screen:
         Items: =Choices([@Reservas].Dias)
         SearchFields: =["Value"]
         SearchItems: =[]
+        Tooltip: ="Todos los dias"
         X: =106
         Y: =603
         ZIndex: =24
@@ -99,4 +100,12 @@ Form As screen:
         X: =104
         Y: =260
         ZIndex: =25
+
+    Button1 As button:
+        OnSelect: |-
+            =Patch(TuLista, TuGaleria.Selected, {Campo1: TextInput1.Text, Campo2: TextInput2.Text})
+        Text: ="Reservar"
+        X: =1104
+        Y: =692
+        ZIndex: =26
 
