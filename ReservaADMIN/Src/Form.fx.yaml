@@ -74,10 +74,10 @@ Form As screen:
         ZIndex: =23
 
     ComboBox1 As combobox:
-        DisplayFields: =["ComplianceAssetId"]
+        DisplayFields: =["Value"]
         IsSearchable: =false
         Items: =Choices([@Reservas].Dias)
-        SearchFields: =["ComplianceAssetId"]
+        SearchFields: =["Value"]
         SearchItems: =[]
         X: =104
         Y: =517
