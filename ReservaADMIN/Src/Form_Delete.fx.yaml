@@ -2,8 +2,8 @@ Form_Delete As screen:
 
     Label2_1 As label:
         Height: =42
-        Text: |-
-            ="Reserva: " & NombreUsuario
+        Text: |
+            ="Reserva: " & Text(Last(EventoSeleccionado).Usuario)
         Width: =328
         X: =216
         Y: =116
@@ -11,8 +11,8 @@ Form_Delete As screen:
 
     Label3_1 As label:
         Height: =36
-        Text: |-
-            ="Correo: " & CorreoUsuario
+        Text: |
+            ="Correo: " & Text(Last(EventoSeleccionado).Email)
         Width: =328
         X: =216
         Y: =185
@@ -80,4 +80,13 @@ Form_Delete As screen:
         X: =40
         Y: =40
         ZIndex: =13
+
+    Label2_2 As label:
+        Height: =42
+        Text: |
+            ="Espacio Deportivo: " & Text(Last(EventoSeleccionado).EspacioDeportivo)
+        Width: =328
+        X: =582
+        Y: =116
+        ZIndex: =14
 
