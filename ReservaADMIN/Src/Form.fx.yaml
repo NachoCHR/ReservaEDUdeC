@@ -26,7 +26,7 @@ Form As screen:
         ZIndex: =15
 
     Label3 As label:
-        Text: ="Fecha de Incio"
+        Text: ="Fecha de Inicio"
         X: =104
         Y: =238
         ZIndex: =16
@@ -43,4 +43,24 @@ Form As screen:
         X: =447
         Y: =278
         ZIndex: =18
+
+    Label3_2 As label:
+        Text: ="Fecha de Termino"
+        Width: =178
+        X: =104
+        Y: =344
+        ZIndex: =19
+
+    DatePicker1_1 As datepicker:
+        X: =102
+        Y: =384
+        ZIndex: =20
+
+    Dropdown1_1 As dropdown:
+        Items: |-
+            =["08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00"]
+        Width: =119
+        X: =447
+        Y: =384
+        ZIndex: =21
 
