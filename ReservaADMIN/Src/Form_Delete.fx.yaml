@@ -19,10 +19,10 @@ Form_Delete As screen:
         ZIndex: =2
 
     Button1_1 As button:
-        OnSelect: =Remove(Last(NuevaColeccion)
+        OnSelect: =RemoveIf(Reservas, ID = Last(NuevaColeccion).ID)
         Text: ="Enviar"
-        X: =576
-        Y: =564
+        X: =572
+        Y: =444
         ZIndex: =7
 
     Icon2_1 As icon.ChevronLeft:
@@ -56,7 +56,7 @@ Form_Delete As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Reservas],DataSourceInfo.DisplayName,"Fechainicio")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =0
             Required: =true
             Update: =If(Not IsBlank(DateValue3.SelectedDate), DateValue3.SelectedDate + Time(Value(HourValue3.Selected.Value), Value(MinuteValue3.Selected.Value), 0))
             Width: =432
@@ -71,7 +71,7 @@ Form_Delete As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =1
                 ZIndex: =1
 
             DateValue3 As datepicker:
@@ -84,23 +84,22 @@ Form_Delete As screen:
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 StartYear: =1899
                 Tooltip: =Parent.DisplayName
-                Width: =(Parent.Width - 60) / 2
+                Width: =224
                 X: =30
-                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                Y: =50
                 ZIndex: =2
 
             HourValue3 As dropdown:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Text(Hour(Last(NuevaColeccion).FechaInicio),"00")
                 DisplayMode: =Parent.DisplayMode
-                Height: =DateValue3.Height
                 Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"]
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5
                 PaddingTop: =5
                 Tooltip: =Parent.DisplayName
-                Width: =DateValue3.Width / 2 - 10
+                Width: =77
                 X: =DateValue3.X + DateValue3.Width + 10
                 Y: =DateValue3.Y
                 ZIndex: =3
@@ -152,16 +151,6 @@ Form_Delete As screen:
                 Y: =HourValue3.Y + HourValue3.Height
                 ZIndex: =6
 
-            StarVisible7 As label:
-                Align: =Align.Center
-                Height: =DataCardKey7.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey7.Y
-                ZIndex: =7
-
         FechaTermino_DataCard2 As typedDataCard.dateTimeEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Fechatermino"
@@ -169,7 +158,7 @@ Form_Delete As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Reservas],DataSourceInfo.DisplayName,"Fechatermino")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =129
             Required: =true
             Update: =If(Not IsBlank(DateValue4.SelectedDate), DateValue4.SelectedDate + Time(Value(HourValue4.Selected.Value), Value(MinuteValue4.Selected.Value), 0))
             Width: =432
@@ -183,8 +172,8 @@ Form_Delete As screen:
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =15
+                Y: =5
                 ZIndex: =1
 
             DateValue4 As datepicker:
@@ -197,9 +186,9 @@ Form_Delete As screen:
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 StartYear: =1899
                 Tooltip: =Parent.DisplayName
-                Width: =(Parent.Width - 60) / 2
-                X: =30
-                Y: =DataCardKey8.Y + DataCardKey8.Height + 5
+                Width: =212
+                X: =15
+                Y: =51
                 ZIndex: =2
 
             HourValue4 As dropdown:
@@ -264,79 +253,4 @@ Form_Delete As screen:
                 X: =30
                 Y: =HourValue4.Y + HourValue4.Height
                 ZIndex: =6
-
-            StarVisible8 As label:
-                Align: =Align.Center
-                Height: =DataCardKey8.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey8.Y
-                ZIndex: =7
-
-        Dias_DataCard2 As typedDataCard.comboBoxMultiSelectEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Dias"
-            Default: =ThisItem.Dias
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Reservas],DataSourceInfo.DisplayName,"Dias")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue6.SelectedItems
-            Width: =432
-            X: =2
-            Y: =0
-            ZIndex: =16
-
-            DataCardKey10 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue6 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
-                Items: =Choices([@Reservas].Dias)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =Choices(Reservas.Dias,DataCardValue6.SearchText)
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey10.Y + DataCardKey10.Height + 5
-                ZIndex: =2
-
-            ErrorMessage10 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue6.Y + DataCardValue6.Height
-                ZIndex: =3
-
-            StarVisible10 As label:
-                Align: =Align.Center
-                Height: =DataCardKey10.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey10.Y
-                ZIndex: =4
 
