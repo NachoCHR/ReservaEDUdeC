@@ -157,3 +157,11 @@ Form As screen:
         Y: =273
         ZIndex: =31
 
+    Label1 As label:
+        Height: =30
+        Text: =LookUp(Choices([@Prueba].Usuario), "SEAGUILA2019@UDEC.CL" = Email, Department)
+        Width: =331
+        X: =476
+        Y: =273
+        ZIndex: =32
+
