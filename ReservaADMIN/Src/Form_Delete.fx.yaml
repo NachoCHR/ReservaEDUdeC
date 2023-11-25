@@ -20,7 +20,11 @@ Form_Delete As screen:
 
     Button1_1 As button:
         OnSelect: |
-            =RemoveIf(Reservas, ID = Last(NuevaColeccion).ID);
+            =If(
+                IsBlank(TextInput1.Text),
+                Notify("Falta rellenar el motivo", NotificationType.Error),
+                RemoveIf(Reservas, ID = Last(NuevaColeccion).ID)
+            );
         Text: ="Enviar"
         X: =605
         Y: =576
@@ -38,8 +42,8 @@ Form_Delete As screen:
         Text: |
             ="Espacio Deportivo: " & Text(Last(NuevaColeccion).EspacioDeportivo.Value)
         Width: =328
-        X: =765
-        Y: =123
+        X: =708
+        Y: =121
         ZIndex: =14
 
     Label3_3 As label:
@@ -59,4 +63,21 @@ Form_Delete As screen:
         X: =258
         Y: =294
         ZIndex: =16
+
+    TextInput1 As text:
+        Default: =""
+        Height: =108
+        HintText: =""
+        Mode: =TextMode.MultiLine
+        Width: =660
+        X: =337
+        Y: =340
+        ZIndex: =18
+
+    Label7 As label:
+        Text: |-
+            ="Motivo:"
+        X: =258
+        Y: =340
+        ZIndex: =19
 

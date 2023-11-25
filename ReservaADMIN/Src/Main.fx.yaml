@@ -87,9 +87,7 @@ Main As screen:
             Height: =47
             Icon: =Icon.ChevronRight
             OnSelect: |
-                =ResetForm(Form2);
-                EditForm(Form2);
-                Navigate(Form2);
+                =Navigate(Form_Delete);
                 ClearCollect(NuevaColeccion, Filter(Reservas, DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado))
             Width: =51
             X: =551
