@@ -31,12 +31,6 @@ Form As screen:
         Y: =333
         ZIndex: =16
 
-    DatePicker1 As datepicker:
-        Height: =50
-        X: =104
-        Y: =373
-        ZIndex: =17
-
     Dropdown1 As dropdown:
         Height: =50
         Items: |-
@@ -54,12 +48,6 @@ Form As screen:
         X: =106
         Y: =439
         ZIndex: =19
-
-    DatePicker1_1 As datepicker:
-        Height: =50
-        X: =104
-        Y: =479
-        ZIndex: =20
 
     Dropdown1_1 As dropdown:
         Height: =50
@@ -90,49 +78,75 @@ Form As screen:
         Y: =603
         ZIndex: =24
 
-    LabelEspacioDeportivo As label:
-        Height: =58
-        Text: =EspacioSeleccionado
-        Width: =464
-        X: =104
-        Y: =260
-        ZIndex: =25
-
     Button1 As button:
         OnSelect: |-
             =Patch(
                 Reservas,
                 Defaults(Reservas),
                 {
-                    
+                    Usuario: User,
+                    FechaInicio: DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value),
+                    FechaTermino: DateValue(DateValue1_1.SelectedDate) + TimeValue(Dropdown1_1.Selected.Value),
+                    EspacioDeportivo: EDeportivos,
+                    Dias: ComboBox1
                 }
-            ),
+            )
         Text: ="Reservar"
         X: =1104
         Y: =692
         ZIndex: =26
 
-    ComboBox2 As combobox:
-        DisplayFields: =["DisplayName","Email","Picture"]
-        IsSearchable: =false
-        Items: =Choices([@Reservas].Usuario)
-        SearchFields: =["DisplayName"]
-        SearchItems: =[]
-        X: =683
-        Y: =158
-        ZIndex: =27
-
-    DataCardValue6 As combobox:
-        DefaultSelectedItems: =LookUp(Reservas,Usuario.Email = User().Email)
+    User As combobox:
+        DefaultSelectedItems: =
         DisplayFields: =["DisplayName","Email","Picture"]
         Height: =37
         Items: =Choices([@Reservas].Usuario)
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
         SearchFields: =["DisplayName"]
-        SearchItems: =Choices(Reservas.Usuario,DataCardValue6.SearchText)
+        SearchItems: =Choices(Reservas.Usuario,User.SearchText)
         SelectMultiple: =false
         Template: =ListItemTemplate.Person
-        X: =683
-        Y: =247
+        X: =388
+        Y: =160
         ZIndex: =28
+
+    DateValue1 As datepicker:
+        EndYear: =Year(Today())+100
+        Height: =50
+        IsEditable: =true
+        PaddingBottom: =0
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        Size: =13
+        StartYear: =1899
+        Width: =330
+        X: =111
+        Y: =373
+        ZIndex: =29
+
+    DateValue1_1 As datepicker:
+        EndYear: =Year(Today())+100
+        Height: =50
+        IsEditable: =true
+        PaddingBottom: =0
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        Size: =13
+        StartYear: =1899
+        Width: =330
+        X: =111
+        Y: =479
+        ZIndex: =30
+
+    EDeportivos As combobox:
+        DefaultSelectedItems: =
+        DisplayFields: =["Value"]
+        Height: =47
+        Items: =Choices([@Reservas].EspacioDeportivo)
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        SearchFields: =["Value"]
+        SearchItems: =Choices(Reservas.EspacioDeportivo,EDeportivos.SearchText)
+        SelectMultiple: =false
+        Width: =337
+        X: =112
+        Y: =273
+        ZIndex: =31
 
