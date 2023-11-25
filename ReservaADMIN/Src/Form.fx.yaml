@@ -70,7 +70,7 @@ Form As screen:
         DisplayFields: =["Value"]
         Height: =50
         IsSearchable: =false
-        Items: =Choices([@Reservas].Dias)
+        Items: =Choices([@Prueba].Dias)
         SearchFields: =["Value"]
         SearchItems: =[]
         Tooltip: ="Todos los dias"
@@ -95,7 +95,8 @@ Form As screen:
                         JobTitle: "",
                         Picture: ""
                     },
-                    FechaInicio: DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value)
+                    FechaInicio: DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value),
+                    Dias: ComboBox1.SelectedItems
                 }
             )
         Text: ="Reservar"
