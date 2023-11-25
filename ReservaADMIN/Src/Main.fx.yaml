@@ -83,9 +83,11 @@ Main As screen:
             ZIndex: =5
 
         Icon3 As icon.ChevronRight:
+            DisplayMode: =If(Subtitle2.Text = "Disponible", DisplayMode.Disabled)
             Height: =47
             Icon: =Icon.ChevronRight
-            OnSelect: =Navigate(Form)
+            OnSelect: |
+                =Navigate(Form);
             Width: =51
             X: =551
             Y: =23
@@ -349,4 +351,12 @@ Main As screen:
         X: =505
         Y: =151
         ZIndex: =14
+
+    Label1 As label:
+        Height: =35
+        Text: =
+        Width: =142
+        X: =924
+        Y: =216
+        ZIndex: =15
 
