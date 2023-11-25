@@ -9,10 +9,10 @@ Form As screen:
 
     Form1 As form:
         DataSource: =Reservas
-        Height: =578
+        Height: =489
         Width: =1229
         X: =80
-        Y: =149
+        Y: =237
         ZIndex: =14
 
         Usuario_DataCard1 As typedDataCard.comboBoxEditCard:
@@ -404,10 +404,11 @@ Form As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
+                IsSearchable: =false
                 Items: =Choices([@Reservas].Dias)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices(Reservas.Dias,DataCardValue3.SearchText)
+                SearchItems: =[]
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
