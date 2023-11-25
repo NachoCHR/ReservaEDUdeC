@@ -4,26 +4,27 @@ Screen3 As screen:
         BorderStyle: =BorderStyle.Solid
         DisplayMode: =DisplayMode.Edit
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =376
+        Height: =163
         Items: |-
             =Filter(Reservas,    DateValue(FechaInicio) = DateValue(_dateSelected) && Text(EspacioSeleccionado) = EspacioDeportivo.Value
                         )
-        Width: =1285
+        Width: =1326
         X: =40
         Y: =40
         ZIndex: =1
 
         Usuario_Columna1 As dataTableColumn.textualColumn:
+            AutoWidth: =false
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Usuario"
             FieldName: ="Usuario"
             FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
+            Height: =376
             LayoutHeight: =Parent.Height
             Order: =1
             Text: =ThisItem.Usuario.DisplayName
-            Width: =100
-            X: =0
+            Width: =233
+            X: =7
             Y: =0
             ZIndex: =1
 
@@ -88,10 +89,10 @@ Screen3 As screen:
         BorderStyle: =BorderStyle.Solid
         DisplayMode: =DisplayMode.Edit
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =564
+        Height: =460
         Items: =TablaFiltrada
-        Width: =1021
-        X: =60
-        Y: =60
+        Width: =1267
+        X: =76
+        Y: =241
         ZIndex: =2
 

@@ -24,7 +24,7 @@
                 },
                 "region": {
                   "charLength": 22,
-                  "charOffset": 740,
+                  "charOffset": 745,
                   "snippet": {
                     "text": "DateValue(FechaInicio)"
                   }
@@ -64,7 +64,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 763,
+                  "charOffset": 768,
                   "snippet": {
                     "text": "="
                   }
@@ -104,7 +104,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 790,
+                  "charOffset": 795,
                   "snippet": {
                     "text": "&&"
                   }

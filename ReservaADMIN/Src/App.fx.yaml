@@ -39,7 +39,7 @@ App As appinfo:
             User().FullName
         );
         Set(EspacioSeleccionado, "Bascket");
-        Collect(
+        ClearCollect(
             TablaFiltrada,
             Filter(
                 Reservas,
