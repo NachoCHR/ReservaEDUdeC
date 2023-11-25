@@ -100,10 +100,10 @@ Form As screen:
         DefaultSelectedItems: =
         DisplayFields: =["DisplayName","Email","Picture"]
         Height: =37
-        Items: =Choices([@Reservas].Usuario)
+        IsSearchable: =false
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
         SearchFields: =["DisplayName"]
-        SearchItems: =Choices(Reservas.Usuario,User.SearchText)
+        SearchItems: =[]
         SelectMultiple: =false
         Template: =ListItemTemplate.Person
         X: =388

@@ -67,6 +67,28 @@
     ],
     "id": "d298d328-ed39-4ffb-aae3-490b3c25cb97"
   },
+  "ee6d38e5-d35e-4af5-b5db-5f328c418039": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://udeconce-my.sharepoint.com/personal/jchavarria2018_udec_cl": {
+        "dataSources": {
+          "Prueba": {
+            "tableName": "85bb3d67-1230-4ca4-b91a-a29f8adb8f48"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Prueba"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "ee6d38e5-d35e-4af5-b5db-5f328c418039"
+  },
   "ffeb0f8c-310f-44b7-9e26-769efdd5ee95": {
     "appActions": [
       "providers/PowerPlatform.Governance/Operations/Read"
