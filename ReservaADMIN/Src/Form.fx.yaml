@@ -189,7 +189,7 @@ Form As screen:
         Height: =41
         Size: =14
         Text: |-
-            ="Fecha deInicio:"
+            ="Fecha de inicio:"
         Width: =305
         X: =104
         Y: =430
@@ -213,7 +213,7 @@ Form As screen:
         Height: =41
         Size: =14
         Text: |-
-            ="Espacio Deportivo:"
+            ="Fecha de termino:"
         Width: =305
         X: =104
         Y: =562
