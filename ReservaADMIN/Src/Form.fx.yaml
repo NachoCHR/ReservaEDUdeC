@@ -225,7 +225,7 @@ Form As screen:
         Height: =41
         Size: =14
         Text: |-
-            ="Hora Inicio:"
+            ="Hora Termino:"
         Width: =119
         X: =449
         Y: =566
