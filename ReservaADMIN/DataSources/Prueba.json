@@ -32,6 +32,8 @@
       "Dias@odata.type": "Dias (Dias@odata.type)",
       "Editor": "Modificado por",
       "Editor#Claims": "Modificado por Claims",
+      "EspacioDeportivo": "EspacioDeportivo",
+      "EspacioDeportivo#Id": "EspacioDeportivo Id",
       "FechaInicio": "FechaInicio",
       "ID": "ID",
       "Modified": "Modificado",

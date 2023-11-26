@@ -81,8 +81,8 @@ Form As screen:
     Button1 As button:
         OnSelect: |-
             =Patch(
-                Prueba,
-                Defaults(Prueba),
+                Reservas,
+                Defaults(Reservas),
                 {
                     Usuario: {
                         Claims: Concatenate(
@@ -96,7 +96,10 @@ Form As screen:
                         Picture: ""
                     },
                     FechaInicio: DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value),
+                    FechaTermino: DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value),
+                    EspacioDeportivo:EDeportivos.Selected,
                     Dias: ComboBox1.SelectedItems
+                    
                 }
             )
         Text: ="Reservar"
@@ -134,10 +137,11 @@ Form As screen:
         DefaultSelectedItems: =
         DisplayFields: =["Value"]
         Height: =47
+        IsSearchable: =false
         Items: =Choices([@Prueba].EspacioDeportivo)
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
         SearchFields: =["Value"]
-        SearchItems: =Choices(Reservas.EspacioDeportivo,EDeportivos.SearchText)
+        SearchItems: =[]
         SelectMultiple: =false
         Width: =337
         X: =112
@@ -146,7 +150,9 @@ Form As screen:
 
     Label1 As label:
         Height: =30
-        Text: =LookUp(Choices([@Prueba].Usuario), "SEAGUILA2019@UDEC.CL" = Email, Department)
+        Text: |+
+            =//LookUp(Choices([@Prueba].Usuario); "SEAGUILA2019@UDEC.CL" = Email; Department)
+            
         Width: =331
         X: =672
         Y: =203
