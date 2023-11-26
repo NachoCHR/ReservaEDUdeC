@@ -70,7 +70,7 @@ Form As screen:
         DisplayFields: =["Value"]
         Height: =50
         IsSearchable: =false
-        Items: =Choices([@Prueba].Dias)
+        Items: =Choices([@Reservas].Dias)
         SearchFields: =["Value"]
         SearchItems: =[]
         Tooltip: ="Todos los dias"
@@ -138,7 +138,7 @@ Form As screen:
         DisplayFields: =["Value"]
         Height: =47
         IsSearchable: =false
-        Items: =Choices([@Prueba].EspacioDeportivo)
+        Items: =Choices([@Reservas].EspacioDeportivo)
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
         SearchFields: =["Value"]
         SearchItems: =[]
