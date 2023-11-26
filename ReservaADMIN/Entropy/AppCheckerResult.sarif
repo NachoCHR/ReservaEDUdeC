@@ -454,12 +454,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Main.GalaeriaFechas.Label12.Text"
+                  "fullyQualifiedName": "Main.GalaeriaFechas.LabelUserReserva.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Main.GalaeriaFechas.Label12.Text",
+                  "fullyQualifiedName": "Main.GalaeriaFechas.LabelUserReserva.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -473,7 +473,7 @@
               "properties": {
                 "member": "Text",
                 "module": "Main",
-                "type": "Main.GalaeriaFechas.Label12"
+                "type": "Main.GalaeriaFechas.LabelUserReserva"
               }
             }
           ],
@@ -494,12 +494,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Main.GalaeriaFechas.Label12.Text"
+                  "fullyQualifiedName": "Main.GalaeriaFechas.LabelUserReserva.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Main.GalaeriaFechas.Label12.Text",
+                  "fullyQualifiedName": "Main.GalaeriaFechas.LabelUserReserva.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -513,7 +513,7 @@
               "properties": {
                 "member": "Text",
                 "module": "Main",
-                "type": "Main.GalaeriaFechas.Label12"
+                "type": "Main.GalaeriaFechas.LabelUserReserva"
               }
             }
           ],
@@ -534,12 +534,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Main.GalaeriaFechas.Label12.Text"
+                  "fullyQualifiedName": "Main.GalaeriaFechas.LabelUserReserva.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Main.GalaeriaFechas.Label12.Text",
+                  "fullyQualifiedName": "Main.GalaeriaFechas.LabelUserReserva.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -553,7 +553,7 @@
               "properties": {
                 "member": "Text",
                 "module": "Main",
-                "type": "Main.GalaeriaFechas.Label12"
+                "type": "Main.GalaeriaFechas.LabelUserReserva"
               }
             }
           ],
@@ -574,12 +574,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Main.GalaeriaFechas.Label12.Text"
+                  "fullyQualifiedName": "Main.GalaeriaFechas.LabelUserReserva.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Main.GalaeriaFechas.Label12.Text",
+                  "fullyQualifiedName": "Main.GalaeriaFechas.LabelUserReserva.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -593,7 +593,7 @@
               "properties": {
                 "member": "Text",
                 "module": "Main",
-                "type": "Main.GalaeriaFechas.Label12"
+                "type": "Main.GalaeriaFechas.LabelUserReserva"
               }
             }
           ],
@@ -614,12 +614,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Main.GalaeriaFechas.Label12.Text"
+                  "fullyQualifiedName": "Main.GalaeriaFechas.LabelUserReserva.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Main.GalaeriaFechas.Label12.Text",
+                  "fullyQualifiedName": "Main.GalaeriaFechas.LabelUserReserva.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -633,7 +633,7 @@
               "properties": {
                 "member": "Text",
                 "module": "Main",
-                "type": "Main.GalaeriaFechas.Label12"
+                "type": "Main.GalaeriaFechas.LabelUserReserva"
               }
             }
           ],
@@ -654,12 +654,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Main.GalaeriaFechas.Label12.Text"
+                  "fullyQualifiedName": "Main.GalaeriaFechas.LabelUserReserva.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Main.GalaeriaFechas.Label12.Text",
+                  "fullyQualifiedName": "Main.GalaeriaFechas.LabelUserReserva.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -673,7 +673,7 @@
               "properties": {
                 "member": "Text",
                 "module": "Main",
-                "type": "Main.GalaeriaFechas.Label12"
+                "type": "Main.GalaeriaFechas.LabelUserReserva"
               }
             }
           ],
@@ -694,12 +694,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Main.GalaeriaFechas.Label12.Text"
+                  "fullyQualifiedName": "Main.GalaeriaFechas.LabelUserReserva.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Main.GalaeriaFechas.Label12.Text",
+                  "fullyQualifiedName": "Main.GalaeriaFechas.LabelUserReserva.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -713,7 +713,7 @@
               "properties": {
                 "member": "Text",
                 "module": "Main",
-                "type": "Main.GalaeriaFechas.Label12"
+                "type": "Main.GalaeriaFechas.LabelUserReserva"
               }
             }
           ],
@@ -734,12 +734,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Main.GalaeriaFechas.Label12.Text"
+                  "fullyQualifiedName": "Main.GalaeriaFechas.LabelUserReserva.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Main.GalaeriaFechas.Label12.Text",
+                  "fullyQualifiedName": "Main.GalaeriaFechas.LabelUserReserva.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -753,7 +753,7 @@
               "properties": {
                 "member": "Text",
                 "module": "Main",
-                "type": "Main.GalaeriaFechas.Label12"
+                "type": "Main.GalaeriaFechas.LabelUserReserva"
               }
             }
           ],
@@ -1308,6 +1308,66 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Main.GalaeriaFechas.Rectangle3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Main.GalaeriaFechas.Rectangle3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Main",
+                "type": "Main.GalaeriaFechas.Rectangle3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Main.GalaeriaFechas.Rectangle3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Main.GalaeriaFechas.Rectangle3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Main",
+                "type": "Main.GalaeriaFechas.Rectangle3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
         },
         {
           "locations": [

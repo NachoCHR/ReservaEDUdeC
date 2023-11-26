@@ -9,6 +9,8 @@ Main As screen:
         Set(_calendarVisible,true)
 
     "GalaeriaFechas As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+        BorderColor: =RGBA(0, 134, 208, 1)
+        BorderThickness: =1
         DelayItemLoading: =true
         Items: =HorasDisponibles
         Layout: =Layout.Vertical
@@ -80,8 +82,7 @@ Main As screen:
 
         Rectangle3 As rectangle:
             Height: =Parent.TemplateHeight - Separator4.Height
-            OnSelect: =
-            Visible: =ThisItem.IsSelected
+            Visible: =false
             Width: =4
             ZIndex: =5
 
@@ -97,16 +98,22 @@ Main As screen:
             Y: =23
             ZIndex: =6
 
-        Icon4 As icon.Person:
+        UserIcon As icon.Person:
             Height: =31
             Icon: =Icon.Person
             OnSelect: =Select(Parent)
+            Visible: |-
+                =If(
+                    IsBlank(LabelUserReserva),
+                    false,
+                    true
+                )
             Width: =25
             X: =16
             Y: =61
             ZIndex: =7
 
-        Label12 As label:
+        LabelUserReserva As label:
             Height: =34
             OnSelect: =Select(Parent)
             Text: |-
@@ -367,4 +374,12 @@ Main As screen:
         X: =505
         Y: =151
         ZIndex: =14
+
+    Rectangle1 As rectangle:
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =36
+        Width: =637
+        X: =727
+        Y: =151
+        ZIndex: =15
 
