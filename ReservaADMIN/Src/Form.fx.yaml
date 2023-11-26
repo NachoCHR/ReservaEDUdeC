@@ -189,7 +189,7 @@ Form As screen:
         Height: =41
         Size: =14
         Text: |-
-            ="Fecha Inicio :"
+            ="Fecha deInicio:"
         Width: =305
         X: =104
         Y: =430
