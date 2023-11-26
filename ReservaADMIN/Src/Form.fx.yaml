@@ -134,7 +134,7 @@ Form As screen:
         DefaultSelectedItems: =
         DisplayFields: =["Value"]
         Height: =47
-        Items: =Choices([@Reservas].EspacioDeportivo)
+        Items: =Choices([@Prueba].EspacioDeportivo)
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
         SearchFields: =["Value"]
         SearchItems: =Choices(Reservas.EspacioDeportivo,EDeportivos.SearchText)

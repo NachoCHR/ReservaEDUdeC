@@ -774,39 +774,36 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Form.Button1.OnSelect"
+                  "fullyQualifiedName": "Form.EDeportivos.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Form.Button1.OnSelect",
+                  "fullyQualifiedName": "Form.EDeportivos.Items",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 500,
-                  "charOffset": 0,
+                  "charLength": 17,
+                  "charOffset": 17,
                   "snippet": {
-                    "text": "Patch(\n    Prueba;\n    Defaults(Prueba);\n    {\n        Usuario: {\n            Claims: Concatenate(\n                \"i:0#.f|membership|\";\n                User().Email// Person email\n            );\n            Department: \"\";\n            DisplayName: User().FullName;\n            Email: User().Email;\n            JobTitle: \"\";\n            Picture: \"\"\n        };\n        FechaInicio: DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value);\n        Dias: ComboBox1.SelectedItems\n    }\n)"
+                    "text": ".EspacioDeportivo"
                   }
                 }
               },
               "properties": {
-                "member": "OnSelect",
+                "member": "Items",
                 "module": "Form",
-                "type": "Form.Button1"
+                "type": "Form.EDeportivos"
               }
             }
           ],
           "message": {
-            "arguments": [
-              "Patch"
-            ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleId": "app-ErrInvalidName",
           "ruleIndex": 1
         },
         {
@@ -814,41 +811,39 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Form.Button1.OnSelect"
+                  "fullyQualifiedName": "Form.EDeportivos.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Form.Button1.OnSelect",
+                  "fullyQualifiedName": "Form.EDeportivos.Items",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 453,
-                  "charOffset": 45,
+                  "charLength": 35,
+                  "charOffset": 0,
                   "snippet": {
-                    "text": "{\n        Usuario: {\n            Claims: Concatenate(\n                \"i:0#.f|membership|\";\n                User().Email// Person email\n            );\n            Department: \"\";\n            DisplayName: User().FullName;\n            Email: User().Email;\n            JobTitle: \"\";\n            Picture: \"\"\n        };\n        FechaInicio: DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value);\n        Dias: ComboBox1.SelectedItems\n    }"
+                    "text": "Choices([@Prueba].EspacioDeportivo)"
                   }
                 }
               },
               "properties": {
-                "member": "OnSelect",
+                "member": "Items",
                 "module": "Form",
-                "type": "Form.Button1"
+                "type": "Form.EDeportivos"
               }
             }
           ],
           "message": {
             "arguments": [
-              "Dias",
-              "Record",
-              "Table"
+              "Choices"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrTypeError-Arg-Expected-Found",
+          "ruleId": "app-ErrInvalidArgs-Func",
           "ruleIndex": 2
         },
         {
@@ -1477,24 +1472,27 @@
               }
             },
             {
-              "id": "app-ErrInvalidArgs-Func",
+              "id": "app-ErrInvalidName",
               "messageStrings": {
                 "issue": {
-                  "text": "The function '{0}' has some invalid arguments."
+                  "text": "Name isn't valid. '{0}' isn't recognized."
                 }
               },
               "properties": {
                 "componentType": "app",
+                "howToFix": [
+                  "Remove or correct the reference to the name that isn't valid."
+                ],
                 "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
               }
             },
             {
-              "id": "app-ErrTypeError-Arg-Expected-Found",
+              "id": "app-ErrInvalidArgs-Func",
               "messageStrings": {
                 "issue": {
-                  "text": "The type of this argument '{0}' does not match the expected type '{1}'. Found type '{2}'."
+                  "text": "The function '{0}' has some invalid arguments."
                 }
               },
               "properties": {

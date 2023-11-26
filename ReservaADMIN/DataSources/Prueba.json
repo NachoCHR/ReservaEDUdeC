@@ -29,6 +29,7 @@
       "Created": "Creado",
       "Dias": "Dias",
       "Dias#Id": "Dias Id",
+      "Dias@odata.type": "Dias (Dias@odata.type)",
       "Editor": "Modificado por",
       "Editor#Claims": "Modificado por Claims",
       "FechaInicio": "FechaInicio",
