@@ -8,195 +8,6 @@ Main As screen:
         Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
         Set(_calendarVisible,true)
 
-    "GalaeriaFechas As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
-        BorderColor: =RGBA(39, 67, 125, 1)
-        BorderThickness: =1
-        DelayItemLoading: =true
-        Items: =HorasDisponibles
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        Selectable: =false
-        TemplatePadding: =0
-        TemplateSize: =103
-        X: =726
-        Y: =193
-        ZIndex: =2
-
-        Title3 As label:
-            DisplayMode: =DisplayMode.View
-            FontWeight: =
-            Height: =Self.Size * 1.8
-            OnSelect: =
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            PressedColor: =
-            Size: =15
-            Text: =ThisItem.Value
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 86
-            X: =16
-            Y: =12
-            ZIndex: =1
-
-        Subtitle2 As label:
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledColor: =RGBA(56, 96, 178, 1)
-            Fill: |-
-                =If(Subtitle2.Text = "Reservado" , RGBA(255, 0, 0, 1), 
-                    If(Subtitle2.Text = "Disponible", RGBA (15,203,0,1)
-                    )
-                )
-            Font: =Font.Arial
-            FontWeight: =
-            Height: =24
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =13
-            Text: |-
-                =    If(
-                        CountRows(
-                            Filter(
-                                Reservas,
-                                DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
-                            )
-                        ) > 0,
-                        "Reservado",
-                        "Disponible"
-                    )   
-                
-                
-                 
-            VerticalAlign: =VerticalAlign.Top
-            Width: =107
-            X: =Title3.X
-            Y: =Title3.Y + Title3.Height
-            ZIndex: =2
-
-        Separator4 As rectangle:
-            Height: =8
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - Self.Height
-            ZIndex: =4
-
-        Rectangle3 As rectangle:
-            Height: =Parent.TemplateHeight - Separator4.Height
-            Visible: =false
-            Width: =4
-            ZIndex: =5
-
-        Icon3 As icon.ChevronRight:
-            DisplayMode: =If(Subtitle2.Text = "Disponible", DisplayMode.Disabled)
-            Height: =47
-            Icon: =Icon.ChevronRight
-            OnSelect: |
-                =Navigate(Form_Delete);
-                ClearCollect(NuevaColeccion, Filter(Reservas, DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado))
-            Width: =51
-            X: =551
-            Y: =23
-            ZIndex: =6
-
-        UserIcon As icon.Person:
-            Height: =31
-            Icon: =Icon.Person
-            OnSelect: =Select(Parent)
-            Visible: |-
-                =If(
-                    IsBlank(LabelUserReserva),
-                    false,
-                    true
-                )
-            Width: =25
-            X: =16
-            Y: =61
-            ZIndex: =7
-
-        LabelUserReserva As label:
-            Height: =34
-            OnSelect: =Select(Parent)
-            Text: |-
-                =If(
-                    !IsBlank(
-                        Filter(
-                            Reservas,
-                            DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
-                        )
-                    ),
-                    Text(First(
-                        Filter(
-                            Reservas,
-                            DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
-                        )
-                    ).Usuario.DisplayName),
-                    "No ocupado"
-                )
-            Width: =492
-            X: =41
-            Y: =61
-            ZIndex: =8
-
-    Encabezado_1 As button:
-        DisplayMode: =DisplayMode.View
-        Fill: =RGBA(0, 134, 208, 1)
-        Height: =50
-        RadiusBottomLeft: =40
-        RadiusBottomRight: =40
-        RadiusTopLeft: =40
-        RadiusTopRight: =40
-        Text: ="Reservas espacios deportivos APP"
-        Width: =1356
-        X: =7
-        Y: =4
-        ZIndex: =7
-
-    Icon1_1 As icon.Calendar:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =34
-        Icon: =Icon.AddToCalendar
-        Width: =28
-        X: =489
-        Y: =12
-        ZIndex: =10
-
-    Rectangle1 As rectangle:
-        Fill: =RGBA(0, 134, 208, 1)
-        Height: =36
-        Width: =637
-        X: =726
-        Y: =159
-        ZIndex: =11
-
-    Label11 As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        FontWeight: =FontWeight.Bold
-        Height: =34
-        Text: =_dateSelected
-        Width: =637
-        X: =726
-        Y: =159
-        ZIndex: =12
-
-    Button2 As button:
-        Fill: =RGBA(0, 134, 208, 1)
-        Height: =41
-        OnSelect: =
-        RadiusBottomLeft: =50
-        RadiusBottomRight: =50
-        RadiusTopLeft: =50
-        RadiusTopRight: =50
-        Text: ="Reserva"
-        Width: =191
-        X: =1172
-        Y: =66
-        ZIndex: =13
-
     Calendario As group:
         Height: =5
         Width: =5
@@ -400,12 +211,221 @@ Main As screen:
             Y: =118
             ZIndex: =9
 
-    Icon5 As icon.Add:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =52
-        Icon: =Icon.Add
-        Width: =35
-        X: =1185
-        Y: =60
-        ZIndex: =14
+    Rectangle2 As rectangle:
+        Fill: =
+        Height: =768
+        Width: =1366
+        ZIndex: =15
+
+    Encabezado As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =15
+
+        Encabezado_1 As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(0, 134, 208, 1)
+            Height: =50
+            RadiusBottomLeft: =40
+            RadiusBottomRight: =40
+            RadiusTopLeft: =40
+            RadiusTopRight: =40
+            Text: ="Reservas espacios deportivos APP"
+            Width: =1356
+            X: =7
+            Y: =4
+            ZIndex: =7
+
+        Icon1_1 As icon.Calendar:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =34
+            Icon: =Icon.AddToCalendar
+            Width: =28
+            X: =489
+            Y: =12
+            ZIndex: =10
+
+    ButtonReserva As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =15
+
+        Button2 As button:
+            Fill: =RGBA(0, 134, 208, 1)
+            Height: =41
+            OnSelect: =
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Text: ="Reserva"
+            Width: =191
+            X: =1172
+            Y: =66
+            ZIndex: =13
+
+        Icon5 As icon.Add:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =28
+            Icon: =Icon.Add
+            Width: =28
+            X: =1196
+            Y: =72
+            ZIndex: =14
+
+    GaleriaFechas As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =15
+
+        "GalaeriaFechas As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+            BorderColor: =RGBA(39, 67, 125, 1)
+            BorderThickness: =1
+            DelayItemLoading: =true
+            Items: =HorasDisponibles
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            Selectable: =false
+            TemplatePadding: =0
+            TemplateSize: =103
+            X: =726
+            Y: =193
+            ZIndex: =2
+
+            Title3 As label:
+                DisplayMode: =DisplayMode.View
+                FontWeight: =
+                Height: =Self.Size * 1.8
+                OnSelect: =
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedColor: =
+                Size: =15
+                Text: =ThisItem.Value
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Parent.TemplateWidth - 86
+                X: =16
+                Y: =12
+                ZIndex: =1
+
+            Subtitle2 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(56, 96, 178, 1)
+                Fill: |-
+                    =If(Subtitle2.Text = "Reservado" , RGBA(255, 0, 0, 1), 
+                        If(Subtitle2.Text = "Disponible", RGBA (15,203,0,1)
+                        )
+                    )
+                Font: =Font.Arial
+                FontWeight: =
+                Height: =24
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =13
+                Text: |-
+                    =    If(
+                            CountRows(
+                                Filter(
+                                    Reservas,
+                                    DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
+                                )
+                            ) > 0,
+                            "Reservado",
+                            "Disponible"
+                        )   
+                    
+                    
+                     
+                VerticalAlign: =VerticalAlign.Top
+                Width: =107
+                X: =Title3.X
+                Y: =Title3.Y + Title3.Height
+                ZIndex: =2
+
+            Separator4 As rectangle:
+                Height: =8
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - Self.Height
+                ZIndex: =4
+
+            Rectangle3 As rectangle:
+                Height: =Parent.TemplateHeight - Separator4.Height
+                Visible: =false
+                Width: =4
+                ZIndex: =5
+
+            Icon3 As icon.ChevronRight:
+                DisplayMode: =If(Subtitle2.Text = "Disponible", DisplayMode.Disabled)
+                Height: =47
+                Icon: =Icon.ChevronRight
+                OnSelect: |
+                    =Navigate(Form_Delete);
+                    ClearCollect(NuevaColeccion, Filter(Reservas, DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado))
+                Width: =51
+                X: =551
+                Y: =23
+                ZIndex: =6
+
+            UserIcon As icon.Person:
+                Height: =31
+                Icon: =Icon.Person
+                OnSelect: =Select(Parent)
+                Visible: |-
+                    =If(
+                        IsBlank(LabelUserReserva),
+                        false,
+                        true
+                    )
+                Width: =25
+                X: =16
+                Y: =61
+                ZIndex: =7
+
+            LabelUserReserva As label:
+                Height: =34
+                OnSelect: =Select(Parent)
+                Text: |-
+                    =If(
+                        !IsBlank(
+                            Filter(
+                                Reservas,
+                                DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
+                            )
+                        ),
+                        Text(First(
+                            Filter(
+                                Reservas,
+                                DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
+                            )
+                        ).Usuario.DisplayName),
+                        "No ocupado"
+                    )
+                Width: =492
+                X: =41
+                Y: =61
+                ZIndex: =8
+
+        Label11 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 134, 208, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =34
+            Text: =_dateSelected
+            Width: =637
+            X: =726
+            Y: =159
+            ZIndex: =12
 
