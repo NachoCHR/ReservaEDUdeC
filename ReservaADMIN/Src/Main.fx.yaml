@@ -48,7 +48,7 @@ Main As screen:
                     If(Subtitle2.Text = "Disponible", RGBA (15,203,0,1)
                     )
                 )
-            Font: =Font.Verdana
+            Font: =Font.Arial
             FontWeight: =
             Height: =24
             OnSelect: =Select(Parent)
@@ -170,7 +170,7 @@ Main As screen:
         Width: =637
         X: =726
         Y: =159
-        ZIndex: =12
+        ZIndex: =11
 
     Label11 As label:
         Align: =Align.Center
@@ -181,6 +181,20 @@ Main As screen:
         Width: =637
         X: =726
         Y: =159
+        ZIndex: =12
+
+    Button2 As button:
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =41
+        OnSelect: =
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Text: ="Reserva"
+        Width: =191
+        X: =1172
+        Y: =66
         ZIndex: =13
 
     Calendario As group:
@@ -385,4 +399,13 @@ Main As screen:
             X: =157
             Y: =118
             ZIndex: =9
+
+    Icon5 As icon.Add:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =52
+        Icon: =Icon.Add
+        Width: =35
+        X: =1185
+        Y: =60
+        ZIndex: =14
 
