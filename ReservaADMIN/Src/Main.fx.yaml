@@ -13,6 +13,7 @@ Main As screen:
         Items: =HorasDisponibles
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
+        Selectable: =false
         TemplatePadding: =0
         TemplateSize: =103
         X: =726
@@ -27,7 +28,7 @@ Main As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Size: =16
+            Size: =15
             Text: =ThisItem.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 86
@@ -79,7 +80,7 @@ Main As screen:
 
         Rectangle3 As rectangle:
             Height: =Parent.TemplateHeight - Separator4.Height
-            OnSelect: =Select(Parent)
+            OnSelect: =
             Visible: =ThisItem.IsSelected
             Width: =4
             ZIndex: =5
