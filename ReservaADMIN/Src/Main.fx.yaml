@@ -176,6 +176,12 @@ Main As screen:
             ZIndex: =1
 
         iconPrevMonth1_2 As icon.ChevronLeft:
+            DisplayMode: |-
+                =If(
+                    _firstDayOfMonth > Today(),
+                    DisplayMode.Edit,
+                    DisplayMode.Disabled
+                )
             Height: =50
             Icon: =Icon.BackArrow
             OnSelect: |-
@@ -193,13 +199,19 @@ Main As screen:
             Tooltip: ="Ver el mes anterior"
             Visible: |-
                 =//_calendarVisible;;
-                _firstDayOfMonth > Today()
+                true
             Width: =57
             X: =136
             Y: =229
             ZIndex: =2
 
         iconNextMonth1_2 As icon.ChevronRight:
+            DisplayMode: |-
+                =If(
+                    Text(_firstDayOfMonth, "mmmm") = "diciembre",
+                    DisplayMode.Disabled,
+                    DisplayMode.Edit
+                )
             Height: =50
             Icon: =Icon.NextArrow
             OnSelect: |-

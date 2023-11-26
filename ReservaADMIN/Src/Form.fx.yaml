@@ -3,8 +3,8 @@ Form As screen:
     Icon2 As icon.ChevronLeft:
         Icon: =Icon.ChevronLeft
         OnSelect: =Navigate(Main)
-        X: =40
-        Y: =40
+        X: =42
+        Y: =103
         ZIndex: =13
 
     LabelUsuario As label:
@@ -12,7 +12,7 @@ Form As screen:
         Text: =User().Email
         Width: =305
         X: =106
-        Y: =151
+        Y: =203
         ZIndex: =14
 
     Label2 As label:
@@ -20,7 +20,7 @@ Form As screen:
         Text: =User().FullName
         Width: =326
         X: =104
-        Y: =206
+        Y: =258
         ZIndex: =15
 
     Label3 As label:
@@ -28,7 +28,7 @@ Form As screen:
         Text: |-
             ="Fecha de Inicio:"
         X: =106
-        Y: =333
+        Y: =385
         ZIndex: =16
 
     Dropdown1 As dropdown:
@@ -37,7 +37,7 @@ Form As screen:
             =["08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00"]
         Width: =119
         X: =449
-        Y: =373
+        Y: =425
         ZIndex: =18
 
     Label3_2 As label:
@@ -46,7 +46,7 @@ Form As screen:
             ="Fecha de Termino:"
         Width: =178
         X: =106
-        Y: =439
+        Y: =491
         ZIndex: =19
 
     Dropdown1_1 As dropdown:
@@ -55,7 +55,7 @@ Form As screen:
             =["08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00"]
         Width: =119
         X: =449
-        Y: =479
+        Y: =531
         ZIndex: =21
 
     Label4 As label:
@@ -63,7 +63,7 @@ Form As screen:
         Text: |-
             ="Dias a repetir:"
         X: =106
-        Y: =548
+        Y: =600
         ZIndex: =23
 
     ComboBox1 As combobox:
@@ -75,7 +75,7 @@ Form As screen:
         SearchItems: =[]
         Tooltip: ="Todos los dias"
         X: =106
-        Y: =603
+        Y: =655
         ZIndex: =24
 
     Button1 As button:
@@ -117,7 +117,7 @@ Form As screen:
         StartYear: =1899
         Width: =330
         X: =111
-        Y: =373
+        Y: =425
         ZIndex: =29
 
     DateValue1_1 As datepicker:
@@ -130,7 +130,7 @@ Form As screen:
         StartYear: =1899
         Width: =330
         X: =111
-        Y: =479
+        Y: =531
         ZIndex: =30
 
     EDeportivos As combobox:
@@ -145,7 +145,7 @@ Form As screen:
         SelectMultiple: =false
         Width: =337
         X: =112
-        Y: =273
+        Y: =325
         ZIndex: =31
 
     Label1 As label:
@@ -157,4 +157,18 @@ Form As screen:
         X: =672
         Y: =203
         ZIndex: =32
+
+    Encabezado_2 As button:
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =50
+        RadiusBottomLeft: =40
+        RadiusBottomRight: =40
+        RadiusTopLeft: =40
+        RadiusTopRight: =40
+        Text: ="Agregar reserva"
+        Width: =1356
+        X: =7
+        Y: =4
+        ZIndex: =33
 
