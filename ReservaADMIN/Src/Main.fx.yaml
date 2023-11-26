@@ -9,7 +9,7 @@ Main As screen:
         Set(_calendarVisible,true)
 
     "GalaeriaFechas As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
-        BorderColor: =RGBA(0, 134, 208, 1)
+        BorderColor: =RGBA(39, 67, 125, 1)
         BorderThickness: =1
         DelayItemLoading: =true
         Items: =HorasDisponibles
