@@ -32,9 +32,10 @@ Form_Delete As screen:
             );
             
             
-        Text: ="Enviar"
-        X: =605
-        Y: =576
+        Text: ="Cancelar reserva"
+        Width: =232
+        X: =551
+        Y: =596
         ZIndex: =7
 
     Icon2_1 As icon.ChevronLeft:
