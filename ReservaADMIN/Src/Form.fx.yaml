@@ -13,26 +13,26 @@ Form As screen:
         Height: =54
         Text: =User().FullName
         Width: =326
-        X: =449
-        Y: =150
+        X: =803
+        Y: =657
         ZIndex: =2
 
     Dropdown1 As dropdown:
         Height: =50
         Items: |-
             =["08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00"]
-        Width: =119
-        X: =449
-        Y: =472
+        Width: =147
+        X: =855
+        Y: =199
         ZIndex: =4
 
     Dropdown1_1 As dropdown:
         Height: =50
         Items: |-
             =["08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00"]
-        Width: =119
-        X: =449
-        Y: =607
+        Width: =147
+        X: =855
+        Y: =334
         ZIndex: =6
 
     ComboBox1 As combobox:
@@ -43,8 +43,9 @@ Form As screen:
         SearchFields: =["Value"]
         SearchItems: =[]
         Tooltip: ="Todos los dias"
-        X: =796
-        Y: =480
+        Width: =305
+        X: =104
+        Y: =489
         ZIndex: =8
 
     Button1 As button:
@@ -85,8 +86,8 @@ Form As screen:
         Size: =13
         StartYear: =1899
         Width: =304
-        X: =105
-        Y: =471
+        X: =511
+        Y: =198
         ZIndex: =10
 
     DateValue1_1 As datepicker:
@@ -98,8 +99,8 @@ Form As screen:
         Size: =13
         StartYear: =1899
         Width: =304
-        X: =105
-        Y: =603
+        X: =511
+        Y: =330
         ZIndex: =11
 
     EDeportivos As combobox:
@@ -116,16 +117,6 @@ Form As screen:
         X: =104
         Y: =334
         ZIndex: =12
-
-    Label1 As label:
-        Height: =30
-        Text: |+
-            =//LookUp(Choices([@Prueba].Usuario); "SEAGUILA2019@UDEC.CL" = Email; Department)
-            
-        Width: =331
-        X: =664
-        Y: =483
-        ZIndex: =13
 
     Encabezado_2 As button:
         DisplayMode: =DisplayMode.View
@@ -191,8 +182,8 @@ Form As screen:
         Text: |-
             ="Fecha de inicio:"
         Width: =305
-        X: =104
-        Y: =430
+        X: =510
+        Y: =157
         ZIndex: =20
 
     Label5_3 As label:
@@ -202,9 +193,9 @@ Form As screen:
         Size: =14
         Text: |-
             ="Hora Inicio:"
-        Width: =119
-        X: =449
-        Y: =430
+        Width: =147
+        X: =855
+        Y: =157
         ZIndex: =21
 
     Label5_4 As label:
@@ -215,8 +206,8 @@ Form As screen:
         Text: |-
             ="Fecha de termino:"
         Width: =305
-        X: =104
-        Y: =562
+        X: =510
+        Y: =289
         ZIndex: =22
 
     Label5_5 As label:
@@ -226,9 +217,9 @@ Form As screen:
         Size: =14
         Text: |-
             ="Hora Termino:"
-        Width: =119
-        X: =449
-        Y: =566
+        Width: =147
+        X: =855
+        Y: =293
         ZIndex: =23
 
     Label5_6 As label:
@@ -237,9 +228,9 @@ Form As screen:
         Height: =41
         Size: =14
         Text: |-
-            ="Espacio Deportivo:"
+            ="Días a repetir:"
         Width: =305
-        X: =796
-        Y: =439
+        X: =104
+        Y: =448
         ZIndex: =24
 
