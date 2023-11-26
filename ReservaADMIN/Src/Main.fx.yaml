@@ -211,12 +211,6 @@ Main As screen:
             Y: =118
             ZIndex: =9
 
-    Rectangle2 As rectangle:
-        Fill: =
-        Height: =768
-        Width: =1366
-        ZIndex: =15
-
     Encabezado As group:
         Height: =5
         Width: =5
@@ -257,7 +251,7 @@ Main As screen:
         Button2 As button:
             Fill: =RGBA(0, 134, 208, 1)
             Height: =41
-            OnSelect: =
+            OnSelect: =Navigate(Form)
             RadiusBottomLeft: =50
             RadiusBottomRight: =50
             RadiusTopLeft: =50
@@ -272,6 +266,7 @@ Main As screen:
             Color: =RGBA(255, 255, 255, 1)
             Height: =28
             Icon: =Icon.Add
+            OnSelect: =Navigate(Form)
             Width: =28
             X: =1196
             Y: =72
