@@ -130,6 +130,7 @@ Main As screen:
                             DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
                         )
                     ).Usuario.DisplayName),
+                    "No ocupado"
                 )
             Width: =492
             X: =41
