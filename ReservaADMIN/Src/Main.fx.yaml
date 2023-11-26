@@ -20,7 +20,7 @@ Main As screen:
         TemplateSize: =103
         X: =726
         Y: =193
-        ZIndex: =1
+        ZIndex: =2
 
         Title3 As label:
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
@@ -130,7 +130,6 @@ Main As screen:
                             DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
                         )
                     ).Usuario.DisplayName),
-                    "No Ocupado"
                 )
             Width: =492
             X: =41
@@ -149,7 +148,7 @@ Main As screen:
         Width: =1356
         X: =7
         Y: =4
-        ZIndex: =6
+        ZIndex: =7
 
     Icon1_1 As icon.Calendar:
         Color: =RGBA(255, 255, 255, 1)
@@ -158,12 +157,25 @@ Main As screen:
         Width: =28
         X: =489
         Y: =12
-        ZIndex: =9
+        ZIndex: =10
 
-    Label10 As label:
-        Text: =EspacioSeleccionado
-        X: =489
-        Y: =82
+    Rectangle1 As rectangle:
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =36
+        Width: =637
+        X: =726
+        Y: =159
+        ZIndex: =12
+
+    Label11 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =34
+        Text: =_dateSelected
+        Width: =637
+        X: =726
+        Y: =159
         ZIndex: =13
 
     Calendario As group:
@@ -213,7 +225,7 @@ Main As screen:
             Width: =57
             X: =136
             Y: =229
-            ZIndex: =2
+            ZIndex: =3
 
         iconNextMonth1_2 As icon.ChevronRight:
             DisplayMode: |-
@@ -242,7 +254,7 @@ Main As screen:
             Width: =57
             X: =463
             Y: =229
-            ZIndex: =3
+            ZIndex: =4
 
         WeekdayGallery1_2 As gallery.WeekdayGallery:
             AccessibleLabel: ="Días de la semana"
@@ -257,7 +269,7 @@ Main As screen:
             Width: =703
             X: =7
             Y: =297
-            ZIndex: =4
+            ZIndex: =5
 
             Title1_2 As label:
                 Align: =Align.Center
@@ -285,7 +297,7 @@ Main As screen:
             WrapCount: =7
             X: =7
             Y: =339
-            ZIndex: =5
+            ZIndex: =6
 
             Subcircle1_2 As circle:
                 Height: =3 * Title2_7.Size
@@ -356,7 +368,7 @@ Main As screen:
             OnSelect: =
             X: =161
             Y: =159
-            ZIndex: =7
+            ZIndex: =8
 
         Label1_1 As label:
             Align: =Align.Center
@@ -367,19 +379,5 @@ Main As screen:
             Width: =332
             X: =157
             Y: =118
-            ZIndex: =8
-
-    Label11 As label:
-        Text: =_dateSelected
-        X: =505
-        Y: =151
-        ZIndex: =14
-
-    Rectangle1 As rectangle:
-        Fill: =RGBA(0, 134, 208, 1)
-        Height: =36
-        Width: =637
-        X: =727
-        Y: =151
-        ZIndex: =15
+            ZIndex: =9
 
