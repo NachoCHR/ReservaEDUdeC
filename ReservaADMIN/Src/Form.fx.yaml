@@ -1,35 +1,21 @@
 Form As screen:
 
-    Icon2 As icon.ChevronLeft:
-        Icon: =Icon.ChevronLeft
-        OnSelect: =Navigate(Main)
-        X: =42
-        Y: =103
-        ZIndex: =13
-
     LabelUsuario As label:
+        BorderThickness: =2
         Height: =55
         Text: =User().Email
         Width: =305
-        X: =106
-        Y: =203
-        ZIndex: =14
+        X: =104
+        Y: =197
+        ZIndex: =1
 
     Label2 As label:
         Height: =54
         Text: =User().FullName
         Width: =326
-        X: =104
-        Y: =258
-        ZIndex: =15
-
-    Label3 As label:
-        Height: =50
-        Text: |-
-            ="Fecha de Inicio:"
-        X: =106
-        Y: =385
-        ZIndex: =16
+        X: =449
+        Y: =150
+        ZIndex: =2
 
     Dropdown1 As dropdown:
         Height: =50
@@ -37,17 +23,8 @@ Form As screen:
             =["08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00"]
         Width: =119
         X: =449
-        Y: =425
-        ZIndex: =18
-
-    Label3_2 As label:
-        Height: =50
-        Text: |-
-            ="Fecha de Termino:"
-        Width: =178
-        X: =106
-        Y: =491
-        ZIndex: =19
+        Y: =472
+        ZIndex: =4
 
     Dropdown1_1 As dropdown:
         Height: =50
@@ -55,16 +32,8 @@ Form As screen:
             =["08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00"]
         Width: =119
         X: =449
-        Y: =531
-        ZIndex: =21
-
-    Label4 As label:
-        Height: =50
-        Text: |-
-            ="Dias a repetir:"
-        X: =106
-        Y: =600
-        ZIndex: =23
+        Y: =607
+        ZIndex: =6
 
     ComboBox1 As combobox:
         DisplayFields: =["Value"]
@@ -74,9 +43,9 @@ Form As screen:
         SearchFields: =["Value"]
         SearchItems: =[]
         Tooltip: ="Todos los dias"
-        X: =106
-        Y: =655
-        ZIndex: =24
+        X: =796
+        Y: =480
+        ZIndex: =8
 
     Button1 As button:
         OnSelect: |-
@@ -97,7 +66,7 @@ Form As screen:
                     },
                     FechaInicio: DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value),
                     FechaTermino: DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value),
-                    EspacioDeportivo:EDeportivos.Selected,
+                    EspacioDeportivo: EDeportivos.Selected,
                     Dias: ComboBox1.SelectedItems
                     
                 }
@@ -105,20 +74,20 @@ Form As screen:
         Text: ="Reservar"
         X: =1104
         Y: =692
-        ZIndex: =26
+        ZIndex: =9
 
     DateValue1 As datepicker:
         EndYear: =Year(Today())+100
-        Height: =50
+        Height: =53
         IsEditable: =true
         PaddingBottom: =0
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
         Size: =13
         StartYear: =1899
-        Width: =330
-        X: =111
-        Y: =425
-        ZIndex: =29
+        Width: =304
+        X: =105
+        Y: =471
+        ZIndex: =10
 
     DateValue1_1 As datepicker:
         EndYear: =Year(Today())+100
@@ -128,25 +97,25 @@ Form As screen:
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
         Size: =13
         StartYear: =1899
-        Width: =330
-        X: =111
-        Y: =531
-        ZIndex: =30
+        Width: =304
+        X: =105
+        Y: =603
+        ZIndex: =11
 
     EDeportivos As combobox:
         DefaultSelectedItems: =
         DisplayFields: =["Value"]
-        Height: =47
+        Height: =48
         IsSearchable: =false
         Items: =Choices([@Reservas].EspacioDeportivo)
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
         SearchFields: =["Value"]
         SearchItems: =[]
         SelectMultiple: =false
-        Width: =337
-        X: =112
-        Y: =325
-        ZIndex: =31
+        Width: =305
+        X: =104
+        Y: =334
+        ZIndex: =12
 
     Label1 As label:
         Height: =30
@@ -154,9 +123,9 @@ Form As screen:
             =//LookUp(Choices([@Prueba].Usuario); "SEAGUILA2019@UDEC.CL" = Email; Department)
             
         Width: =331
-        X: =672
-        Y: =203
-        ZIndex: =32
+        X: =664
+        Y: =483
+        ZIndex: =13
 
     Encabezado_2 As button:
         DisplayMode: =DisplayMode.View
@@ -170,11 +139,107 @@ Form As screen:
         Width: =1356
         X: =7
         Y: =4
-        ZIndex: =33
+        ZIndex: =14
 
-    Icon1 As icon.Calendar:
-        Icon: =Icon.AddToCalendar
-        X: =40
-        Y: =40
-        ZIndex: =34
+    Icon2 As icon.ChevronLeft:
+        Height: =49
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Navigate(Main)
+        Width: =40
+        X: =35
+        Y: =4
+        ZIndex: =16
+
+    Icon6 As icon.Add:
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(255, 255, 255, 1)
+        Height: =41
+        Icon: =Icon.Add
+        Width: =40
+        X: =556
+        Y: =8
+        ZIndex: =17
+
+    Label5 As label:
+        Fill: =RGBA(0, 134, 208, 1)
+        Font: =Font.'Lato Black'
+        Size: =14
+        Text: |-
+            ="Reservado por:"
+        Width: =305
+        X: =104
+        Y: =157
+        ZIndex: =18
+
+    Label5_1 As label:
+        Fill: =RGBA(0, 134, 208, 1)
+        Font: =Font.'Lato Black'
+        Height: =41
+        Size: =14
+        Text: |-
+            ="Espacio Deportivo:"
+        Width: =305
+        X: =104
+        Y: =293
+        ZIndex: =19
+
+    Label5_2 As label:
+        Fill: =RGBA(0, 134, 208, 1)
+        Font: =Font.'Lato Black'
+        Height: =41
+        Size: =14
+        Text: |-
+            ="Fecha Inicio :"
+        Width: =305
+        X: =104
+        Y: =430
+        ZIndex: =20
+
+    Label5_3 As label:
+        Fill: =RGBA(0, 134, 208, 1)
+        Font: =Font.'Lato Black'
+        Height: =41
+        Size: =14
+        Text: |-
+            ="Hora Inicio:"
+        Width: =119
+        X: =449
+        Y: =430
+        ZIndex: =21
+
+    Label5_4 As label:
+        Fill: =RGBA(0, 134, 208, 1)
+        Font: =Font.'Lato Black'
+        Height: =41
+        Size: =14
+        Text: |-
+            ="Espacio Deportivo:"
+        Width: =305
+        X: =104
+        Y: =562
+        ZIndex: =22
+
+    Label5_5 As label:
+        Fill: =RGBA(0, 134, 208, 1)
+        Font: =Font.'Lato Black'
+        Height: =41
+        Size: =14
+        Text: |-
+            ="Hora Inicio:"
+        Width: =119
+        X: =449
+        Y: =566
+        ZIndex: =23
+
+    Label5_6 As label:
+        Fill: =RGBA(0, 134, 208, 1)
+        Font: =Font.'Lato Black'
+        Height: =41
+        Size: =14
+        Text: |-
+            ="Espacio Deportivo:"
+        Width: =305
+        X: =796
+        Y: =439
+        ZIndex: =24
 
