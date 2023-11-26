@@ -1074,19 +1074,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Form.Icon2.AccessibleLabel"
+                  "fullyQualifiedName": "Form_Delete.ComboBox2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Form.Icon2.AccessibleLabel",
+                  "fullyQualifiedName": "Form_Delete.ComboBox2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Form",
-                "type": "Form.Icon2"
+                "module": "Form_Delete",
+                "type": "Form_Delete.ComboBox2"
               }
             }
           ],
@@ -1098,36 +1098,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Form.Icon2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Form.Icon2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Form",
-                "type": "Form.Icon2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
         },
         {
           "locations": [

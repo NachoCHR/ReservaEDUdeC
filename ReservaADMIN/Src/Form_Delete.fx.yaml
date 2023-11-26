@@ -89,3 +89,13 @@ Form_Delete As screen:
         Y: =340
         ZIndex: =19
 
+    ComboBox2 As combobox:
+        DisplayFields: =["Value"]
+        IsSearchable: =false
+        Items: =Choices([@Reservas].Dias)
+        SearchFields: =["Value"]
+        SearchItems: =[]
+        X: =60
+        Y: =60
+        ZIndex: =20
+
