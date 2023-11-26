@@ -35,12 +35,68 @@ Form As screen:
         Text: ="Reservar"
         X: =1144
         Y: =692
-        ZIndex: =9
+        ZIndex: =6
 
     Rectangle5 As rectangle:
         Fill: =RGBA(0, 121, 187, 0.5)
         Height: =768
         Width: =1366
+        ZIndex: =19
+
+    Rectangle6 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =587
+        Width: =696
+        X: =337
+        Y: =105
+        ZIndex: =20
+
+    Label6 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(0, 94, 146, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =51
+        Size: =15
+        Text: |-
+            ="Detalles de la reserva:"
+        Width: =696
+        X: =337
+        Y: =65
+        ZIndex: =21
+
+    ReservadoPor As label:
+        FontWeight: =FontWeight.Bold
+        Height: =43
+        Text: |-
+            ="Reservado por: " 
+        Width: =149
+        X: =380
+        Y: =154
+        ZIndex: =22
+
+    Correo As label:
+        FontWeight: =FontWeight.Bold
+        Text: |-
+            ="Correo: "
+        Width: =91
+        X: =380
+        Y: =209
+        ZIndex: =23
+
+    "'User.FullName' As label":
+        Height: =37
+        Text: =User().FullName
+        Width: =465
+        X: =529
+        Y: =157
+        ZIndex: =24
+
+    "'User.Correo' As label":
+        Text: =User().Email
+        Width: =504
+        X: =471
+        Y: =209
         ZIndex: =25
 
     DiasRepetir As group:
@@ -62,7 +118,7 @@ Form As screen:
             Width: =305
             X: =224
             Y: =502
-            ZIndex: =8
+            ZIndex: =5
 
         Label5_6 As label:
             Fill: =RGBA(0, 134, 208, 1)
@@ -74,7 +130,7 @@ Form As screen:
             Width: =305
             X: =224
             Y: =461
-            ZIndex: =24
+            ZIndex: =18
 
     HoraTermino As group:
         Height: =5
@@ -90,7 +146,7 @@ Form As screen:
             Width: =147
             X: =975
             Y: =347
-            ZIndex: =6
+            ZIndex: =4
 
         Label5_5 As label:
             Fill: =RGBA(0, 134, 208, 1)
@@ -102,7 +158,7 @@ Form As screen:
             Width: =147
             X: =975
             Y: =306
-            ZIndex: =23
+            ZIndex: =17
 
     FechaTermino As group:
         Height: =5
@@ -122,7 +178,7 @@ Form As screen:
             Width: =304
             X: =631
             Y: =343
-            ZIndex: =11
+            ZIndex: =8
 
         Label5_4 As label:
             Fill: =RGBA(0, 134, 208, 1)
@@ -134,7 +190,7 @@ Form As screen:
             Width: =305
             X: =630
             Y: =302
-            ZIndex: =22
+            ZIndex: =16
 
     HoraInicio As group:
         Height: =5
@@ -150,7 +206,7 @@ Form As screen:
             Width: =147
             X: =975
             Y: =212
-            ZIndex: =4
+            ZIndex: =3
 
         Label5_3 As label:
             Fill: =RGBA(0, 134, 208, 1)
@@ -162,7 +218,7 @@ Form As screen:
             Width: =147
             X: =975
             Y: =170
-            ZIndex: =21
+            ZIndex: =15
 
     FechaInicio As group:
         Height: =5
@@ -182,7 +238,7 @@ Form As screen:
             Width: =304
             X: =631
             Y: =211
-            ZIndex: =10
+            ZIndex: =7
 
         Label5_2 As label:
             Fill: =RGBA(0, 134, 208, 1)
@@ -194,7 +250,7 @@ Form As screen:
             Width: =305
             X: =630
             Y: =170
-            ZIndex: =20
+            ZIndex: =14
 
     EspacioDeportivo As group:
         Height: =5
@@ -216,7 +272,7 @@ Form As screen:
             Width: =305
             X: =224
             Y: =347
-            ZIndex: =12
+            ZIndex: =9
 
         Label5_1 As label:
             Fill: =RGBA(0, 134, 208, 1)
@@ -228,7 +284,7 @@ Form As screen:
             Width: =305
             X: =224
             Y: =306
-            ZIndex: =19
+            ZIndex: =13
 
     QuienReserva As group:
         Height: =5
@@ -255,7 +311,7 @@ Form As screen:
             Width: =305
             X: =224
             Y: =170
-            ZIndex: =18
+            ZIndex: =12
 
     Header As group:
         Height: =5
@@ -276,7 +332,7 @@ Form As screen:
             Width: =1356
             X: =7
             Y: =4
-            ZIndex: =14
+            ZIndex: =10
 
         Icon6 As icon.Add:
             Color: =RGBA(255, 255, 255, 1)
@@ -286,63 +342,7 @@ Form As screen:
             Width: =31
             X: =564
             Y: =13
-            ZIndex: =17
-
-    Rectangle6 As rectangle:
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =587
-        Width: =696
-        X: =337
-        Y: =116
-        ZIndex: =26
-
-    Label6 As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        Fill: =RGBA(0, 94, 146, 1)
-        FontWeight: =FontWeight.Semibold
-        Height: =51
-        Size: =15
-        Text: |-
-            ="Detalles de la reserva:"
-        Width: =696
-        X: =337
-        Y: =65
-        ZIndex: =27
-
-    ReservadoPor As label:
-        FontWeight: =FontWeight.Bold
-        Height: =43
-        Text: |-
-            ="Reservado por: " 
-        Width: =149
-        X: =380
-        Y: =154
-        ZIndex: =28
-
-    Correo As label:
-        FontWeight: =FontWeight.Bold
-        Text: |-
-            ="Correo: "
-        Width: =91
-        X: =380
-        Y: =209
-        ZIndex: =29
-
-    "'User.FullName' As label":
-        Height: =37
-        Text: =User().FullName
-        Width: =465
-        X: =529
-        Y: =157
-        ZIndex: =30
-
-    "'User.Correo' As label":
-        Text: =User().Email
-        Width: =504
-        X: =471
-        Y: =209
-        ZIndex: =31
+            ZIndex: =11
 
     TFechaInicio As label:
         FontWeight: =FontWeight.Bold
@@ -350,14 +350,14 @@ Form As screen:
             ="Fecha De inicio:"
         X: =380
         Y: =276
-        ZIndex: =32
+        ZIndex: =26
 
     DFechaInicio As label:
         Text: =DateValue1.SelectedDate
         Width: =191
         X: =550
         Y: =276
-        ZIndex: =33
+        ZIndex: =27
 
     THoraInicio As label:
         FontWeight: =FontWeight.Bold
@@ -367,13 +367,13 @@ Form As screen:
         Width: =80
         X: =741
         Y: =275
-        ZIndex: =34
+        ZIndex: =28
 
     DHoraInicio As label:
         Text: =Dropdown1.Selected.Value & " hrs."
         X: =809
         Y: =276
-        ZIndex: =35
+        ZIndex: =29
 
     TFechaTermino As label:
         FontWeight: =FontWeight.Bold
@@ -383,7 +383,7 @@ Form As screen:
         Width: =170
         X: =380
         Y: =343
-        ZIndex: =36
+        ZIndex: =30
 
     DFechaTermino As label:
         Height: =45
@@ -391,7 +391,7 @@ Form As screen:
         Width: =181
         X: =560
         Y: =343
-        ZIndex: =37
+        ZIndex: =31
 
     THoraTermino As label:
         FontWeight: =FontWeight.Bold
@@ -400,13 +400,13 @@ Form As screen:
         Width: =80
         X: =741
         Y: =341
-        ZIndex: =38
+        ZIndex: =32
 
     DHoraTermino As label:
         Text: =Dropdown1_1.Selected.Value & " hrs."
         X: =809
         Y: =341
-        ZIndex: =39
+        ZIndex: =33
 
     TDiasRepetir As label:
         FontWeight: =FontWeight.Bold
@@ -414,9 +414,9 @@ Form As screen:
             ="Días a repetir:"
         X: =380
         Y: =409
-        ZIndex: =40
+        ZIndex: =34
 
-    Label22 As label:
+    DDiasSeleccionados As label:
         Text: |-
             =If(
                 CountRows(ComboBox1.SelectedItems) > 0,
@@ -426,12 +426,27 @@ Form As screen:
         Width: =430
         X: =529
         Y: =409
-        ZIndex: =41
+        ZIndex: =35
 
-    Button3 As button:
-        Fill: =RGBA(127, 178, 57, 1)
-        Text: ="Botón"
-        X: =767
+    BCancelar As button:
+        Fill: =RGBA(255, 0, 0, 1)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Text: ="Cancelar"
+        X: =471
         Y: =577
-        ZIndex: =42
+        ZIndex: =36
+
+    BEnvias As button:
+        Fill: =RGBA(127, 178, 57, 1)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Text: ="Enviar"
+        X: =723
+        Y: =577
+        ZIndex: =37
 
