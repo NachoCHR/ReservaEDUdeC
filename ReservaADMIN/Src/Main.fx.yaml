@@ -280,14 +280,6 @@ Main As screen:
             Y: =118
             ZIndex: =9
 
-    Label16 As label:
-        Height: =33
-        Text: =Text(_dateSelected,"dddd")
-        Width: =95
-        X: =118
-        Y: =67
-        ZIndex: =15
-
     Encabezado As group:
         Height: =5
         Width: =5
