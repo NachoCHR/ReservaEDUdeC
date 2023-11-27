@@ -10,7 +10,12 @@ Form As screen:
 
     Button1 As button:
         Fill: =RGBA(0, 134, 208, 1)
-        OnSelect: =Set(VarShowPopUp,true)
+        OnSelect: |
+            =If(
+                Value(Dropdown1_1.Selected.Value) < Value(Dropdown1.Selected.Value),
+                Notify("La hora de termino debe ser mayor que la hora de inicio", NotificationType.Warning),
+                Set(VarShowPopUp,true)
+            )
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
         RadiusTopLeft: =50
@@ -63,6 +68,7 @@ Form As screen:
         Dropdown1_1 As dropdown:
             Height: =50
             Items: =HorasDropdown
+            OnChange: =
             Width: =147
             X: =975
             Y: =347
@@ -518,8 +524,8 @@ Form As screen:
                 ="Espacio Deportivo:"
             Visible: =VarShowPopUp
             Width: =184
-            X: =611
-            Y: =552
+            X: =380
+            Y: =270
             ZIndex: =38
 
         Label24 As label:

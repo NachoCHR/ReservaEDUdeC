@@ -38,7 +38,10 @@ App As appinfo:
             NombreUsuario,
             User().FullName
         );
-        Set(EspacioSeleccionado, "Bascket");
+        Set(
+            EspacioSeleccionado,
+            "Bascket"
+        );
         ClearCollect(
             TablaFiltrada,
             Filter(
@@ -46,11 +49,24 @@ App As appinfo:
                 DateValue(FechaInicio) = DateValue(_dateSelected) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
             )
         );
-        
-        
         ClearCollect(
             HorasDropdown,
-            ["08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00"]
+            [
+                "08:00",
+                "09:00",
+                "10:00",
+                "11:00",
+                "12:00",
+                "13:00",
+                "14:00",
+                "15:00",
+                "16:00",
+                "17:00",
+                "18:00",
+                "19:00",
+                "20:00",
+                "21:00"
+            ]
         )
     Theme: =PowerAppsTheme
 

@@ -24,7 +24,7 @@
                 },
                 "region": {
                   "charLength": 22,
-                  "charOffset": 745,
+                  "charOffset": 755,
                   "snippet": {
                     "text": "DateValue(FechaInicio)"
                   }
@@ -64,7 +64,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 768,
+                  "charOffset": 778,
                   "snippet": {
                     "text": "="
                   }
@@ -104,7 +104,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 795,
+                  "charOffset": 805,
                   "snippet": {
                     "text": "&&"
                   }
@@ -1374,17 +1374,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.CorreoUsuario"
+                  "fullyQualifiedName": "App.NombreUsuario"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.CorreoUsuario",
+                  "fullyQualifiedName": "App.NombreUsuario",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "CorreoUsuario",
+                "member": "NombreUsuario",
                 "module": "App",
                 "type": "App"
               }
@@ -1404,17 +1404,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.NombreUsuario"
+                  "fullyQualifiedName": "App.CorreoUsuario"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.NombreUsuario",
+                  "fullyQualifiedName": "App.CorreoUsuario",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "NombreUsuario",
+                "member": "CorreoUsuario",
                 "module": "App",
                 "type": "App"
               }
