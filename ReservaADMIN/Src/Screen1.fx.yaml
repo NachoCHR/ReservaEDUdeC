@@ -8,8 +8,8 @@ Screen1 As screen:
         Items: |-
             =Filter(
                 Reservas,
-                EspacioDeportivo.Value = EspacioSeleccionado  && DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue("08:00"))
-            )
+                EspacioDeportivo.Value = EspacioSeleccionado  
+                
         Width: =800
         X: =244
         Y: =100
