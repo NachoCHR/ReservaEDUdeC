@@ -542,3 +542,9 @@ Form As screen:
             Y: =268
             ZIndex: =40
 
+    Label13 As label:
+        Text: =EspacioSeleccionado
+        X: =812
+        Y: =474
+        ZIndex: =41
+
