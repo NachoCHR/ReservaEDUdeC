@@ -409,38 +409,28 @@ Main As screen:
                 Size: =13
                 Text: |-
                     =If(
-                            IsEmpty(FiltradoDias),
-                            If(
-                                CountRows(
-                                    Filter(
-                                        FiltradoFecha,
-                                        TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && IsEmpty(Dias)
-                                    )
-                                ) > 0,
-                                First(
-                                    Filter(
-                                        FiltradoFecha,
-                                        TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && IsEmpty(Dias)
-                                    )
-                                ).Usuario.DisplayName,
-                                ""
-                            ),
-                            If(
-                                CountRows(
-                                    Filter(
-                                        FiltradoDias,
-                                        TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value,5))
-                                    )
-                                ) > 0,
-                                First(
-                                    Filter(
-                                        FiltradoDias,
-                                        TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value,5))
-                                    )
-                                ).Usuario.DisplayName,
-                                ""
+                        IsEmpty(FiltradoDias),
+                        If(
+                        CountRows(
+                            Filter(
+                                FiltradoFecha,
+                                TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && IsEmpty(Dias)
                             )
+                        ) > 0,
+                        "Reservado",
+                        "Disponible"
+                        ),
+                        If(
+                            CountRows(
+                                Filter(
+                                    FiltradoDias,
+                                    TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value,5))
+                                )
+                            ) > 0,
+                            "Reservado por admin",
+                            "Disponible"
                         )
+                    )
                 VerticalAlign: =VerticalAlign.Top
                 Width: =167
                 X: =Title3.X
