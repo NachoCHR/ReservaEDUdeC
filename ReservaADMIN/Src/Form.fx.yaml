@@ -220,13 +220,14 @@ Form As screen:
         EDeportivos As combobox:
             Default: |
                 =EspacioSeleccionado
-            DefaultSelectedItems: =
+            DefaultSelectedItems: =EspacioSeleccionado
             DisplayFields: =["Value"]
             Height: =48
+            IsSearchable: =false
             Items: =Choices([@Reservas].EspacioDeportivo)
             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
             SearchFields: =["Value"]
-            SearchItems: =Choices(Reservas.EspacioDeportivo,EDeportivos.SearchText)
+            SearchItems: =[]
             SelectMultiple: =false
             Width: =305
             X: =224
