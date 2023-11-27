@@ -181,6 +181,7 @@ Form As screen:
         ZIndex: =25
 
         EDeportivos As combobox:
+            Default: =Text(EspacioSeleccionado)
             DefaultSelectedItems: =
             DisplayFields: =["Value"]
             Height: =48
