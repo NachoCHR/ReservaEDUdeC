@@ -454,18 +454,18 @@ Main As screen:
             LabelUserReserva As label:
                 Height: =34
                 OnSelect: =Select(Parent)
-                Text: |-
+                Text: |
                     =If(
                         !IsBlank(
                             Filter(
-                                Reservas,
-                                DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
+                                FiltradoFecha,
+                                TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5))
                             )
                         ),
                         Text(First(
                             Filter(
-                                Reservas,
-                                DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
+                                FiltradoFecha,
+                                TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5))
                             )
                         ).Usuario.DisplayName),
                         "No ocupado"
