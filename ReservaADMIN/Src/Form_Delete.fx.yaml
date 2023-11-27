@@ -33,9 +33,9 @@ Form_Delete As screen:
             
             
         Text: ="Cancelar reserva"
-        Width: =232
-        X: =551
-        Y: =596
+        Width: =184
+        X: =580
+        Y: =597
         ZIndex: =7
 
     Icon2_1 As icon.ChevronLeft:

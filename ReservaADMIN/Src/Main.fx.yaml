@@ -43,7 +43,7 @@ Main As screen:
             "Bascket"
         );
         Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
-        Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected = DateValue(FechaInicio)));
+        Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino));
         
         
         
@@ -270,11 +270,12 @@ Main As screen:
             Y: =118
             ZIndex: =9
 
-    Label1 As label:
-        Text: =Day(Now())
-        Width: =215
-        X: =43
-        Y: =78
+    Label16 As label:
+        Height: =33
+        Text: =Text(_dateSelected,"dddd")
+        Width: =95
+        X: =118
+        Y: =67
         ZIndex: =15
 
     Encabezado As group:
