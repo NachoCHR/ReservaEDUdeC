@@ -238,7 +238,7 @@ Main As screen:
         ZIndex: =13
 
         Dropdown2_1 As dropdown:
-            Default: ="Bascket"
+            Default: =
             Items: =Choices([@Reservas].EspacioDeportivo)
             OnChange: =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value)
             OnSelect: =
