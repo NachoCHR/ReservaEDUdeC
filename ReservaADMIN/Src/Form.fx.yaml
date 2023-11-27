@@ -1,4 +1,5 @@
 Form As screen:
+    OnVisible: =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
 
     Button1_2 As button:
         Fill: =RGBA(0, 134, 208, 1)
