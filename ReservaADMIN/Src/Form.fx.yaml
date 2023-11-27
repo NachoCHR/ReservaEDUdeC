@@ -185,7 +185,7 @@ Form As screen:
             DisplayFields: =["Value"]
             Height: =48
             IsSearchable: =false
-            Items: =Filter(Choices([@Reservas].EspacioDeportivo), Value = EspacioSeleccionado)
+            Items: =Choices([@Reservas].EspacioDeportivo)
             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
             SearchFields: =["Value"]
             SearchItems: =[]
