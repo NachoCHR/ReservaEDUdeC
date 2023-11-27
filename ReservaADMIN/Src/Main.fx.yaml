@@ -403,7 +403,7 @@ Main As screen:
                             If(
                                 Subtitle2.Text = "Reservado por admin",
                                 RGBA(246, 88, 16, 1),
-                                RGBA(0, 0, 0, 0)  // Agregué un caso por defecto para evitar errores de sintaxis
+                                RGBA(0, 0, 0, 0)  // Caso en que no entre en ningun if
                             )
                         )
                     )
