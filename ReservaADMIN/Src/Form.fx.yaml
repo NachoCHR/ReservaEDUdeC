@@ -42,6 +42,18 @@ Form As screen:
         Y: =681
         ZIndex: =7
 
+    Label5_1 As label:
+        Fill: =RGBA(0, 134, 208, 1)
+        Font: =Font.'Lato Black'
+        Height: =41
+        Size: =14
+        Text: |-
+            ="Espacio Deportivo:"
+        Width: =305
+        X: =224
+        Y: =306
+        ZIndex: =14
+
     DiasRepetir As group:
         Height: =5
         Width: =5
@@ -213,42 +225,6 @@ Form As screen:
             X: =630
             Y: =170
             ZIndex: =15
-
-    EspacioDeportivo As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =25
-
-        EDeportivos As combobox:
-            Default: |
-                =
-            DefaultSelectedItems: = First(Filter(Choices([@Reservas].EspacioDeportivo), Value = EspacioSeleccionado))
-            DisplayFields: =["Value"]
-            Height: =48
-            IsSearchable: =false
-            Items: =Choices([@Reservas].EspacioDeportivo)
-            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-            SearchFields: =["Value"]
-            SearchItems: =[]
-            SelectMultiple: =false
-            Width: =305
-            X: =224
-            Y: =347
-            ZIndex: =10
-
-        Label5_1 As label:
-            Fill: =RGBA(0, 134, 208, 1)
-            Font: =Font.'Lato Black'
-            Height: =41
-            Size: =14
-            Text: |-
-                ="Espacio Deportivo:"
-            Width: =305
-            X: =224
-            Y: =306
-            ZIndex: =14
 
     QuienReserva As group:
         Height: =5
@@ -545,4 +521,13 @@ Form As screen:
             X: =560
             Y: =268
             ZIndex: =40
+
+    EDeportivo As dropdown:
+        Default: =EspacioSeleccionado
+        Height: =51
+        Items: =Choices([@Reservas].EspacioDeportivo)
+        Width: =306
+        X: =223
+        Y: =342
+        ZIndex: =41
 

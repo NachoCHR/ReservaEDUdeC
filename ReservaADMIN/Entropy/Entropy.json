@@ -26,11 +26,10 @@
     "Dropdown1": 80,
     "Dropdown1_1": 92,
     "Dropdown2_1": 11,
-    "EDeportivos": 91,
+    "EDeportivo": 115,
     "Encabezado": 34,
     "Encabezado_1": 5,
     "Encabezado_2": 66,
-    "EspacioDeportivo": 110,
     "EspacioDeportivo_Columna1": 42,
     "FechaInicio": 109,
     "FechaInicio_Columna1": 40,
@@ -116,7 +115,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/27/2023 17:49:38",
+  "HeaderLastSavedDateTimeUTC": "11/27/2023 17:58:21",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "4c352f40-aa62-4a4e-9744-a74c22565a3b": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/66771953837f4dd98a962dafc0abc1f6\"",
@@ -165,10 +164,6 @@
     "Encabezado": {
       "Encabezado_1": 0,
       "Icon1_1": 1
-    },
-    "EspacioDeportivo": {
-      "EDeportivos": 1,
-      "Label5_1": 0
     },
     "FechaInicio": {
       "DateValue1": 1,
@@ -265,11 +260,10 @@
     "Dropdown1": {},
     "Dropdown1_1": {},
     "Dropdown2_1": {},
-    "EDeportivos": {},
+    "EDeportivo": {},
     "Encabezado": {},
     "Encabezado_1": {},
     "Encabezado_2": {},
-    "EspacioDeportivo": {},
     "EspacioDeportivo_Columna1": {},
     "FechaInicio": {},
     "FechaInicio_Columna1": {},
@@ -380,11 +374,10 @@
     "Dropdown1": 20,
     "Dropdown1_1": 35,
     "Dropdown2_1": 60,
-    "EDeportivos": 34,
+    "EDeportivo": 0,
     "Encabezado": 52,
     "Encabezado_1": 51,
     "Encabezado_2": 2,
-    "EspacioDeportivo": 26,
     "EspacioDeportivo_Columna1": 105,
     "FechaInicio": 13,
     "FechaInicio_Columna1": 103,
