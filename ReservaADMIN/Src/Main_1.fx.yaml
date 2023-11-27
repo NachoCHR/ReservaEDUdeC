@@ -143,26 +143,7 @@ Main_1 As screen:
                 BorderColor: =RGBA(56, 96, 178, 1)
                 Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(47, 41, 43, 1), LblMonthSelected1_3.Color)
                 DisabledFill: =
-                DisplayMode: |
-                    =
-                    With(
-                        {
-                            calendarDate: DateAdd(
-                                _firstDayInView,
-                                ThisItem.Value
-                            )
-                        },
-                        If(
-                            Or(
-                                calendarDate < Today(),
-                                Weekday(calendarDate) in [1.7],
-                                Abs(Self.Text - ThisItem.Value) > 10,
-                                Weekday(DateAdd(_firstDayInView, ThisItem.Value)) = 1
-                            ),
-                            DisplayMode.Disabled,
-                            DisplayMode.Edit
-                        )
-                    )
+                DisplayMode: =
                 Fill: |-
                     =With(
                         {
@@ -428,7 +409,7 @@ Main_1 As screen:
             Fill: =RGBA(0, 134, 208, 1)
             FontWeight: =FontWeight.Bold
             Height: =34
-            Text: =_dateSelected
+            Text: =_dateSelected & ""
             Width: =637
             X: =726
             Y: =159

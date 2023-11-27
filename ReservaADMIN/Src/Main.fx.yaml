@@ -144,7 +144,8 @@ Main As screen:
                 Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(47, 41, 43, 1), LblMonthSelected1_2.Color)
                 DisabledFill: =
                 DisplayMode: |+
-                    =With(
+                    =
+                    With(
                         {
                             calendarDate: DateAdd(
                                 _firstDayInView,
@@ -155,12 +156,14 @@ Main As screen:
                             Or(
                                 calendarDate < Today(),
                                 Weekday(calendarDate) in [1.7],
-                                Abs(Self.Text - ThisItem.Value) > 10
+                                Abs(Self.Text - ThisItem.Value) > 10,
+                                Weekday(DateAdd(_firstDayInView, ThisItem.Value)) = 1
                             ),
                             DisplayMode.Disabled,
                             DisplayMode.Edit
                         )
                     )
+                    
                     
                 Fill: |-
                     =With(
@@ -219,6 +222,13 @@ Main As screen:
             X: =157
             Y: =118
             ZIndex: =9
+
+    Label1 As label:
+        Text: =Day(Now())
+        Width: =215
+        X: =43
+        Y: =78
+        ZIndex: =15
 
     Encabezado As group:
         Height: =5
