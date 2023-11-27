@@ -160,7 +160,9 @@ Main As screen:
                             DisplayMode.Disabled,
                             DisplayMode.Edit
                         )
-                    )
+                    ),
+                    
+                    If(Weekday(DateAdd(_firstDayInView, ThisItem.Value))=6, DisplayMode.Disabled,DisplayMode.Edit)
                 Fill: |-
                     =With(
                         {
