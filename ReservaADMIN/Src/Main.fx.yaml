@@ -407,7 +407,7 @@ Main As screen:
                             CountRows(
                                 Filter(
                                     Reservas,
-                                    DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && EspacioDeportivo.Value = EspacioSeleccionado
+                                    DateValue(FechaInicio) = DateValue(_dateSelected) 
                                 )
                             ) > 0,
                             "Reservado",
