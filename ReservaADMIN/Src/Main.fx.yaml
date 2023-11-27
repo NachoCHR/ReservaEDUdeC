@@ -430,7 +430,6 @@ Main As screen:
                             "Reservado por admin",
                             "Disponible"
                         )
-                    ))
                     )
                 VerticalAlign: =VerticalAlign.Top
                 Width: =167
