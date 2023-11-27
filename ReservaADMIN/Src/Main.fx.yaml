@@ -400,14 +400,14 @@ Main As screen:
                     )
                 Font: =Font.Arial
                 FontWeight: =
-                Height: =22
+                Height: =25
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =13
-                Text: |-
+                Text: |
                     =If(
                         IsEmpty(FiltradoDias),
                         If(
@@ -432,7 +432,7 @@ Main As screen:
                         )
                     )
                 VerticalAlign: =VerticalAlign.Top
-                Width: =346
+                Width: =167
                 X: =Title3.X
                 Y: =36
                 ZIndex: =2
@@ -480,21 +480,29 @@ Main As screen:
             LabelUserReserva As label:
                 Height: =34
                 OnSelect: =Select(Parent)
-                Text: |
+                Text: |-
                     =If(
-                        !IsBlank(
+                        IsEmpty(FiltradoDias),
+                        If(
+                        CountRows(
                             Filter(
                                 FiltradoFecha,
-                                TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5))
+                                TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && IsBlank(Dias)
                             )
+                        ) > 0,
+                        "Reservado",
+                        "Disponible"
                         ),
-                        Text(First(
-                            Filter(
-                                FiltradoFecha,
-                                TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5))
-                            )
-                        ).Usuario.DisplayName),
-                        "No ocupado"
+                        If(
+                            CountRows(
+                                Filter(
+                                    FiltradoDias,
+                                    TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value,5))
+                                )
+                            ) > 0,
+                            "Reservado por admin",
+                            "Disponible"
+                        )
                     )
                 Width: =492
                 X: =41
