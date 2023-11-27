@@ -204,9 +204,9 @@ Main As screen:
 
         Dropdown2_1 As dropdown:
             Default: ="Bascket"
-            Items: =EspaciosDeportivos.EspacioDeportivo
-            OnChange: =Set(EspacioSeleccionado,Dropdown2_1.Selected.EspacioDeportivo)
-            OnSelect: =
+            Items: =Choices([@Reservas].EspacioDeportivo)
+            OnChange: =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value)
+            OnSelect: =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value)
             X: =161
             Y: =159
             ZIndex: =8
