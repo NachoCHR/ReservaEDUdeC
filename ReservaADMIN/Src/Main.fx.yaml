@@ -228,7 +228,7 @@ Main As screen:
                 OnSelect: |
                     =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days));
                     Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
-                    Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected = DateValue(FechaInicio)));
+                    Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
                 Size: =12
                 TabIndex: =0
                 Text: =Day(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days))
