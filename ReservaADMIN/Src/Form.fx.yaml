@@ -152,6 +152,11 @@ Form As screen:
             EndYear: =Year(Today())+100
             Height: =53
             IsEditable: =true
+            OnSelect: |-
+                =If(
+                    DateDiff(Today(),DateValue1.SelectedDate)<0,
+                    Notify("La fecha seleccionada no puede ser anterior a hoy", NotificationType.Warning)
+                )
             PaddingBottom: =0
             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
             Size: =13
