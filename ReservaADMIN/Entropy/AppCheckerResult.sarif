@@ -725,7 +725,7 @@
                   "charLength": 22,
                   "charOffset": 89,
                   "snippet": {
-                    "text": "DateValue(FechaInicio)"
+                    "text": "TimeValue(FechaInicio)"
                   }
                 }
               },
@@ -738,7 +738,7 @@
           ],
           "message": {
             "arguments": [
-              "DateValue"
+              "TimeValue"
             ],
             "id": "issue"
           },
