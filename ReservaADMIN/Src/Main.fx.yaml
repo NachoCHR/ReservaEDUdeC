@@ -480,28 +480,34 @@ Main As screen:
             LabelUserReserva As label:
                 Height: =34
                 OnSelect: =Select(Parent)
-                Text: |-
+                Text: |
                     =If(
-                        IsEmpty(FiltradoDias),
-                        If(
-                        CountRows(
+                        !IsBlank(
                             Filter(
                                 FiltradoFecha,
-                                TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && IsBlank(Dias)
+                                TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5))
                             )
-                        ) > 0,
-                        "Reservado",
-                        "Disponible"
                         ),
+                        First(
+                            Filter(
+                                FiltradoFecha,
+                                TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5))
+                            )
+                        ).Usuario.DisplayName,
                         If(
                             CountRows(
                                 Filter(
                                     FiltradoDias,
-                                    TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value,5))
+                                    TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5))
                                 )
                             ) > 0,
-                            "Reservado por admin",
-                            "Disponible"
+                            First(
+                                Filter(
+                                    FiltradoDias,
+                                    TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5))
+                                )
+                            ).Usuario.DisplayName,
+                            "No ocupado"
                         )
                     )
                 Width: =492
