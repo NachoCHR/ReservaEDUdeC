@@ -484,11 +484,3 @@ Main As screen:
             Y: =159
             ZIndex: =12
 
-    Label13 As label:
-        Height: =50
-        Text: =Hay
-        Width: =397
-        X: =561
-        Y: =86
-        ZIndex: =16
-
