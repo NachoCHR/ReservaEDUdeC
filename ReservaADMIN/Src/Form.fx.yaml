@@ -12,7 +12,9 @@ Form As screen:
         Fill: =RGBA(0, 134, 208, 1)
         OnSelect: |-
             =If(
-                Hour(Dropdown1_1.Selected.Value) < Hour(Dropdown1.Selected.Value)
+                Hour(Dropdown1_1.Selected.Value) < Hour(Dropdown1.Selected.Value),
+                Notify("No pasa na", NotificationType.Warning
+                )
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
         RadiusTopLeft: =50
