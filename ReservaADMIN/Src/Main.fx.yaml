@@ -543,7 +543,7 @@ Main As screen:
                         CountRows(
                             Filter(
                                 FiltradoFecha,
-                                TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) || TimeValue(FechaTermino) = Tim && IsEmpty(Dias)
+                                TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5)) && IsEmpty(Dias)
                             )
                         ) > 0,
                         "Reservado",
@@ -553,7 +553,7 @@ Main As screen:
                             CountRows(
                                 Filter(
                                     FiltradoDias,
-                                    TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value,5))
+                                    TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5))
                                 )
                             ) > 0,
                             "Reservado por admin",
