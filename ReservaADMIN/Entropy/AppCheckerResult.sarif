@@ -1374,17 +1374,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.CorreoUsuario"
+                  "fullyQualifiedName": "App.NombreUsuario"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.CorreoUsuario",
+                  "fullyQualifiedName": "App.NombreUsuario",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "CorreoUsuario",
+                "member": "NombreUsuario",
                 "module": "App",
                 "type": "App"
               }
@@ -1404,17 +1404,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.NombreUsuario"
+                  "fullyQualifiedName": "App.CorreoUsuario"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.NombreUsuario",
+                  "fullyQualifiedName": "App.CorreoUsuario",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "NombreUsuario",
+                "member": "CorreoUsuario",
                 "module": "App",
                 "type": "App"
               }
