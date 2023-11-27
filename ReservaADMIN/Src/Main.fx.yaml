@@ -238,7 +238,7 @@ Main As screen:
         ZIndex: =13
 
         Dropdown2_1 As dropdown:
-            Default: =
+            Default: ="Bascket"
             Items: =Choices([@Reservas].EspacioDeportivo)
             OnChange: =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value)
             OnSelect: =
@@ -386,7 +386,7 @@ Main As screen:
                             CountRows(
                                 Filter(
                                     Reservas,
-                                    DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) 
+                                    DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && EspacioDeportivo.Value = EspacioSeleccionado
                                 )
                             ) > 0,
                             "Reservado",
