@@ -465,7 +465,7 @@ Main As screen:
             UserIcon As icon.Person:
                 Height: =31
                 Icon: =Icon.Person
-                OnSelect: =Select(Parent)
+                OnSelect: ="algo a"
                 Visible: |-
                     =If(
                         IsBlank(LabelUserReserva),
