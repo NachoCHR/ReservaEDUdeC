@@ -506,7 +506,7 @@ Form As screen:
                         Dias: ComboBox1.SelectedItems
                         
                     }
-                )
+                );
                 
                 Set(VarShowPopUp,false)
             RadiusBottomLeft: =50
