@@ -39,8 +39,10 @@ Form_Delete As screen:
         ZIndex: =7
 
     Icon2_1 As icon.ChevronLeft:
+        Height: =47
         Icon: =Icon.ChevronLeft
         OnSelect: =Navigate(Main)
+        Width: =51
         X: =40
         Y: =40
         ZIndex: =13
