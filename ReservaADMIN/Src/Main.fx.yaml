@@ -253,15 +253,11 @@ Main As screen:
         Dropdown2_1 As dropdown:
             Default: ="Bascket"
             Items: =Choices([@Reservas].EspacioDeportivo)
-            OnChange: |-
+            OnChange: |+
                 =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
-                ClearCollect(
-                    TablaFiltrada,
-                    Filter(
-                        Reservas,
-                        EspacioDeportivo.Value = EspacioSeleccionado
-                    )
-                )
+                Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
+                Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected = DateValue(FechaInicio)));
+                
             OnSelect: =
             X: =161
             Y: =159
@@ -403,19 +399,13 @@ Main As screen:
                 PaddingTop: =0
                 Size: =13
                 Text: |-
-                    =    If(
-                            CountRows(
-                                Filter(
-                                    Reservas,
-                                    TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5))
-                                )
-                            ) > 0,
-                            "Reservado",
-                            "Disponible"
-                        )   
-                    
-                    
-                     
+                    =If(
+                        CountRows(
+                            Set(FiltradoHora, Filter(FiltradoFecha, TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5))))
+                        )>0,
+                        "Reservado",
+                        "Disponible"
+                    )
                 VerticalAlign: =VerticalAlign.Top
                 Width: =107
                 X: =Title3.X
