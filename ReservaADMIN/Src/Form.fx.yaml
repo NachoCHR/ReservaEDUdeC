@@ -23,11 +23,15 @@ Form As screen:
 
     Button1 As button:
         Fill: =RGBA(0, 134, 208, 1)
-        OnSelect: |-
+        OnSelect: |
             =If(
                 TimeValue(Dropdown1.Selected.Value) >= TimeValue(Dropdown1_1.Selected.Value),
-                Notify("La hora de término debe ser mayor que la hora de inicio", NotificationType.Warning),
-                Set(VarShowPopUp,true)
+                If(
+                    EDeportivos.Selected.Value = "Blank",
+                    Notify("Debe seleccionar un espacio deportivo", NotificationType.Warning),
+                    Set(VarShowPopUp, true)
+                ),
+                Notify("La hora de termino debe ser mayor que la hora de inicio", NotificationType.Warning)
             )
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
