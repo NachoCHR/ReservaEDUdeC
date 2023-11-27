@@ -13,7 +13,7 @@ Form As screen:
         OnSelect: |-
             =If(
                 TimeValue(Dropdown1.Selected.Value) >= TimeValue(Dropdown1_1.Selected.Value),
-                Notify("La hora de termino no puede ser menor que la hora de inicio", NotificationType.Warning),
+                Notify("La hora de término debe ser mayor que la hora de inicio", NotificationType.Warning),
                 Set(VarShowPopUp,true)
             )
         RadiusBottomLeft: =50
