@@ -10,12 +10,9 @@ Form As screen:
 
     Button1 As button:
         Fill: =RGBA(0, 134, 208, 1)
-        OnSelect: |
+        OnSelect: |-
             =If(
-                Value(Dropdown1_1.Selected.Value) < Value(Dropdown1.Selected.Value),
-                Notify("La hora de termino debe ser mayor que la hora de inicio", NotificationType.Warning),
-                Set(VarShowPopUp,true)
-            )
+                Hour(Dropdown1_1.Selected.Value) < Hour(Dropdown1.Selected.Value)
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
         RadiusTopLeft: =50
