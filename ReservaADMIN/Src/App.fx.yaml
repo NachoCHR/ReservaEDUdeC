@@ -46,7 +46,7 @@ App As appinfo:
             TablaFiltrada,
             Filter(
                 Reservas,
-                DateValue(FechaInicio) = DateValue(_dateSelected) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
+                EspacioDeportivo.Value = EspacioSeleccionado
             )
         );
         ClearCollect(
