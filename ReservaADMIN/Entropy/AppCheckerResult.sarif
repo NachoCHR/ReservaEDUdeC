@@ -1147,36 +1147,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.FiltradoDias"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.FiltradoDias",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FiltradoDias",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App"
                 }
               ],

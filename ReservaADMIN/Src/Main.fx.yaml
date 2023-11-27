@@ -405,8 +405,10 @@ Main As screen:
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =13
-                Text: |
+                Text: |-
                     =If(
+                        IsBlank(FiltradoDias),
+                        If(
                         CountRows(
                             Filter(
                                 FiltradoFecha,
@@ -415,6 +417,17 @@ Main As screen:
                         ) > 0,
                         "Reservado",
                         "Disponible"
+                        ),
+                        If(
+                            CountRows(
+                                Filter(
+                                    FiltradoDias,
+                                    TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value,5))
+                                )
+                            ) > 0,
+                            "Reservado por admin",
+                            "Disponible"
+                        )
                     )
                 VerticalAlign: =VerticalAlign.Top
                 Width: =107
