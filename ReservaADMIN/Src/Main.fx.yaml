@@ -317,9 +317,7 @@ Main As screen:
         Button2 As button:
             Fill: =RGBA(0, 134, 208, 1)
             Height: =41
-            OnSelect: |-
-                =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
-                Navigate(Form)
+            OnSelect: =Navigate(Form)
             RadiusBottomLeft: =50
             RadiusBottomRight: =50
             RadiusTopLeft: =50
