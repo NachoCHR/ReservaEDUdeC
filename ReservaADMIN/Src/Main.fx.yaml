@@ -42,6 +42,17 @@ Main As screen:
             EspacioSeleccionado,
             "Bascket"
         );
+        
+        If(
+            CountRows(
+                Filter(
+                    Reservas,
+                    EspacioDeportivo.Value = EspacioSeleccionado
+                )
+            ) > 0,
+                Set(Hay,"Hay reservas en este espacioDeportivo"),
+                Set(Hay,"No hay reservas en este espacioDeportivo")
+        )
 
     Calendario As group:
         Height: =5
@@ -476,4 +487,12 @@ Main As screen:
             X: =726
             Y: =159
             ZIndex: =12
+
+    Label13 As label:
+        Height: =50
+        Text: =Hay
+        Width: =397
+        X: =561
+        Y: =86
+        ZIndex: =16
 
