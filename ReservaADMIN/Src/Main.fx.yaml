@@ -398,7 +398,7 @@ Main As screen:
                     )
                 Font: =Font.Arial
                 FontWeight: =
-                Height: =24
+                Height: =22
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
@@ -416,7 +416,7 @@ Main As screen:
                             )
                         ) > 0,
                         "Reservado por alumno",
-                        "Disponible"
+                        "Disponible por alumno"
                         ),
                         If(
                             CountRows(
@@ -430,7 +430,7 @@ Main As screen:
                         )
                     )
                 VerticalAlign: =VerticalAlign.Top
-                Width: =107
+                Width: =175
                 X: =Title3.X
                 Y: =Title3.Y + Title3.Height
                 ZIndex: =2
