@@ -481,43 +481,31 @@ Form As screen:
 
         BEnvias As button:
             Fill: =RGBA(127, 178, 57, 1)
-            OnSelect: |
-                =If(
-                    IsEmpty(
-                        Filter(
-                            Reservas,
-                            Dias = ComboBox1.SelectedItems &&
-                            FechaInicio = DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value) &&
-                            FechaTermino = DateValue(DateValue1_1.SelectedDate) + TimeValue(Dropdown1_1.Selected.Value) &&
-                            EspacioDeportivo = EDeportivo.Selected
-                        )
-                    ),
-                    Patch(
-                        Reservas,
-                        Defaults(Reservas),
-                        {
-                            Usuario: {
-                                Claims: Concatenate(
-                                    "i:0#.f|membership|",
-                                    User().Email
-                                ),
-                                Department: "",
-                                DisplayName: User().FullName,
-                                Email: User().Email,
-                                JobTitle: "",
-                                Picture: ""
-                            },
-                            FechaInicio: DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value),
-                            FechaTermino: DateValue(DateValue1_1.SelectedDate) + TimeValue(Dropdown1_1.Selected.Value),
-                            EspacioDeportivo: EDeportivo.Selected,
-                            Dias: ComboBox1.SelectedItems
-                        }
-                    ),
-                    // Aquí puedes agregar lógica adicional si la reserva ya existe
-                    Notify("Ya existe una reserva con los mismos datos", NotificationType.Error),
-                ),
+            OnSelect: |-
+                =Patch(
+                    Reservas,
+                    Defaults(Reservas),
+                    {
+                        Usuario: {
+                            Claims: Concatenate(
+                                "i:0#.f|membership|",
+                                User().Email// Person email
+                            ),
+                            Department: "",
+                            DisplayName: User().FullName,
+                            Email: User().Email,
+                            JobTitle: "",
+                            Picture: ""
+                        },
+                        FechaInicio: DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value),
+                        FechaTermino: DateValue(DateValue1_1.SelectedDate) + TimeValue(Dropdown1_1.Selected.Value),
+                        EspacioDeportivo: EDeportivo.Selected,
+                        Dias: ComboBox1.SelectedItems
                 
-                Set(VarShowPopUp, false)
+                    }
+                );
+                
+                Set(VarShowPopUp,false)
             RadiusBottomLeft: =50
             RadiusBottomRight: =50
             RadiusTopLeft: =50

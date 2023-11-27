@@ -116,7 +116,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/27/2023 21:54:33",
+  "HeaderLastSavedDateTimeUTC": "11/27/2023 22:16:16",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "4c352f40-aa62-4a4e-9744-a74c22565a3b": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/66771953837f4dd98a962dafc0abc1f6\"",
@@ -475,7 +475,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.5928253,
+    "AnalysisLoadTime": 0.5967864,
     "ControlCount": {
       "button": 8,
       "circle": 1,
@@ -488,12 +488,12 @@
       "galleryTemplate": 3,
       "group": 14,
       "icon": 8,
-      "label": 49,
+      "label": 50,
       "rectangle": 4,
       "screen": 4,
       "text": 2
     },
-    "DeserializationLoadTime": 1.6043328
+    "DeserializationLoadTime": 1.7003323
   },
   "WasLocalDatabaseReferencesEmpty": false
 }
