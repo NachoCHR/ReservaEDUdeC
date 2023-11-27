@@ -409,7 +409,7 @@ Main As screen:
                 Size: =13
                 Text: |-
                     =If(
-                        IsBlank(FiltradoDias),
+                        IsEmpty(FiltradoDias),
                         If(
                         CountRows(
                             Filter(
@@ -417,8 +417,8 @@ Main As screen:
                                 TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5))
                             )
                         ) > 0,
-                        "Reservado por alumno",
-                        "Disponible por alumno"
+                        "Reservado",
+                        "Disponible"
                         ),
                         If(
                             CountRows(
