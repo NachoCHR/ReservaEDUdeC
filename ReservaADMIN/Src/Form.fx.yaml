@@ -181,7 +181,7 @@ Form As screen:
         ZIndex: =25
 
         EDeportivos As combobox:
-            Default: =First(Filter(Choices([@Reservas].EspacioDeportivo), Value = EspacioSeleccionado))
+            Default: =Last(Filter(Choices([@Reservas].EspacioDeportivo), Value = EspacioSeleccionado))
             DefaultSelectedItems: =
             DisplayFields: =["Value"]
             Height: =48
