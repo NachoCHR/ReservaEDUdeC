@@ -225,10 +225,11 @@ Main As screen:
                 FocusedBorderColor: =Self.Color
                 FocusedBorderThickness: =2
                 Height: =MonthDayGallery1_2.TemplateHeight
-                OnSelect: |
+                OnSelect: |-
                     =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days));
                     Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
                     Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
+                    Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
                 Size: =12
                 TabIndex: =0
                 Text: =Day(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days))
