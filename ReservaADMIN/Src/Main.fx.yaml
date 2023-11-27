@@ -230,6 +230,7 @@ Main As screen:
                     Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
                     Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
                     Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
+                    Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
                     ClearCollect(
                         ResultadosFiltrados,
                         Filter(
@@ -432,7 +433,7 @@ Main As screen:
                 VerticalAlign: =VerticalAlign.Top
                 Width: =346
                 X: =Title3.X
-                Y: =Title3.Y + Title3.Height
+                Y: =36
                 ZIndex: =2
 
             Separator4 As rectangle:
