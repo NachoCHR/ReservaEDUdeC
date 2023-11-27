@@ -267,7 +267,7 @@ Form As screen:
 
     Button1_2 As button:
         Fill: =RGBA(0, 134, 208, 1)
-        OnSelect: =Set(VarShowPopUp,true)
+        OnSelect: =Navigate(Main)
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
         RadiusTopLeft: =50
