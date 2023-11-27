@@ -381,14 +381,14 @@ Main As screen:
 
             Icon3 As icon.ChevronRight:
                 DisplayMode: =If(Subtitle2.Text = "Disponible", DisplayMode.Disabled)
-                Height: =47
-                Icon: =Icon.ChevronRight
+                Height: =31
+                Icon: =Icon.Trash
                 OnSelect: |
                     =Navigate(Form_Delete);
                     ClearCollect(NuevaColeccion, Filter(Reservas, DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado))
-                Width: =51
-                X: =551
-                Y: =23
+                Width: =31
+                X: =570
+                Y: =39
                 ZIndex: =6
 
             UserIcon As icon.Person:
