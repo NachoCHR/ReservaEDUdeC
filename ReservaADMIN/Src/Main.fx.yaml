@@ -414,7 +414,7 @@ Main As screen:
                         CountRows(
                             Filter(
                                 FiltradoFecha,
-                                TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && IsBlank(Dias)
+                                TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) 
                             )
                         ) > 0,
                         "Reservado",
