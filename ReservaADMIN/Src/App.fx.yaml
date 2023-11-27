@@ -40,7 +40,7 @@ App As appinfo:
         );
         Set(
             EspacioSeleccionado,
-            "Bascket"
+            Dropdown2_1.Selected.Value
         );
         ClearCollect(
             TablaFiltrada,
