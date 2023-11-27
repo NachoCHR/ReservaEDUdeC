@@ -1,7 +1,7 @@
 App As appinfo:
     BackEnabled: =true
     Formulas: =
-    OnStart: |-
+    OnStart: |
         =ClearCollect(
             HorasDisponibles,
             [
@@ -57,6 +57,14 @@ App As appinfo:
                 "20:00",
                 "21:00"
             ]
+        );
+        
+        ClearCollect(
+            ResultadosFiltrados,
+            Filter(
+                Reservas,  // Reemplaza con el nombre de tu lista de SharePoint
+                !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value
+            )
         )
     StartScreen: =Main
     Theme: =PowerAppsTheme

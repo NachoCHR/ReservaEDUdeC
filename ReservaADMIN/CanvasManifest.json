@@ -131,6 +131,7 @@
   "ScreenOrder": [
     "Form",
     "Main",
-    "Form_Delete"
+    "Form_Delete",
+    "PantallaPrueba"
   ]
 }
