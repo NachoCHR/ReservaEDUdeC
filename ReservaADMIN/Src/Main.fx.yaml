@@ -154,8 +154,8 @@ Main As screen:
                         If(
                             Or(
                                 calendarDate < Today(),
-                                Weekday(calendarDate) in [1.7] 
-                                //Abs(Self.Text - ThisItem.Value) > 10
+                                Weekday(calendarDate) in [1.7],
+                                Abs(Self.Text - ThisItem.Value) > 10
                             ),
                             DisplayMode.Disabled,
                             DisplayMode.Edit
