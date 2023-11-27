@@ -318,7 +318,7 @@ Main As screen:
             Fill: =RGBA(0, 134, 208, 1)
             Height: =41
             OnSelect: |-
-                =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value)
+                =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
                 Navigate(Form)
             RadiusBottomLeft: =50
             RadiusBottomRight: =50
@@ -335,7 +335,7 @@ Main As screen:
             Height: =28
             Icon: =Icon.Add
             OnSelect: |-
-                =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value)
+                =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
                 Navigate(Form)
             Width: =28
             X: =1196
