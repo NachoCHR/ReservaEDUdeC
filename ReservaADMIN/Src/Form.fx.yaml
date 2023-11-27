@@ -154,7 +154,7 @@ Form As screen:
             IsEditable: =true
             OnSelect: |-
                 =If(
-                    DateDiff(Today(),DateValue1.SelectedDate)<0,
+                    Self.SelectedDate < Today(),
                     Notify("La fecha seleccionada no puede ser anterior a hoy", NotificationType.Warning)
                 );
                 If(
