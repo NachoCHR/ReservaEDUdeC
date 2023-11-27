@@ -171,7 +171,7 @@ Main As screen:
                         },
                     /*Fill value changes if the gallery item day = today, or if it lies outside of the current month*/             
                     If(
-                        Or(calendarDate < Today(),Weekday(calendarDate) in [1.1]), RGBA(200, 200, 200, 0.3),
+                        Or(calendarDate < Today(),Weekday(calendarDate) in [1.7]), RGBA(200, 200, 200, 0.3),
                         /*Date selected is today*/
                         calendarDate = Today() && calendarDate = _dateSelected, RGBA(0,0,0,0),
                         /*Today when it is not selected*/
