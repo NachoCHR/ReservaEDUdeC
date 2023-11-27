@@ -223,11 +223,10 @@ Form As screen:
             DefaultSelectedItems: =
             DisplayFields: =["Value"]
             Height: =48
-            IsSearchable: =false
             Items: =Choices([@Reservas].EspacioDeportivo)
             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
             SearchFields: =["Value"]
-            SearchItems: =[]
+            SearchItems: =Choices(Reservas.EspacioDeportivo,EDeportivos.SearchText)
             SelectMultiple: =false
             Width: =305
             X: =224
