@@ -5,7 +5,7 @@ PantallaPrueba As screen:
         DisplayMode: =DisplayMode.Edit
         Fill: =RGBA(0, 0, 0, 0)
         Height: =500
-        Items: =
+        Items: =ResultadosFiltrados
         Width: =800
         X: =183
         Y: =117
