@@ -220,7 +220,7 @@ Form As screen:
         EDeportivos As combobox:
             Default: |
                 =EspacioSeleccionado
-            DefaultSelectedItems: =
+            DefaultSelectedItems: = First(Filter(Choices([@Reservas].EspacioDeportivo), Value = EspacioSeleccionados))
             DisplayFields: =["Value"]
             Height: =48
             IsSearchable: =false
