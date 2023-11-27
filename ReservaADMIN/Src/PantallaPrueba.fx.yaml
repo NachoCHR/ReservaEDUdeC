@@ -6,10 +6,80 @@ PantallaPrueba As screen:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =500
         Items: =ResultadosFiltrados
-        Width: =800
-        X: =183
-        Y: =117
+        Width: =1366
+        X: =0
+        Y: =144
         ZIndex: =1
+
+        Dias_Columna1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Dias"
+            FieldName: ="Dias"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =1
+            Text: =ThisItem.Dias
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        EspacioDeportivo_Columna1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="EspacioDeportivo"
+            FieldName: ="EspacioDeportivo"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.EspacioDeportivo
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+        Fechainicio_Columna1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Fechainicio"
+            FieldName: ="Fechainicio"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.Fechainicio
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+        Fechatermino_Columna1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Fechatermino"
+            FieldName: ="Fechatermino"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.Fechatermino
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+        Usuario_Columna1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Usuario"
+            FieldName: ="Usuario"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =5
+            Text: =ThisItem.Usuario
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =5
 
     TextInput2 As text:
         Default: ="Entrada de texto"
