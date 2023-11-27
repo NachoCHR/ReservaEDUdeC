@@ -480,7 +480,40 @@ Main As screen:
             LabelUserReserva As label:
                 Height: =34
                 OnSelect: =Select(Parent)
-                Text: ="aLGO"
+                Text: |-
+                    =If(
+                            IsEmpty(FiltradoDias),
+                            If(
+                                CountRows(
+                                    Filter(
+                                        FiltradoFecha,
+                                        TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && IsEmpty(Dias)
+                                    )
+                                ) > 0,
+                                First(
+                                    Filter(
+                                        FiltradoFecha,
+                                        TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && IsEmpty(Dias)
+                                    )
+                                ).Usuario.DisplayName,
+                                ""
+                            ),
+                            If(
+                                CountRows(
+                                    Filter(
+                                        FiltradoDias,
+                                        TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value,5))
+                                    )
+                                ) > 0,
+                                First(
+                                    Filter(
+                                        FiltradoDias,
+                                        TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value,5))
+                                    )
+                                ).Usuario.DisplayName,
+                                ""
+                            )
+                        )
                 Width: =492
                 X: =41
                 Y: =61
