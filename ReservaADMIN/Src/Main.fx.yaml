@@ -239,7 +239,7 @@ Main As screen:
 
         Dropdown2_1 As dropdown:
             Default: =
-            Items: =Choices([@Reservas].EspacioDeportivo)
+            Items: =EspaciosDeportivos.EspacioDeportivo
             OnChange: =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value)
             OnSelect: =
             X: =161
