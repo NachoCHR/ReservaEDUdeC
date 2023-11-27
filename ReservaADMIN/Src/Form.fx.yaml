@@ -507,6 +507,8 @@ Form As screen:
                         
                     }
                 )
+                
+                Set(VarShowPopUp,false)
             RadiusBottomLeft: =50
             RadiusBottomRight: =50
             RadiusTopLeft: =50
