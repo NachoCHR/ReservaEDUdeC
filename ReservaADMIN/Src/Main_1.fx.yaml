@@ -157,7 +157,7 @@ Main_1 As screen:
                                 calendarDate < Today(),
                                 Weekday(calendarDate) in [1.7],
                                 Abs(Self.Text - ThisItem.Value) > 10,
-                                Weekday(DateAdd(_firstDayInView, ThisItem.Value)) = 6
+                                Weekday(DateAdd(_firstDayInView, ThisItem.Value)) = 0
                             ),
                             DisplayMode.Disabled,
                             DisplayMode.Edit
