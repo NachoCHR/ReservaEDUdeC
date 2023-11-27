@@ -430,7 +430,7 @@ Main As screen:
                         )
                     )
                 VerticalAlign: =VerticalAlign.Top
-                Width: =175
+                Width: =346
                 X: =Title3.X
                 Y: =Title3.Y + Title3.Height
                 ZIndex: =2
