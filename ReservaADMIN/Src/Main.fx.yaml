@@ -481,35 +481,7 @@ Main As screen:
                 Height: =34
                 OnSelect: =Select(Parent)
                 Text: |
-                    =If(
-                        !IsBlank(
-                            Filter(
-                                FiltradoFecha,
-                                TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5))
-                            )
-                        ),
-                        First(
-                            Filter(
-                                FiltradoFecha,
-                                TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5))
-                            )
-                        ).Usuario.DisplayName,
-                        If(
-                            CountRows(
-                                Filter(
-                                    FiltradoDias,
-                                    TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5))
-                                )
-                            ) > 0,
-                            First(
-                                Filter(
-                                    FiltradoDias,
-                                    TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5))
-                                )
-                            ).Usuario.DisplayName,
-                            "No ocupado"
-                        )
-                    )
+                    =If
                 Width: =492
                 X: =41
                 Y: =61
