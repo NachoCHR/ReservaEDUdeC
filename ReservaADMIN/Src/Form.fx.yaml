@@ -552,3 +552,9 @@ Form As screen:
         Y: =474
         ZIndex: =41
 
+    Label14 As label:
+        Text: =EDeportivos.Selected.Value
+        X: =631
+        Y: =461
+        ZIndex: =42
+
