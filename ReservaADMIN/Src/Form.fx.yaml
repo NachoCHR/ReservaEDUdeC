@@ -27,7 +27,7 @@ Form As screen:
             =If(
                 TimeValue(Dropdown1.Selected.Value) >= TimeValue(Dropdown1_1.Selected.Value),
                 If(
-                    EDeportivos.Selected.Value = "Blank",
+                    IsBlank(EDeportivos.Selected.Value),
                     Notify("Debe seleccionar un espacio deportivo", NotificationType.Warning),
                     Set(VarShowPopUp, true)
                 ),
@@ -545,16 +545,4 @@ Form As screen:
             X: =560
             Y: =268
             ZIndex: =40
-
-    Label13 As label:
-        Text: =EspacioSeleccionado
-        X: =812
-        Y: =474
-        ZIndex: =41
-
-    Label14 As label:
-        Text: =EDeportivos.Selected.Value
-        X: =631
-        Y: =461
-        ZIndex: =42
 
