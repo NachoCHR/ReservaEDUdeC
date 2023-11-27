@@ -5,9 +5,83 @@ Screen1 As screen:
         DisplayMode: =DisplayMode.Edit
         Fill: =RGBA(0, 0, 0, 0)
         Height: =500
-        Items: =
+        Items: |-
+            =Filter(
+                Reservas,
+                EspacioDeportivo.Value = EspacioSeleccionado
+            )
         Width: =800
         X: =244
         Y: =100
         ZIndex: =1
+
+        Usuario_Columna1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Usuario"
+            FieldName: ="Usuario"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =1
+            Text: =ThisItem.Usuario.DisplayName
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        FechaInicio_Columna1 As dataTableColumn.dateTimeColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="FechaInicio"
+            FieldName: ="Fechainicio"
+            FieldVariantName: ="dateTimeColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =Text(ThisItem.FechaInicio,DateTimeFormat.LongDateTime)
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+        FechaTermino_Columna1 As dataTableColumn.dateTimeColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="FechaTermino"
+            FieldName: ="Fechatermino"
+            FieldVariantName: ="dateTimeColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =Text(ThisItem.FechaTermino,DateTimeFormat.LongDateTime)
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+        EspacioDeportivo_Columna1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="EspacioDeportivo"
+            FieldName: ="EspacioDeportivo"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.EspacioDeportivo.Value
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+        "'Datos adjuntos_Columna1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Datos adjuntos"
+            FieldName: ="{Attachments}"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =6
+            Text: =ThisItem.'Datos adjuntos'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =6
 
