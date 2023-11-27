@@ -52,7 +52,9 @@ Main As screen:
             ) > 0,
                 Set(Hay,"Hay reservas en este espacioDeportivo"),
                 Set(Hay,"No hay reservas en este espacioDeportivo")
-        )
+        );
+        
+        Set(ListaConEspaciosD, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado))
 
     Calendario As group:
         Height: =5
