@@ -94,6 +94,7 @@ Form As screen:
         ZIndex: =25
 
         DateValue1_1 As datepicker:
+            DefaultDate: =_dateSelected
             EndYear: =Year(Today())+100
             Height: =50
             IsEditable: =true
@@ -162,6 +163,7 @@ Form As screen:
         ZIndex: =25
 
         DateValue1 As datepicker:
+            DefaultDate: =_dateSelected
             EndYear: =Year(Today())+100
             Height: =53
             IsEditable: =true
