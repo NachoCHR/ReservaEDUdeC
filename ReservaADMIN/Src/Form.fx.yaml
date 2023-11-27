@@ -540,7 +540,7 @@ Form As screen:
             ZIndex: =39
 
         Label24 As label:
-            Text: =EspacioSeleccionado
+            Text: =EDeportivos.Selected.Value
             Visible: =VarShowPopUp
             X: =560
             Y: =268
