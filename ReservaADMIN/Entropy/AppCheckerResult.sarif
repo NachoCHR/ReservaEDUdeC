@@ -833,47 +833,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Form.EDeportivos.DefaultSelectedItems"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Form.EDeportivos.DefaultSelectedItems",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 19,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "EspacioSeleccionado"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DefaultSelectedItems",
-                "module": "Form",
-                "type": "Form.EDeportivos"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Table",
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Form.EDeportivos.Default"
                 }
               ],

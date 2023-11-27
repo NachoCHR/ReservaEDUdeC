@@ -220,7 +220,7 @@ Form As screen:
         EDeportivos As combobox:
             Default: |
                 =EspacioSeleccionado
-            DefaultSelectedItems: =EspacioSeleccionado
+            DefaultSelectedItems: =
             DisplayFields: =["Value"]
             Height: =48
             IsSearchable: =false
