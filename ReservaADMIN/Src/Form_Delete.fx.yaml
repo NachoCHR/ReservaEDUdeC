@@ -3,19 +3,19 @@ Form_Delete As screen:
     Label2_1 As label:
         Height: =42
         Text: |
-            ="Reserva: " & Text(Last(NuevaColeccion).Usuario.DisplayName)
-        Width: =328
-        X: =258
-        Y: =121
+            =Text(Last(NuevaColeccion).Usuario.DisplayName)
+        Width: =364
+        X: =408
+        Y: =119
         ZIndex: =1
 
     Label3_1 As label:
-        Height: =36
+        Height: =28
         Text: |
-            ="Correo: " & Text(Last(NuevaColeccion).Usuario.Email)
+            =Text(Last(NuevaColeccion).Usuario.Email)
         Width: =328
-        X: =258
-        Y: =180
+        X: =348
+        Y: =179
         ZIndex: =2
 
     Button1_1 As button:
@@ -46,31 +46,21 @@ Form_Delete As screen:
         ZIndex: =13
 
     Label2_2 As label:
-        Height: =42
+        Height: =58
         Text: |
-            ="Espacio Deportivo: " & Text(Last(NuevaColeccion).EspacioDeportivo.Value)
-        Width: =328
-        X: =708
-        Y: =121
+            =Text(Last(NuevaColeccion).EspacioDeportivo.Value)
+        Width: =178
+        X: =445
+        Y: =321
         ZIndex: =14
 
     Label3_3 As label:
-        Height: =36
         Text: |
-            ="Fecha Inicio: " & Text(Last(NuevaColeccion).FechaInicio)
-        Width: =328
-        X: =258
-        Y: =240
+            =Text(Last(NuevaColeccion).FechaInicio,"dd/mm/yyy")
+        Width: =125
+        X: =426
+        Y: =228
         ZIndex: =15
-
-    Label3_4 As label:
-        Height: =34
-        Text: |
-            ="Fecha Termino: " & Text(Last(NuevaColeccion).FechaTermino)
-        Width: =347
-        X: =258
-        Y: =294
-        ZIndex: =16
 
     TextInput1 As text:
         Default: =""
@@ -78,14 +68,106 @@ Form_Delete As screen:
         HintText: =""
         Mode: =TextMode.MultiLine
         Width: =660
-        X: =337
-        Y: =340
+        X: =345
+        Y: =423
         ZIndex: =18
 
     Label7 As label:
+        FontWeight: =FontWeight.Bold
         Text: |-
-            ="Motivo:"
+            ="Motivo: *"
         X: =258
-        Y: =340
+        Y: =386
         ZIndex: =19
+
+    Label3 As label:
+        FontWeight: =FontWeight.Bold
+        Text: |-
+            ="Reservado por: "
+        X: =258
+        Y: =121
+        ZIndex: =20
+
+    Label4 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =31
+        Text: |-
+            ="Correo: " 
+        Width: =90
+        X: =258
+        Y: =175
+        ZIndex: =21
+
+    Label8 As label:
+        FontWeight: =FontWeight.Bold
+        Text: |-
+            ="Fecha de inicio: "
+        X: =258
+        Y: =228
+        ZIndex: =22
+
+    Label9 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =43
+        Text: |-
+            ="Hora: "
+        Width: =77
+        X: =570
+        Y: =228
+        ZIndex: =23
+
+    Label10 As label:
+        Height: =37
+        Text: |-
+            =Text(Last(NuevaColeccion).FechaInicio,"hh:mm") & " Hrs."
+        Width: =112
+        X: =623
+        Y: =231
+        ZIndex: =24
+
+    Label3_4 As label:
+        Text: |
+            =Text(Last(NuevaColeccion).FechaTermino,"dd/mm/yyy")
+        Width: =125
+        X: =445
+        Y: =278
+        ZIndex: =25
+
+    Label8_1 As label:
+        FontWeight: =FontWeight.Bold
+        Text: |-
+            ="Fecha de termino: "
+        Width: =187
+        X: =258
+        Y: =278
+        ZIndex: =26
+
+    Label9_1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =43
+        Text: |-
+            ="Hora: "
+        Width: =77
+        X: =570
+        Y: =278
+        ZIndex: =27
+
+    Label10_1 As label:
+        Height: =37
+        Text: |-
+            =Text(Last(NuevaColeccion).FechaTermino,"hh:mm")  & " Hrs."
+        Width: =98
+        X: =623
+        Y: =281
+        ZIndex: =28
+
+    Label12 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =37
+        Text: |-
+            ="Espacio deportivo: "
+        Width: =210
+        X: =258
+        Y: =330
+        ZIndex: =29
 
