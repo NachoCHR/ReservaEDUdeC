@@ -415,7 +415,7 @@ Main As screen:
                                 TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5))
                             )
                         ) > 0,
-                        "Reservado",
+                        "Reservado por alumno",
                         "Disponible"
                         ),
                         If(
