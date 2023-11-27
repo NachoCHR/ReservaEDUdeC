@@ -317,7 +317,9 @@ Main As screen:
         Button2 As button:
             Fill: =RGBA(0, 134, 208, 1)
             Height: =41
-            OnSelect: =Navigate(Form)
+            OnSelect: |-
+                =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value)
+                Navigate(Form)
             RadiusBottomLeft: =50
             RadiusBottomRight: =50
             RadiusTopLeft: =50
@@ -332,7 +334,9 @@ Main As screen:
             Color: =RGBA(255, 255, 255, 1)
             Height: =28
             Icon: =Icon.Add
-            OnSelect: =Navigate(Form)
+            OnSelect: |-
+                =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value)
+                Navigate(Form)
             Width: =28
             X: =1196
             Y: =72
