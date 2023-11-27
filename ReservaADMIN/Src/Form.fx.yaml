@@ -28,10 +28,10 @@ Form As screen:
                 TimeValue(Dropdown1.Selected.Value) >= TimeValue(Dropdown1_1.Selected.Value),
                 If(
                     IsBlank(EDeportivos.Selected.Value),
-                    Notify("Debe seleccionar un espacio deportivo", NotificationType.Warning),
+                    Notify("Debe seleccionar un espacio deportivo", NotificationType.Error),
                     Set(VarShowPopUp, true)
                 ),
-                Notify("La hora de termino debe ser mayor que la hora de inicio", NotificationType.Warning)
+                Notify("La hora de termino debe ser mayor que la hora de inicio", NotificationType.Error)
             )
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
