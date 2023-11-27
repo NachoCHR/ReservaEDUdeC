@@ -181,12 +181,12 @@ Form As screen:
         ZIndex: =25
 
         EDeportivos As combobox:
-            Default: =Text(EspacioSeleccionado)
+            Default: =First(Filter(Choices([@Reservas].EspacioDeportivo), Value = EspacioSeleccionado))
             DefaultSelectedItems: =
             DisplayFields: =["Value"]
             Height: =48
             IsSearchable: =false
-            Items: =Choices([@Reservas].EspacioDeportivo)
+            Items: =Filter(Choices([@Reservas].EspacioDeportivo), Value = EspacioSeleccionado)
             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
             SearchFields: =["Value"]
             SearchItems: =[]
@@ -503,8 +503,8 @@ Form As screen:
                 ="Espacio Deportivo:"
             Visible: =VarShowPopUp
             Width: =184
-            X: =380
-            Y: =268
+            X: =611
+            Y: =552
             ZIndex: =38
 
         Label24 As label:
