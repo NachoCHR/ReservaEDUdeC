@@ -424,12 +424,13 @@ Main As screen:
                             CountRows(
                                 Filter(
                                     FiltradoDias,
-                                    TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value,5))
+                                    TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5))
                                 )
                             ) > 0,
                             "Reservado por admin",
                             "Disponible"
                         )
+                    ))
                     )
                 VerticalAlign: =VerticalAlign.Top
                 Width: =167
