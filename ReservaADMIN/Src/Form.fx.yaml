@@ -306,12 +306,14 @@ Form As screen:
         Rectangle5 As rectangle:
             Fill: =RGBA(0, 121, 187, 0.5)
             Height: =768
+            Visible: =VarShowPopUp
             Width: =1366
             ZIndex: =20
 
         Rectangle6 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
             Height: =587
+            Visible: =VarShowPopUp
             Width: =696
             X: =337
             Y: =105
@@ -326,6 +328,7 @@ Form As screen:
             Size: =15
             Text: |-
                 ="Detalles de la reserva:"
+            Visible: =VarShowPopUp
             Width: =696
             X: =337
             Y: =65
@@ -336,6 +339,7 @@ Form As screen:
             Height: =43
             Text: |-
                 ="Reservado por: " 
+            Visible: =VarShowPopUp
             Width: =149
             X: =380
             Y: =154
@@ -345,6 +349,7 @@ Form As screen:
             FontWeight: =FontWeight.Bold
             Text: |-
                 ="Correo: "
+            Visible: =VarShowPopUp
             Width: =91
             X: =380
             Y: =209
@@ -353,6 +358,7 @@ Form As screen:
         "'User.FullName' As label":
             Height: =37
             Text: =User().FullName
+            Visible: =VarShowPopUp
             Width: =465
             X: =529
             Y: =157
@@ -360,6 +366,7 @@ Form As screen:
 
         "'User.Correo' As label":
             Text: =User().Email
+            Visible: =VarShowPopUp
             Width: =504
             X: =471
             Y: =209
@@ -369,12 +376,14 @@ Form As screen:
             FontWeight: =FontWeight.Bold
             Text: |-
                 ="Fecha De inicio:"
+            Visible: =VarShowPopUp
             X: =380
             Y: =326
             ZIndex: =27
 
         DFechaInicio As label:
             Text: =DateValue1.SelectedDate
+            Visible: =VarShowPopUp
             Width: =191
             X: =550
             Y: =327
@@ -385,6 +394,7 @@ Form As screen:
             Height: =41
             Text: |-
                 ="Hora:  "
+            Visible: =VarShowPopUp
             Width: =80
             X: =741
             Y: =325
@@ -392,6 +402,7 @@ Form As screen:
 
         DHoraInicio As label:
             Text: =Dropdown1.Selected.Value & " hrs."
+            Visible: =VarShowPopUp
             X: =812
             Y: =325
             ZIndex: =30
@@ -401,6 +412,7 @@ Form As screen:
             Height: =38
             Text: |-
                 ="Fecha de termino:"
+            Visible: =VarShowPopUp
             Width: =170
             X: =380
             Y: =385
@@ -409,6 +421,7 @@ Form As screen:
         DFechaTermino As label:
             Height: =45
             Text: =DateValue1_1.SelectedDate
+            Visible: =VarShowPopUp
             Width: =181
             X: =551
             Y: =385
@@ -418,6 +431,7 @@ Form As screen:
             FontWeight: =FontWeight.Bold
             Text: |-
                 ="Hora:  "
+            Visible: =VarShowPopUp
             Width: =80
             X: =741
             Y: =390
@@ -425,6 +439,7 @@ Form As screen:
 
         DHoraTermino As label:
             Text: =Dropdown1_1.Selected.Value & " hrs."
+            Visible: =VarShowPopUp
             X: =809
             Y: =390
             ZIndex: =34
@@ -433,6 +448,7 @@ Form As screen:
             FontWeight: =FontWeight.Bold
             Text: |-
                 ="Días a repetir:"
+            Visible: =VarShowPopUp
             X: =380
             Y: =450
             ZIndex: =35
@@ -444,6 +460,7 @@ Form As screen:
                     Concat(ComboBox1.SelectedItems, Value,", "),
                     "No hay días seleccionados."
                 )
+            Visible: =VarShowPopUp
             Width: =430
             X: =530
             Y: =450
@@ -457,6 +474,7 @@ Form As screen:
             RadiusTopLeft: =50
             RadiusTopRight: =50
             Text: ="Cancelar"
+            Visible: =VarShowPopUp
             X: =471
             Y: =577
             ZIndex: =37
@@ -505,6 +523,7 @@ Form As screen:
             RadiusTopLeft: =50
             RadiusTopRight: =50
             Text: ="Enviar"
+            Visible: =VarShowPopUp
             X: =723
             Y: =577
             ZIndex: =38
@@ -514,6 +533,7 @@ Form As screen:
             Height: =41
             Text: |-
                 ="Espacio Deportivo:"
+            Visible: =VarShowPopUp
             Width: =184
             X: =380
             Y: =270
@@ -521,6 +541,7 @@ Form As screen:
 
         Label24 As label:
             Text: =EDeportivo.Selected.Value
+            Visible: =VarShowPopUp
             X: =560
             Y: =268
             ZIndex: =40
