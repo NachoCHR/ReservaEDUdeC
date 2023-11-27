@@ -3,16 +3,6 @@ App As appinfo:
     Formulas: =
     OnStart: |-
         =ClearCollect(
-            deportivos,
-            [
-                "Futbol",
-                "Basquet",
-                "Voley",
-                "Handball"
-            ]
-        );
-        //ClearCollect(deportivos; ["F";"B";"V";"H"]);;
-        ClearCollect(
             HorasDisponibles,
             [
                 "08:00 - 09:00",

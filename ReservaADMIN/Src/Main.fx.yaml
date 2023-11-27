@@ -253,7 +253,15 @@ Main As screen:
         Dropdown2_1 As dropdown:
             Default: ="Bascket"
             Items: =Choices([@Reservas].EspacioDeportivo)
-            OnChange: =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value)
+            OnChange: |-
+                =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
+                ClearCollect(
+                    TablaFiltrada,
+                    Filter(
+                        Reservas,
+                        EspacioDeportivo.Value = EspacioSeleccionado
+                    )
+                )
             OnSelect: =
             X: =161
             Y: =159
