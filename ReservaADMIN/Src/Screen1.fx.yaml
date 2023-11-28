@@ -173,8 +173,7 @@ Screen1 As screen:
         Dropdown2_4 As dropdown:
             AllowEmptySelection: =true
             Default: =
-            Items: |
-                =DepartamentosUnicos.Department
+            Items: =["(3319) INGENIERIA CIVIL INFORMATICA", "(3317) INGENIERIA CIVIL QUIMICA"]
             OnChange: |-
                 =Set(
                     DepartamentoSeleccionado,

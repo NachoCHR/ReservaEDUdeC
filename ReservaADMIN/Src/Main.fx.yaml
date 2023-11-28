@@ -283,7 +283,11 @@ Main As screen:
     Button2_1 As button:
         Fill: =RGBA(0, 134, 208, 1)
         Height: =41
-        OnSelect: =Navigate(Screen1)
+        OnSelect: |-
+            =
+            
+            
+            Navigate(Screen1)
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
         RadiusTopLeft: =50
