@@ -1,0 +1,148 @@
+Screen1 As screen:
+
+    SelectorEspacioDeportivo_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =9
+        ZIndex: =3
+
+        Dropdown2_3 As dropdown:
+            AllowEmptySelection: =true
+            Default: =
+            Items: =Distinct(Filter(Reservas, Usuario.Email = User().Email),EspacioDeportivo.Value)
+            OnChange: |-
+                =Set(EspacioSeleccionado,Dropdown2_3.Selected.Value);
+                ClearCollect(
+                    DatosGrafico,
+                    ForAll(
+                        Filter(
+                            Reservas,
+                            Text(EspacioDeportivo.Value) = Dropdown2_3.SelectedText.Value
+                        ),
+                        { Id : EspacioDeportivo.Value, Fecha1: FechaInicio , Department: Usuario.Department }
+                    )
+                );
+                ClearCollect(
+                    DatosContados,
+                    AddColumns(
+                        GroupBy(DatosGrafico, "Department", "DepartmentGroup"),
+                        "Count", CountRows(DepartmentGroup),
+                        "Percentage", Text(CountRows(DepartmentGroup) / CountRows(DatosGrafico) * 100, "0%")
+                
+                    )
+                )
+            OnSelect: =
+            X: =156
+            Y: =85
+            ZIndex: =1
+
+        Label1_3 As label:
+            Align: =Align.Center
+            Font: =Font.'Lato Black'
+            FontWeight: =FontWeight.Bold
+            Height: =38
+            Text: ="Espacio Deportivo"
+            Width: =332
+            X: =154
+            Y: =40
+            ZIndex: =2
+
+    CompositePieChart2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =9
+        ZIndex: =4
+
+        PieChart2 As pieChart:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Segoe UI'
+            Height: =613
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            Items: =DatosContados.Percentage
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Size: =24
+            Width: =600
+            X: =735
+            Y: =125
+            ZIndex: =5
+
+        Legend2 As legend:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(220, 220, 220, 1)
+            Font: =Font.'Segoe UI'
+            Height: =613
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            ItemColorSet: =PieChart2.ItemColorSet
+            Items: =DatosContados
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Size: =16
+            Width: =634
+            X: =6
+            Y: =155
+            ZIndex: =6
+
+    "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =612
+        Items: =DatosContados
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =41
+        X: =20
+        Y: =156
+        ZIndex: =7
+
+        Title5 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =25
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Count
+            VerticalAlign: =VerticalAlign.Top
+            Width: =129
+            X: =442
+            Y: =7
+            ZIndex: =2
+
+        Subtitle5 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =26
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =14
+            Text: =ThisItem.Percentage
+            VerticalAlign: =VerticalAlign.Top
+            Width: =128
+            X: =481
+            Y: =7
+            ZIndex: =3
+
+        Separator5 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
