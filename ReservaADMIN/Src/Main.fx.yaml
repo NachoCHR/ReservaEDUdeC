@@ -285,8 +285,22 @@ Main As screen:
         Height: =41
         OnSelect: |-
             =
-            
-            
+            ClearCollect(
+                DatosGrafico2,
+                ForAll(
+                    Filter(
+                        Reservas,
+                        ID>=0
+                    ),
+                    {
+                        EspacioDeportivo: Text(Usuario.Department)
+                    }
+                )
+            );
+            ClearCollect(
+                DatosGrafico2Unicos,
+                Distinct(DatosGrafico2, EspacioDeportivo)
+            );
             Navigate(Screen1)
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
