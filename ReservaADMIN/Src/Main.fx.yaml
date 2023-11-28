@@ -291,7 +291,7 @@ Main As screen:
         Text: ="Metricas"
         Width: =191
         X: =735
-        Y: =66
+        Y: =71
         ZIndex: =15
 
     Encabezado As group:
