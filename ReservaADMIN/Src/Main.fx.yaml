@@ -280,6 +280,20 @@ Main As screen:
             Y: =118
             ZIndex: =9
 
+    Button2_1 As button:
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =41
+        OnSelect: =Navigate(Screen1)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Text: ="Metricas"
+        Width: =191
+        X: =735
+        Y: =66
+        ZIndex: =15
+
     Encabezado As group:
         Height: =5
         Width: =5
@@ -527,7 +541,7 @@ Main As screen:
             FontWeight: =FontWeight.Bold
             Height: =34
             Text: =_dateSelected
-            Width: =637
+            Width: =640
             X: =726
             Y: =159
             ZIndex: =12
