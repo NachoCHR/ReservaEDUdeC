@@ -150,7 +150,7 @@
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Value\":\"Value\"}",
+          "NameMap": "{\"Value\":\"EspacioDeportivo\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },

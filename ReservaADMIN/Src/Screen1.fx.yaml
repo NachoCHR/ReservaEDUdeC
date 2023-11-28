@@ -10,9 +10,9 @@ Screen1 As screen:
         Dropdown2_3 As dropdown:
             AllowEmptySelection: =true
             Default: =
-            Items: =Distinct(Filter(Reservas, Usuario.Email = User().Email),EspacioDeportivo.Value)
+            Items: =EspaciosDeportivos.EspacioDeportivo
             OnChange: |-
-                =Set(EspacioSeleccionado,Dropdown2_3.Selected.Value);
+                =Set(EspacioSeleccionado,Dropdown2_3.Selected.EspacioDeportivo);
                 ClearCollect(
                     DatosGrafico,
                     ForAll(
