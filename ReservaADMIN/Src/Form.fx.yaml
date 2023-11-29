@@ -540,12 +540,12 @@ Form As screen:
                         EspacioDeportivo: EDeportivo.Selected,
                         Dias: If(
                                 FechasDistintas,
-                                DiaSeleccionado,
                                 If(
                                     Dropdown2.Selected.Value = "Todos los días",
                                     TodosLosDias,
                                     ComboBox1.SelectedItems
-                                )
+                                ),
+                                DiaSeleccionado
                         ),            
                         Asunto: TextInput3.Text
                 
