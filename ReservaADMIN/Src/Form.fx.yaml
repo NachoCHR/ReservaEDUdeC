@@ -671,7 +671,12 @@ Form As screen:
         Dropdown2 As dropdown:
             Height: =53
             Items: =["Todos los días","Personalizado"]
-            Visible: =!FechasDistintas
+            Visible: |-
+                =If(
+                    FechasDistintas,
+                    true,
+                    false
+                )
             Width: =306
             X: =224
             Y: =480
@@ -683,7 +688,12 @@ Form As screen:
             Size: =14
             Text: |-
                 ="Repetir:"
-            Visible: =!FechasDistintas
+            Visible: |-
+                =If(
+                    FechasDistintas,
+                    true,
+                    false
+                )
             Width: =305
             X: =224
             Y: =440
