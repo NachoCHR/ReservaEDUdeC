@@ -530,28 +530,51 @@ Form As screen:
                     Table(
                         {
                             Fecha: DateValue1.SelectedDate,
-                            NombreDia: Text(DateValue1.SelectedDate, "dddd"),
+                            NombreDia: Text(
+                                DateValue1.SelectedDate,
+                                "dddd"
+                            ),
                             ID: Switch(
-                                Text(DateValue1.SelectedDate, "dddd"),
-                                "lunes", 0,
-                                "martes", 1,
-                                "miércoles", 2,
-                                "jueves", 3,
-                                "viernes", 4,
-                                "sábado", 5,
-                                "domingo", 6,
-                                -1  // Valor por defecto en caso de que el día no coincida con ninguno de los anteriores
+                                Text(
+                                    DateValue1.SelectedDate,
+                                    "dddd"
+                                ),
+                                "lunes",
+                                0,
+                                "martes",
+                                1,
+                                "miércoles",
+                                2,
+                                "jueves",
+                                3,
+                                "viernes",
+                                4,
+                                "sábado",
+                                5,
+                                "domingo",
+                                6,
+                                -1// Valor por defecto en caso de que el día no coincida con ninguno de los anteriores
                             ),
                             Value: Switch(
-                                Text(DateValue1.SelectedDate, "dddd"),
-                                "lunes", "Lunes",
-                                "martes", "Martes",
-                                "miércoles", "Miércoles",
-                                "jueves", "Jueves",
-                                "viernes", "Viernes",
-                                "sábado", "Sábado",
-                                "domingo", "Domingo",
-                                "OtroValor"  // Valor por defecto en caso de que el día no coincida con ninguno de los anteriores
+                                Text(
+                                    DateValue1.SelectedDate,
+                                    "dddd"
+                                ),
+                                "lunes",
+                                "Lunes",
+                                "martes",
+                                "Martes",
+                                "miércoles",
+                                "Miércoles",
+                                "jueves",
+                                "Jueves",
+                                "viernes",
+                                "Viernes",
+                                "sábado",
+                                "Sábado",
+                                "domingo",
+                                "Domingo",
+                                "OtroValor"// Valor por defecto en caso de que el día no coincida con ninguno de los anteriores
                             )
                         }
                     )
@@ -559,58 +582,78 @@ Form As screen:
                 ClearCollect(
                     TodosLosDias,
                     Table(
-                        { Id: 0, Value: "Lunes" },
-                        { Id: 1, Value: "Martes" },
-                        { Id: 2, Value: "Miércoles" },
-                        { Id: 3, Value: "Jueves" },
-                        { Id: 4, Value: "Viernes" },
-                        { Id: 5, Value: "Sábado" }
+                        {
+                            Id: 0,
+                            Value: "Lunes"
+                        },
+                        {
+                            Id: 1,
+                            Value: "Martes"
+                        },
+                        {
+                            Id: 2,
+                            Value: "Miércoles"
+                        },
+                        {
+                            Id: 3,
+                            Value: "Jueves"
+                        },
+                        {
+                            Id: 4,
+                            Value: "Viernes"
+                        },
+                        {
+                            Id: 5,
+                            Value: "Sábado"
+                        }
                     )
                 );
-                
                 If(
                     CountRows(
                         Filter(
                             FiltradoFecha,
-                            TimeValue(FechaInicio) <= TimeValue(DateValue1) && TimeValue(FechaTermino) >= TimeValue(DateValue1_1)
+                            TimeValue(FechaInicio) <= TimeValue(DHoraInicio) && TimeValue(FechaTermino) >= TimeValue(DHoraTermino)
                         )
                     ) > 0,
-                    Notify("El ciclo que se quiere ingresar coincide con alguna reserva registrada previamente, por favor revise las reservas.", NotificationType.Error),
+                    Notify(
+                        "El ciclo que se quiere ingresar coincide con alguna reserva registrada previamente, por favor revise las reservas.",
+                        NotificationType.Error
+                    ),
                     Patch(
-                    Reservas,
-                    Defaults(Reservas),
-                    {
-                        Usuario: {
-                            Claims: Concatenate(
-                                "i:0#.f|membership|",
-                                User().Email// Person email
-                            ),
-                            Department: "",
-                            DisplayName: User().FullName,
-                            Email: User().Email,
-                            JobTitle: "",
-                            Picture: ""
-                        },
-                        FechaInicio: DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value),
-                        FechaTermino: DateValue(DateValue1_1.SelectedDate) + TimeValue(Dropdown1_1.Selected.Value),
-                        EspacioDeportivo: EDeportivo.Selected,
-                        Dias: If(FechasDistintas,
+                        Reservas,
+                        Defaults(Reservas),
+                        {
+                            Usuario: {
+                                Claims: Concatenate(
+                                    "i:0#.f|membership|",
+                                    User().Email// Person email
+                                ),
+                                Department: "",
+                                DisplayName: User().FullName,
+                                Email: User().Email,
+                                JobTitle: "",
+                                Picture: ""
+                            },
+                            FechaInicio: DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value),
+                            FechaTermino: DateValue(DateValue1_1.SelectedDate) + TimeValue(Dropdown1_1.Selected.Value),
+                            EspacioDeportivo: EDeportivo.Selected,
+                            Dias: If(
+                                FechasDistintas,
                                 If(
                                     Dropdown2.Selected.Value = "Todos los días",
                                     TodosLosDias,
                                     ComboBox1.SelectedItems
                                 ),
                                 DiaCorrespondiente
-                        ),
-                        Asunto: TextInput3.Text
-                
-                    }
+                            ),
+                            Asunto: TextInput3.Text
+                        }
                     )
                 );
-                
-                
-                
-                Set(VarShowPopUp,false);
+                Set(
+                    VarShowPopUp,
+                    false
+                );
                 Reset (TextInput3);
                 Reset (ComboBox1);
                 Reset (Dropdown1);
