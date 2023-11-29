@@ -254,7 +254,7 @@ Main As screen:
                     Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
                     Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
                     Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
-                    ClearCollect(DiasDefault,Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd"))));
+                    ClearCollect(DiaSeleccionado,Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd"))));
                 Size: =12
                 TabIndex: =0
                 Text: =Day(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days))
