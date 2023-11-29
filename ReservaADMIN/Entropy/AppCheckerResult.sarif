@@ -617,6 +617,96 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Form_Delete.Icon2_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Form_Delete.Icon2_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form_Delete",
+                "type": "Form_Delete.Icon2_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Form_Delete.Icon2_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Form_Delete.Icon2_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Form_Delete",
+                "type": "Form_Delete.Icon2_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Form_Delete.TextInput1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Form_Delete.TextInput1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form_Delete",
+                "type": "Form_Delete.TextInput1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Main.Icon5.AccessibleLabel"
                 }
               ],
@@ -1001,96 +1091,6 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Form_Delete.Icon2_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Form_Delete.Icon2_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form_Delete",
-                "type": "Form_Delete.Icon2_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Form_Delete.Icon2_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Form_Delete.Icon2_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Form_Delete",
-                "type": "Form_Delete.Icon2_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Form_Delete.TextInput1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Form_Delete.TextInput1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form_Delete",
-                "type": "Form_Delete.TextInput1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1636,6 +1636,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.VarInicio"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.VarInicio",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "VarInicio",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.CorreoUsuario"
                 }
               ],
@@ -1666,17 +1696,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.DepartamentoSeleccionado"
+                  "fullyQualifiedName": "App.NombreUsuario"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.DepartamentoSeleccionado",
+                  "fullyQualifiedName": "App.NombreUsuario",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "DepartamentoSeleccionado",
+                "member": "NombreUsuario",
                 "module": "App",
                 "type": "App"
               }
@@ -1696,17 +1726,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.NombreUsuario"
+                  "fullyQualifiedName": "App.DepartamentoSeleccionado"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.NombreUsuario",
+                  "fullyQualifiedName": "App.DepartamentoSeleccionado",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "NombreUsuario",
+                "member": "DepartamentoSeleccionado",
                 "module": "App",
                 "type": "App"
               }

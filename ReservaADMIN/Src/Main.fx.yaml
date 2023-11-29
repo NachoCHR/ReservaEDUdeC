@@ -38,12 +38,9 @@ Main As screen:
             _calendarVisible,
             true
         );
-        If(
-            VarInicio,
-            Set(
-                EspacioSeleccionado,
-                "Cancha Hockey"
-            )
+        Set(
+            EspacioSeleccionado,
+            Dropdown2_1.SelectedText.Value
         );
         
         Set(
