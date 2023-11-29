@@ -706,11 +706,13 @@ Form As screen:
             Y: =160
             ZIndex: =45
 
-    Label16 As label:
-        Text: =TimeValue(
+    Label17 As label:
+        Height: =33
+        Text: =TimeValue(Dropdown1.Selected.Value) &"  "& TimeValue(Dropdown1_1.Selected.Value)
+        Width: =138
         X: =392
-        Y: =486
-        ZIndex: =46
+        Y: =483
+        ZIndex: =47
 
     Repetir As group:
         Height: =5
