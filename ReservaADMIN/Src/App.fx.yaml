@@ -68,7 +68,7 @@ App As appinfo:
         
         
         
-    StartScreen: =Main
+    StartScreen: =Main //Setea la pantalla Main como la principal
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
