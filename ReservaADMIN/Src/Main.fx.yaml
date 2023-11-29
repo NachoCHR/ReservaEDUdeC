@@ -585,3 +585,12 @@ Main As screen:
             Y: =159
             ZIndex: =12
 
+    Label15 As label:
+        Height: =45
+        Text: |-
+            ="Valor espacio deportivo: " & EspacioSeleccionado
+        Width: =395
+        X: =545
+        Y: =99
+        ZIndex: =16
+
