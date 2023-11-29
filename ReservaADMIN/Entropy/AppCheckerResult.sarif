@@ -617,47 +617,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Form.ComboBox1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Form.ComboBox1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 66,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "Filter(Choices([@Reservas].Dias); Value in [\"Lunes\"; \"Miércoles\"])"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "Form",
-                "type": "Form.ComboBox1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Record",
-              "Table"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Form_Delete.Icon2_1.AccessibleLabel"
                 }
               ],

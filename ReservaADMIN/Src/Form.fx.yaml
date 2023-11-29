@@ -67,8 +67,7 @@ Form As screen:
         ZIndex: =25
 
         ComboBox1 As combobox:
-            Default: |
-                =Filter(Choices([@Reservas].Dias), Value in ["Lunes", "Miércoles"])
+            DefaultSelectedItems: =DiasDefault
             DisplayFields: =["Value"]
             Height: =50
             IsSearchable: =false
