@@ -265,13 +265,6 @@ Main As screen:
                 Wrap: =false
                 ZIndex: =3
 
-            Label16 As label:
-                OnSelect: =Select(Parent)
-                Text: =ThisItem.Value
-                Width: =100.42857142857143
-                Y: =20
-                ZIndex: =4
-
     SelectorEspacioDeportivo As group:
         Height: =5
         Width: =5
