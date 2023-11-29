@@ -521,7 +521,11 @@ Form As screen:
                     }
                 );
                 
-                Set(VarShowPopUp,false)
+                Set(VarShowPopUp,false);
+                Reset (TextInput3);
+                Reset (ComboBox1);
+                Reset (Dropdown1);
+                Reset (Dropdown1_1)
             RadiusBottomLeft: =50
             RadiusBottomRight: =50
             RadiusTopLeft: =50
