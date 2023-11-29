@@ -1,12 +1,13 @@
 Form As screen:
-    OnVisible: |
+    OnVisible: |+
         =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
-        Set(
-            MiRegistro,
+        ClearCollect(
+            MiTabla,
             {
                 DiaSemana: Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd")))
             }
         )
+        
 
     Button1_2 As button:
         Fill: =RGBA(0, 134, 208, 1)
@@ -545,7 +546,7 @@ Form As screen:
                         FechaInicio: DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value),
                         FechaTermino: DateValue(DateValue1_1.SelectedDate) + TimeValue(Dropdown1_1.Selected.Value),
                         EspacioDeportivo: EDeportivo.Selected,
-                        Dias: DiaSeleccionado,         
+                        Dias: MiRegistro,         
                         Asunto: TextInput3.Text
                 
                     }
