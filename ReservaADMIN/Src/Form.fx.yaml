@@ -530,13 +530,12 @@ Form As screen:
                         EspacioDeportivo: EDeportivo.Selected,
                         Dias: If(
                                 !FechasDistintas,
-                                Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd"))),
+                                DiaSeleccionado,
                                 If(
-                                    DiasDefault
-                                    Dropdown2.Selected.Value = "Personalizado",
-                                TodosLosDias,
-                                ComboBox1.SelectedItems
-                        ),
+                                    Dropdown2.Selected.Value = "Todos los días",
+                                    TodosLosDias,
+                                    ComboBox1.SelectedItems
+                                )
                         ),            
                         Asunto: TextInput3.Text
                 
