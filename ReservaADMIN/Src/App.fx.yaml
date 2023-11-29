@@ -3,7 +3,7 @@ App As appinfo:
     Formulas: =
     OnStart: |+
         =Set(VarInicio, true);
-        ClearCollect(TodosLosDias, ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"]);
+        
         ClearCollect(
             HorasDisponibles,
             [
