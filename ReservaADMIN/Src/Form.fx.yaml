@@ -568,6 +568,11 @@ Form As screen:
                     )
                 );
                 
+                If(
+                    // Necesito ver que fechaInicio<= Fecha Seleccionada <= Fecha termino. && Verificar el dia. 
+                    
+                );
+                
                 Patch(
                     Reservas,
                     Defaults(Reservas),

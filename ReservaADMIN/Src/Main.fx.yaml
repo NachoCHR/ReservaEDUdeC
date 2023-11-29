@@ -475,7 +475,7 @@ Main As screen:
                     If(
                         CountRows(
                             Filter(
-                                FiltradoDias,
+                                FiltradoFecha,
                                 TimeValue(FechaInicio) <= TimeValue(Left(ThisItem.Value, 5)) && TimeValue(FechaTermino) >= TimeValue(Right(ThisItem.Value, 5))
                             )
                         ) > 0,
