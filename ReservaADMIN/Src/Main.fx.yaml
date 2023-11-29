@@ -367,9 +367,7 @@ Main As screen:
             Color: =RGBA(255, 255, 255, 1)
             Height: =28
             Icon: =Icon.Add
-            OnSelect: |-
-                =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
-                Navigate(Form)
+            OnSelect: =Navigate(Form)
             Width: =28
             X: =1196
             Y: =72
