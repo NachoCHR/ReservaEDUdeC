@@ -531,7 +531,10 @@ Form As screen:
                         FechaInicio: DateValue(DateValue1.SelectedDate) + TimeValue(Dropdown1.Selected.Value),
                         FechaTermino: DateValue(DateValue1_1.SelectedDate) + TimeValue(Dropdown1_1.Selected.Value),
                         EspacioDeportivo: EDeportivo.Selected,
-                        Dias: ComboBox1.SelectedItems,
+                        Dias: If(
+                                Dropdown2.Selected.Value = "Personalizado",
+                                
+                                ComboBox1.SelectedItems,
                         Asunto: TextInput3.Text
                 
                     }
