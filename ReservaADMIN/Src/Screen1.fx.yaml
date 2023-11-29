@@ -3,8 +3,8 @@ Screen1 As screen:
     Radio1 As radio:
         Items: =["Espacio Deportivo", "Departamento"]
         Width: =352
-        X: =60
-        Y: =50
+        X: =88
+        Y: =95
         ZIndex: =8
 
     Group1 As group:
@@ -86,7 +86,7 @@ Screen1 As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledFill: =RGBA(220, 220, 220, 1)
             Font: =Font.'Segoe UI'
-            Height: =613
+            Height: =555
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             ItemColorSet: =PieChart2.ItemColorSet
             Items: =DatosContados
@@ -94,24 +94,25 @@ Screen1 As screen:
             Size: =16
             Visible: |
                 =If(Radio1.Selected.Value = "Espacio Deportivo", true, false)
-            Width: =634
-            X: =26
-            Y: =155
+            Width: =571
+            X: =88
+            Y: =212
             ZIndex: =6
 
         "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
-            Height: =612
+            Height: =606
             Items: =DatosContados
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0
-            TemplateSize: =41
+            TemplateSize: =38
             Visible: |
                 =If(Radio1.Selected.Value = "Espacio Deportivo", true, false)
-            X: =45
-            Y: =156
+            Width: =550
+            X: =106
+            Y: =158
             ZIndex: =7
 
             Title5 As label:
@@ -126,8 +127,8 @@ Screen1 As screen:
                 Text: =ThisItem.Count
                 VerticalAlign: =VerticalAlign.Top
                 Width: =129
-                X: =442
-                Y: =7
+                X: =421
+                Y: =8
                 ZIndex: =2
 
             Subtitle5 As label:
@@ -159,9 +160,18 @@ Screen1 As screen:
     Label13 As label:
         Text: |-
             ="Filtrar Por: " 
-        X: =60
-        Y: =10
+        X: =106
+        Y: =55
         ZIndex: =9
+
+    Icon1 As icon.ChevronLeft:
+        Height: =51
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Navigate(Main)
+        Width: =36
+        X: =24
+        Y: =27
+        ZIndex: =15
 
     Group1_1 As group:
         Height: =5
