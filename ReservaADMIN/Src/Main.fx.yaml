@@ -384,14 +384,27 @@ Main As screen:
         Button2 As button:
             Fill: =RGBA(0, 134, 208, 1)
             Height: =41
-            OnSelect: |-
-                =Reset (TextInput3);
-                Reset (ComboBox1);
-                Reset (Dropdown1);
-                Reset (Dropdown1_1);
-                Set(VarInicio,false);
-                Set(FechasDistintas,false);
-                Navigate(Form)
+            OnSelect: |
+                =// Restablecer el control TextInput3
+                Reset(TextInput3);
+                
+                // Restablecer el control ComboBox1
+                Reset(ComboBox1);
+                
+                // Restablecer el control Dropdown1
+                Reset(Dropdown1);
+                
+                // Restablecer el control Dropdown1_1
+                Reset(Dropdown1_1);
+                
+                // Establecer la variable VarInicio en false
+                Set(VarInicio, false);
+                
+                // Establecer la variable FechasDistintas en false
+                Set(FechasDistintas, false);
+                
+                // Navegar a la pantalla Form
+                Navigate(Form),
             RadiusBottomLeft: =50
             RadiusBottomRight: =50
             RadiusTopLeft: =50
@@ -406,14 +419,27 @@ Main As screen:
             Color: =RGBA(255, 255, 255, 1)
             Height: =28
             Icon: =Icon.Add
-            OnSelect: |-
-                =Reset (TextInput3);
-                Reset (ComboBox1);
-                Reset (Dropdown1);
-                Reset (Dropdown1_1);
-                Set(VarInicio,false);
-                Set(FechasDistintas,false);
-                Navigate(Form)
+            OnSelect: |
+                =// Restablecer el control TextInput3
+                Reset(TextInput3);
+                
+                // Restablecer el control ComboBox1
+                Reset(ComboBox1);
+                
+                // Restablecer el control Dropdown1
+                Reset(Dropdown1);
+                
+                // Restablecer el control Dropdown1_1
+                Reset(Dropdown1_1);
+                
+                // Establecer la variable VarInicio en false
+                Set(VarInicio, false);
+                
+                // Establecer la variable FechasDistintas en false
+                Set(FechasDistintas, false);
+                
+                // Navegar a la pantalla Form
+                Navigate(Form),
             Width: =28
             X: =1196
             Y: =72
