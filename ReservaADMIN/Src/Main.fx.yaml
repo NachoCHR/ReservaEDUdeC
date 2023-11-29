@@ -594,7 +594,7 @@ Main As screen:
         Height: =60
         Size: =21
         Text: |-
-            ="Valor espacio deportivo: " & 
+            ="Valor espacio deportivo: " & Dropdown2_1.SelectedText.Value
         Width: =533
         X: =520
         Y: =93
