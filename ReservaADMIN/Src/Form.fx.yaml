@@ -9,6 +9,7 @@ Form As screen:
             Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
             Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
             Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
+            Set(_dateSelected, Today());
             Navigate(Main)
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
