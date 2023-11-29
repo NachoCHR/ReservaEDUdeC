@@ -267,19 +267,19 @@ Form As screen:
             RadiusTopLeft: =40
             RadiusTopRight: =40
             Text: ="Agregar reserva"
-            Width: =1356
-            X: =7
-            Y: =4
+            Width: =1350
+            X: =10
             ZIndex: =12
 
         Icon6 As icon.Add:
             Color: =RGBA(255, 255, 255, 1)
             DisabledColor: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.View
             Height: =32
             Icon: =Icon.Add
             Width: =31
-            X: =564
-            Y: =13
+            X: =568
+            Y: =9
             ZIndex: =13
 
     EspacioDeportivo As group:

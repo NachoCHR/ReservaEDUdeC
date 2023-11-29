@@ -335,6 +335,7 @@ Main As screen:
 
         Icon1_1 As icon.Calendar:
             Color: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.View
             Height: =34
             Icon: =Icon.AddToCalendar
             Width: =28
