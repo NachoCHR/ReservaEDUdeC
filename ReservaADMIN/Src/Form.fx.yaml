@@ -58,7 +58,7 @@ Form As screen:
             Tooltip: ="Todos los dias"
             Visible: |-
                 =If(
-                    Dropdown2 = "Personalizado"
+                    Dropdown2.SelectedText = "Personalizado"
                 )
             Width: =305
             X: =636
@@ -74,7 +74,7 @@ Form As screen:
                 ="Días a repetir:"
             Visible: |-
                 =If(
-                    Dropdown2 = "Personalizado"
+                    Dropdown2.SelectedText = "Personalizado"
                 )
             Width: =305
             X: =636

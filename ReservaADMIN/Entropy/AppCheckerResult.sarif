@@ -627,7 +627,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 19,
+                  "charOffset": 32,
                   "snippet": {
                     "text": "="
                   }
@@ -642,7 +642,7 @@
           ],
           "message": {
             "arguments": [
-              "Control",
+              "Record",
               "Text"
             ],
             "id": "issue"
@@ -667,10 +667,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 39,
+                  "charLength": 52,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "If(\r\n    Dropdown2 = \"Personalizado\"\r\n)"
+                    "text": "If(\r\n    Dropdown2.SelectedText = \"Personalizado\"\r\n)"
                   }
                 }
               },
@@ -709,7 +709,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 19,
+                  "charOffset": 32,
                   "snippet": {
                     "text": "="
                   }
@@ -724,7 +724,7 @@
           ],
           "message": {
             "arguments": [
-              "Control",
+              "Record",
               "Text"
             ],
             "id": "issue"
@@ -749,10 +749,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 39,
+                  "charLength": 52,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "If(\r\n    Dropdown2 = \"Personalizado\"\r\n)"
+                    "text": "If(\r\n    Dropdown2.SelectedText = \"Personalizado\"\r\n)"
                   }
                 }
               },
