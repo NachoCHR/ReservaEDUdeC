@@ -42,7 +42,10 @@ Main As screen:
             EspacioSeleccionado,
             "Cancha Tenis"
         );
-        Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
+        Set(
+            EspacioSeleccionado,
+            Text(Dropdown2_1.Selected.Value)
+        );
         Set(
             FiltradoEspacio,
             Filter(
@@ -422,7 +425,7 @@ Main As screen:
             Selectable: =false
             TemplatePadding: =0
             TemplateSize: =103
-            X: =726
+            X: =723
             Y: =193
             ZIndex: =2
 
