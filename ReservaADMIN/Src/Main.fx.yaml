@@ -6,12 +6,9 @@ Main As screen:
             IsBlank(Dropdown2_1.Selected.Value),
             Set(EspacioSeleccionado, "Cancha Hockey")
         );
-        If(
-            IsBlank(_dateSelected),
-            Set(
-                _dateSelected,
-                Today()
-            )
+        Set(
+            _dateSelected,
+            Today()
         );
         
         Set(
