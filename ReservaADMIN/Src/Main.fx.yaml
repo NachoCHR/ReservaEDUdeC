@@ -40,7 +40,7 @@ Main As screen:
         );
         Set(
             EspacioSeleccionado,
-            "Bascket"
+            "Cancha Hockey"
         );
         Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
         Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
