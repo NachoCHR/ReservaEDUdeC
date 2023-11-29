@@ -373,6 +373,7 @@ Main As screen:
                 Reset (Dropdown1);
                 Reset (Dropdown1_1);
                 Set(VarInicio,false);
+                ClearCollect(DiasDefault, ["Lunes", "Miércoles"]);
                 Navigate(Form)
             RadiusBottomLeft: =50
             RadiusBottomRight: =50

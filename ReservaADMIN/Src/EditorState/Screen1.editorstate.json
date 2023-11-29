@@ -103,7 +103,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Dropdown2_3",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -448,7 +448,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Dropdown2_4",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -741,7 +741,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Gallery4",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -933,7 +933,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Gallery4_1",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1487,7 +1487,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1_3",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2050,7 +2050,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label13",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2302,7 +2302,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Legend2",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2470,7 +2470,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Legend2_1",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2636,7 +2636,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PieChart2",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2792,7 +2792,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PieChart2_1",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
