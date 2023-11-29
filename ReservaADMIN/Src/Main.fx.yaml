@@ -1,6 +1,6 @@
 Main As screen:
     Fill: =
-    OnVisible: |
+    OnVisible: |-
         =/*resets calendar view and date selection to today*/
         If(
             IsBlank(Dropdown2_1.Selected.Value),
@@ -69,6 +69,7 @@ Main As screen:
                 ) in Dias.Value
             )
         );
+        ClearCollect(DiasDefault,Text(_dateSelected,"dddd"));
 
     Calendario As group:
         Height: =5
