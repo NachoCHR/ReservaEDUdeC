@@ -56,7 +56,10 @@ Form As screen:
             SearchFields: =["Value"]
             SearchItems: =[]
             Tooltip: ="Todos los dias"
-            Visible: =FechasDistintas
+            Visible: |-
+                =If(
+                    Dropdown2 = "Personalizado"
+                )
             Width: =305
             X: =636
             Y: =483
@@ -69,7 +72,10 @@ Form As screen:
             Size: =14
             Text: |-
                 ="Días a repetir:"
-            Visible: =FechasDistintas
+            Visible: |-
+                =If(
+                    Dropdown2 = "Personalizado"
+                )
             Width: =305
             X: =636
             Y: =442
@@ -586,7 +592,7 @@ Form As screen:
             Visible: =FechasDistintas
             Width: =306
             X: =224
-            Y: =473
+            Y: =480
             ZIndex: =44
 
         Label5_7 As label:
@@ -598,7 +604,7 @@ Form As screen:
             Visible: =FechasDistintas
             Width: =305
             X: =224
-            Y: =432
+            Y: =440
             ZIndex: =46
 
     Asunto As group:
