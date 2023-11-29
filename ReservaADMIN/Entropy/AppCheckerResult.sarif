@@ -381,7 +381,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 632,
+                  "charOffset": 686,
                   "snippet": {
                     "text": "!"
                   }
@@ -421,7 +421,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 647,
+                  "charOffset": 701,
                   "snippet": {
                     "text": "&&"
                   }
