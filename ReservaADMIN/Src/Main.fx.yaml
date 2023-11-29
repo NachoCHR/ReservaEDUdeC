@@ -40,7 +40,7 @@ Main As screen:
         );
         Set(
             EspacioSeleccionado,
-            "Cancha Hockey"
+            "Cancha Tenis"
         );
         Set(
             FiltradoEspacio,
