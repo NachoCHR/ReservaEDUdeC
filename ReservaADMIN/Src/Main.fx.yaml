@@ -314,24 +314,29 @@ Main As screen:
     Button2_1 As button:
         Fill: =RGBA(0, 134, 208, 1)
         Height: =41
-        OnSelect: |-
+        OnSelect: |
             =
+            // Crear la colección DatosGrafico2 con información sobre los espacios deportivos
             ClearCollect(
                 DatosGrafico2,
                 ForAll(
                     Filter(
                         Reservas,
-                        ID>=0
+                        ID >= 0
                     ),
                     {
                         EspacioDeportivo: Text(Usuario.Department)
                     }
                 )
             );
+            
+            // Crear la colección DatosGrafico2Unicos con valores únicos de EspacioDeportivo
             ClearCollect(
                 DatosGrafico2Unicos,
                 Distinct(DatosGrafico2, EspacioDeportivo)
             );
+            
+            // Navegar a la pantalla Screen1
             Navigate(Screen1)
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
