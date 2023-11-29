@@ -38,7 +38,7 @@ Form As screen:
                 If(
                     Dropdown2.Selected.Value = "Personalizado" && IsBlank(ComboBox1.SelectedItems),
                     Notify("Debe seleccionar los días a repetir", NotificationType.Error),
-                    Set(VarShowPopUp, true) && Set(DiaSeleccionado,"Martes")
+                    Set(VarShowPopUp, true) 
                 )
             )
         RadiusBottomLeft: =50
