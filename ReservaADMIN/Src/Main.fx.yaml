@@ -439,7 +439,7 @@ Main As screen:
                 Set(FechasDistintas, false);
                 
                 // Navegar a la pantalla Form
-                Navigate(Form),
+                Navigate(Form)
             Width: =28
             X: =1196
             Y: =72
