@@ -539,7 +539,7 @@ Form As screen:
                         FechaTermino: DateValue(DateValue1_1.SelectedDate) + TimeValue(Dropdown1_1.Selected.Value),
                         EspacioDeportivo: EDeportivo.Selected,
                         Dias: If(
-                                !FechasDistintas,
+                                FechasDistintas,
                                 DiaSeleccionado,
                                 If(
                                     Dropdown2.Selected.Value = "Todos los días",
