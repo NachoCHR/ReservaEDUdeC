@@ -74,7 +74,7 @@ Form As screen:
                 ="Días a repetir:"
             Visible: |-
                 =If(
-                    Dropdown2.SelectedText = "Personalizado",
+                    Dropdown2.SelectedText.Value = "Personalizado",
                     true,
                     false
                 )

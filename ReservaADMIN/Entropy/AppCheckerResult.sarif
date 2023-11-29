@@ -617,47 +617,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Form.Label5_6.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Form.Label5_6.Visible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 32,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "Form",
-                "type": "Form.Label5_6"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Record",
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Form.ComboBox1.Visible"
                 }
               ],
