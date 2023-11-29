@@ -548,7 +548,7 @@ Main As screen:
                         First(
                             Filter(
                                 FiltradoDias,
-                                ((TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5)))) && IsBlank(Asunto)
+                                ((TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5)))) && !IsBlank(Asunto)
                             )
                         ).Asunto
                     )
