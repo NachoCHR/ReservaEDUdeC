@@ -584,6 +584,13 @@ Form As screen:
             Y: =160
             ZIndex: =43
 
+    Label16 As label:
+        Text: |-
+            ="_dateSelected: " &_dateSelected
+        X: =359
+        Y: =454
+        ZIndex: =47
+
     Repetir As group:
         Height: =5
         Width: =5
