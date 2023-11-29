@@ -466,8 +466,8 @@ Main As screen:
                                 TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && IsEmpty(Dias)
                             )
                         ) > 0,
-                        "Reservado",
-                        "Disponible"
+                        "Reservado por estudiante",
+                        "DisponibleSinDias"
                         ),
                         If(
                             CountRows(
@@ -477,7 +477,7 @@ Main As screen:
                                 )
                             ) > 0,
                             "Reservado por admin",
-                            "Disponible"
+                            "DisponibleSinDias"
                         )
                     )
                 VerticalAlign: =VerticalAlign.Top
