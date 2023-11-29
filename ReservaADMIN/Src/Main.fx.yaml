@@ -473,7 +473,7 @@ Main As screen:
                             CountRows(
                                 Filter(
                                     FiltradoDias,
-                                    TimeValue(FechaInicio) <= TimeValue(Left(ThisItem.Value, 5)) && TimeValue(FechaTermino) >= TimeValue(Right(ThisItem.Value, 5))
+                                    TimeValue(FechaInicio) <= TimeValue("12:00") && TimeValue(FechaTermino) >= TimeValue("13:00")
                                 )
                             ) > 0,
                             "Reservado por admin",
