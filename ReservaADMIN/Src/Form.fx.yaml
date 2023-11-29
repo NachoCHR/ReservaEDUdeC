@@ -4,9 +4,19 @@ Form As screen:
         ClearCollect(
             MiTabla,
             {
+                Id: Switch(
+                    Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd"))),
+                    "Lunes", 0,
+                    "Martes", 1,
+                    "Miércoles", 2,
+                    "Jueves", 3,
+                    "Viernes", 4,
+                    "Sábado", 5
+                ),
                 DiaSemana: Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd")))
             }
         )
+        
         
 
     Button1_2 As button:
