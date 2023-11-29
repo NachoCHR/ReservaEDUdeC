@@ -47,7 +47,7 @@ Form As screen:
             Reset(Dropdown2);
             
             // Navegar a la pantalla Main
-            Navigate(Main),
+            Navigate(Main)
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
         RadiusTopLeft: =50
