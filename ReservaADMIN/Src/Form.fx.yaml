@@ -15,7 +15,11 @@ Form As screen:
     Button1_2 As button:
         Fill: =RGBA(0, 134, 208, 1)
         OnSelect: |-
-            =
+            =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
+            Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
+            Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
+            Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
+            Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
             Navigate(Main)
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
