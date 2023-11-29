@@ -126,7 +126,7 @@ Form As screen:
         DateValue1_1 As datepicker:
             DefaultDate: =_dateSelected
             EndYear: =Year(Today())+100
-            Height: =50
+            Height: =49
             IsEditable: =true
             OnSelect: |-
                 =If(
@@ -149,19 +149,18 @@ Form As screen:
             StartYear: =1899
             Width: =304
             X: =631
-            Y: =343
+            Y: =348
             ZIndex: =11
 
         Label5_4 As label:
             Fill: =RGBA(0, 134, 208, 1)
             Font: =Font.'Lato Black'
-            Height: =41
             Size: =14
             Text: |-
                 ="Fecha de termino:"
             Width: =305
             X: =630
-            Y: =302
+            Y: =308
             ZIndex: =18
 
     HoraInicio As group:
@@ -201,7 +200,7 @@ Form As screen:
         DateValue1 As datepicker:
             DefaultDate: =_dateSelected
             EndYear: =Year(Today())+100
-            Height: =53
+            Height: =52
             IsEditable: =true
             OnSelect: |-
                 =If(
@@ -223,13 +222,12 @@ Form As screen:
             StartYear: =1899
             Width: =304
             X: =631
-            Y: =211
+            Y: =210
             ZIndex: =10
 
         Label5_2 As label:
             Fill: =RGBA(0, 134, 208, 1)
             Font: =Font.'Lato Black'
-            Height: =41
             Size: =14
             Text: |-
                 ="Fecha de inicio:"
@@ -247,16 +245,17 @@ Form As screen:
 
         LabelUsuario As label:
             BorderThickness: =2
-            Height: =55
+            Height: =53
             Text: =User().Email
             Width: =305
             X: =224
-            Y: =210
+            Y: =209
             ZIndex: =4
 
         Label5 As label:
             Fill: =RGBA(0, 134, 208, 1)
             Font: =Font.'Lato Black'
+            Height: =39
             Size: =14
             Text: |-
                 ="Reservado por:"
@@ -305,23 +304,23 @@ Form As screen:
 
         EDeportivo As dropdown:
             Default: =EspacioSeleccionado
-            Height: =51
+            Height: =47
             Items: =Choices([@Reservas].EspacioDeportivo)
             Width: =306
             X: =224
-            Y: =347
+            Y: =350
             ZIndex: =2
 
         Label5_1 As label:
             Fill: =RGBA(0, 134, 208, 1)
             Font: =Font.'Lato Black'
-            Height: =41
+            Height: =38
             Size: =14
             Text: |-
                 ="Espacio Deportivo:"
             Width: =305
             X: =224
-            Y: =306
+            Y: =312
             ZIndex: =15
 
     PopUp As group:
@@ -586,15 +585,6 @@ Form As screen:
             X: =466
             Y: =160
             ZIndex: =43
-
-    Label16 As label:
-        Height: =54
-        Text: |-
-            ="_dateSelected: " &_dateSelected
-        Width: =311
-        X: =704
-        Y: =576
-        ZIndex: =47
 
     Repetir As group:
         Height: =5
