@@ -1,5 +1,12 @@
 Form As screen:
-    OnVisible: =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
+    OnVisible: |
+        =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
+        Set(
+            MiRegistro,
+            {
+                DiaSemana: Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd")))
+            }
+        )
 
     Button1_2 As button:
         Fill: =RGBA(0, 134, 208, 1)
@@ -31,7 +38,7 @@ Form As screen:
                 If(
                     Dropdown2.Selected.Value = "Personalizado" && IsBlank(ComboBox1.SelectedItems),
                     Notify("Debe seleccionar los días a repetir", NotificationType.Error),
-                    Set(VarShowPopUp, true)
+                    Set(VarShowPopUp, true) && Set(DiaSeleccionado,"Martes")
                 )
             )
         RadiusBottomLeft: =50

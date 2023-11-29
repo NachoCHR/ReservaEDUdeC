@@ -1,7 +1,7 @@
 App As appinfo:
     BackEnabled: =true
     Formulas: =
-    OnStart: |
+    OnStart: |+
         =Set(VarInicio, true);
         ClearCollect(TodosLosDias, ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"]);
         ClearCollect(
@@ -64,7 +64,10 @@ App As appinfo:
                 Reservas,  // Reemplaza con el nombre de tu lista de SharePoint
                 !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value
             )
-        )
+        );
+        
+        
+        
     StartScreen: =Main
     Theme: =PowerAppsTheme
 
