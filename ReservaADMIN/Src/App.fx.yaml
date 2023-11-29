@@ -2,7 +2,11 @@ App As appinfo:
     BackEnabled: =true
     Formulas: =
     OnStart: |
-        =ClearCollect(
+        =Set(
+            EspacioSeleccionado,
+           "Cancha Hockey"
+        );
+        ClearCollect(
             HorasDisponibles,
             [
                 "08:00 - 09:00",
@@ -28,10 +32,7 @@ App As appinfo:
             NombreUsuario,
             User().FullName
         );
-        Set(
-            EspacioSeleccionado,
-           "Cancha Hockey"
-        );
+        
         ClearCollect(
             TablaFiltrada,
             Filter(
