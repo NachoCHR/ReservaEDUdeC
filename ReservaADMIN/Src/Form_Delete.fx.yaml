@@ -20,17 +20,30 @@ Form_Delete As screen:
 
     Button1_1 As button:
         OnSelect: |+
-            =If(
-                IsBlank(TextInput1.Text),
-                Notify("Falta rellenar el motivo", NotificationType.Error),
-                RemoveIf(Reservas, ID = Last(NuevaColeccion).ID)
-            );
+            =// Verificar si el texto en TextInput1 está en blanco
             If(
                 IsBlank(TextInput1.Text),
+                // Si está en blanco, mostrar una notificación de error
                 Notify("Falta rellenar el motivo", NotificationType.Error),
-                powerapps.Run(Text(Last(NuevaColeccion).Usuario.Email),Text(Last(NuevaColeccion).EspacioDeportivo.Value),Text(Last(NuevaColeccion).Usuario.DisplayName),TextInput1.Text,Text(Last(NuevaColeccion).FechaInicio),Text(Last(NuevaColeccion).FechaTermino))
+                // Si no está en blanco, eliminar la última reserva agregada
+                RemoveIf(Reservas, ID = Last(NuevaColeccion).ID)
             );
             
+            // Verificar si el texto en TextInput1 está en blanco
+            If(
+                IsBlank(TextInput1.Text),
+                // Si está en blanco, mostrar una notificación de error
+                Notify("Falta rellenar el motivo", NotificationType.Error),
+                // Si no está en blanco, ejecutar un flujo en Power Automate con parámetros relacionados con la última reserva agregada
+                powerapps.Run(
+                    Text(Last(NuevaColeccion).Usuario.Email),
+                    Text(Last(NuevaColeccion).EspacioDeportivo.Value),
+                    Text(Last(NuevaColeccion).Usuario.DisplayName),
+                    TextInput1.Text,
+                    Text(Last(NuevaColeccion).FechaInicio),
+                    Text(Last(NuevaColeccion).FechaTermino)
+                )
+            );
             
         Text: ="Cancelar reserva"
         Width: =184
