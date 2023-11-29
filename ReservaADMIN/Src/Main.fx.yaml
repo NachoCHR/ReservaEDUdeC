@@ -354,7 +354,7 @@ Main As screen:
             Fill: =RGBA(0, 134, 208, 1)
             Height: =41
             OnSelect: |-
-                =Reset (TextInput3),
+                =Reset (TextInput3);
                 Navigate(Form)
             RadiusBottomLeft: =50
             RadiusBottomRight: =50
