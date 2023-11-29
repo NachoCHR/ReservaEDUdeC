@@ -1,16 +1,18 @@
 Main As screen:
     Fill: =
-    OnVisible: |-
+    OnVisible: |
         =/*resets calendar view and date selection to today*/
         If(
             IsBlank(Dropdown2_1.Selected.Value),
             Set(EspacioSeleccionado, "Cancha Hockey")
         );
+        // Establecer la variable _dateSelected con la fecha actual
         Set(
             _dateSelected,
             Today()
         );
         
+        // Establecer la variable _firstDayOfMonth con el primer día del mes actual
         Set(
             _firstDayOfMonth,
             DateAdd(
@@ -19,6 +21,8 @@ Main As screen:
                 TimeUnit.Days
             )
         );
+        
+        // Establecer la variable _firstDayInView con el primer día visible en la vista del calendario
         Set(
             _firstDayInView,
             DateAdd(
@@ -27,6 +31,8 @@ Main As screen:
                 TimeUnit.Days
             )
         );
+        
+        // Establecer la variable _lastDayOfMonth con el último día del mes actual
         Set(
             _lastDayOfMonth,
             DateAdd(
@@ -39,12 +45,14 @@ Main As screen:
                 TimeUnit.Days
             )
         );
+        
+        // Establecer la variable _calendarVisible en true (visible)
         Set(
             _calendarVisible,
             true
         );
         
-        
+        // Filtrar los datos de Reservas por EspacioSeleccionado
         Set(
             FiltradoEspacio,
             Filter(
@@ -52,6 +60,8 @@ Main As screen:
                 EspacioDeportivo.Value = EspacioSeleccionado
             )
         );
+        
+        // Filtrar los datos de FiltradoEspacio por fecha dentro del rango [_firstDayOfMonth, _lastDayOfMonth]
         Set(
             FiltradoFecha,
             Filter(
@@ -59,6 +69,8 @@ Main As screen:
                 _dateSelected >= DateValue(FechaInicio) && _dateSelected <= DateValue(FechaTermino)
             )
         );
+        
+        // Filtrar los datos de FiltradoFecha por días específicos de la semana
         Set(
             FiltradoDias,
             Filter(
@@ -69,7 +81,9 @@ Main As screen:
                 ) in Dias.Value
             )
         );
-        ClearCollect(DiasDefault,Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd"))));
+        
+        // Crear una colección DiasDefault con el día de la semana actual (primera letra en mayúscula)
+        ClearCollect(DiasDefault, Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd"))));
 
     Calendario As group:
         Height: =5
