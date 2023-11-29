@@ -38,11 +38,14 @@ Main As screen:
             _calendarVisible,
             true
         );
-        
-        Set(
-            EspacioSeleccionado,
-            "Cancha Hockey"
+        If(
+            VarInicio,
+            Set(
+                EspacioSeleccionado,
+                "Cancha Hockey"
+            )
         );
+        
         Set(
             FiltradoEspacio,
             Filter(
