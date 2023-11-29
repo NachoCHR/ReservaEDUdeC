@@ -563,8 +563,7 @@ Form As screen:
                         { Id: 2, Value: "Miércoles" },
                         { Id: 3, Value: "Jueves" },
                         { Id: 4, Value: "Viernes" },
-                        { Id: 5, Value: "Sábado" },
-                        { Id: 6, Value: "Domingo" }
+                        { Id: 5, Value: "Sábado" }
                     )
                 );
                 
