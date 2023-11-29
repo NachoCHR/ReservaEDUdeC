@@ -612,7 +612,7 @@ Form As screen:
                     CountRows(
                         Filter(
                             FiltradoFecha,
-                            TimeValue(FechaInicio) <= TimeValue(Dropdown1.Selected.Value) && TimeValue(FechaTermino) >= TimeValue(DHoraTermino)
+                            TimeValue(FechaInicio) <= TimeValue(Dropdown1.Selected.Value) && TimeValue(FechaTermino) >= TimeValue(Dropdown1_1.Selected.Value)
                         )
                     ) > 0,
                     Notify(
