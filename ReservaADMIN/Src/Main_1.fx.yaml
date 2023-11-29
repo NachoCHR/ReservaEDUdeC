@@ -280,7 +280,7 @@ Main_1 As screen:
                 =Set(EspacioSeleccionado,Dropdown2_2.Selected.Value);
                 Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
                 Set(FiltradoDias, Filter(FiltradoEspacio, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Lower(Dias.Value)));
-                Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
+                Set(FiltradoFecha, Filter(FiltradoDias, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
                 
             OnSelect: =
             X: =161

@@ -16,6 +16,7 @@ Form As screen:
             Set(_dateSelected, Today());
             Reset(DateValue1);
             Reset(DateValue1_1);
+            Reset(Dropdown2);
             Navigate(Main)
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
