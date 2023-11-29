@@ -544,7 +544,7 @@ Main As screen:
                                     FiltradoDias,
                                     TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value,5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5))
                             )
-                        ).Usuario.DisplayName,
+                        ).Asunto,
                                 ""
                     )
                         
