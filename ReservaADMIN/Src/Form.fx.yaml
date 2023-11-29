@@ -525,7 +525,7 @@ Form As screen:
             Fill: =RGBA(127, 178, 57, 1)
             OnSelect: |-
                 =ClearCollect(
-                    DiaCorrespondie,
+                    DiaCorrespondiente,
                     Table(
                         {
                             Fecha: _dateSelected,
@@ -589,8 +589,11 @@ Form As screen:
                         Dias: If(FechasDistintas,
                                 If(
                                     Dropdown2.Selected.Value = "Todos los días",
-                
-                
+                                    TodosLosDias,
+                                    ComboBox1.SelectedItems
+                                ),
+                                DiaCorrespondiente
+                        ),
                         Asunto: TextInput3.Text
                 
                     }
@@ -668,7 +671,7 @@ Form As screen:
         Dropdown2 As dropdown:
             Height: =53
             Items: =["Todos los días","Personalizado"]
-            Visible: =FechasDistintas
+            Visible: =!FechasDistintas
             Width: =306
             X: =224
             Y: =480
@@ -680,7 +683,7 @@ Form As screen:
             Size: =14
             Text: |-
                 ="Repetir:"
-            Visible: =FechasDistintas
+            Visible: =!FechasDistintas
             Width: =305
             X: =224
             Y: =440
