@@ -1756,36 +1756,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.FechasDistintas"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.FechasDistintas",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FechasDistintas",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App"
                 }
               ],

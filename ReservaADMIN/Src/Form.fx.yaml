@@ -76,6 +76,7 @@ Form As screen:
             SearchFields: =["Value"]
             SearchItems: =[]
             Tooltip: ="Todos los dias"
+            Visible: =FechasDistintas
             Width: =305
             X: =224
             Y: =502
@@ -88,6 +89,7 @@ Form As screen:
             Size: =14
             Text: |-
                 ="Días a repetir:"
+            Visible: =FechasDistintas
             Width: =305
             X: =224
             Y: =461
