@@ -536,16 +536,21 @@ Main As screen:
                         CountRows(
                             Filter(
                                 FiltradoDias,
-                                TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5)) 
+                                (TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5))) && IsBlank(Asunto)
                             )
                         ) > 0,
                         First(
                             Filter(
                                 FiltradoDias,
-                                (TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5))) 
+                                ((TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5)))) && IsBlank(Asunto)
                             )
                         ).Usuario.DisplayName,
-                        ""
+                        First(
+                            Filter(
+                                FiltradoDias,
+                                ((TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5)))) && IsBlank(Asunto)
+                            )
+                        ).Asunto
                     )
                 Width: =492
                 X: =41
