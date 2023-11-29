@@ -38,10 +38,7 @@ Main As screen:
             _calendarVisible,
             true
         );
-        Set(
-            EspacioSeleccionado,
-            "Cancha Tenis"
-        );
+        
         Set(
             EspacioSeleccionado,
             Text(Dropdown2_1.Selected.Value)
