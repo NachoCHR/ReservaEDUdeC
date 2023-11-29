@@ -706,6 +706,12 @@ Form As screen:
             Y: =160
             ZIndex: =45
 
+    Label16 As label:
+        Text: =TimeValue(
+        X: =392
+        Y: =486
+        ZIndex: =46
+
     Repetir As group:
         Height: =5
         Width: =5
