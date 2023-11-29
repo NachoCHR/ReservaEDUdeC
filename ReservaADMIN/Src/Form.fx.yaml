@@ -2,6 +2,7 @@ Form As screen:
     OnVisible: =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
 
     TextInput3 As text:
+        Clear: =true
         Default: =""
         Font: =Font.Arial
         Height: =47
