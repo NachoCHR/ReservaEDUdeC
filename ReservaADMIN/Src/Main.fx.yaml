@@ -69,7 +69,7 @@ Main As screen:
                 ) in Dias.Value
             )
         );
-        ClearCollect(DiasDefault,Text(_dateSelected,"dddd"));
+        ClearCollect(DiasDefault,Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd"))));
 
     Calendario As group:
         Height: =5
