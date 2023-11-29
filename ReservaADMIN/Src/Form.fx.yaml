@@ -44,13 +44,16 @@ Form As screen:
     Button1 As button:
         Fill: =RGBA(0, 134, 208, 1)
         OnSelect: |
-            =If(
+            =// Verificar si la hora de inicio es mayor o igual que la hora de termino
+            If(
                 TimeValue(Dropdown1.Selected.Value) >= TimeValue(Dropdown1_1.Selected.Value),
                 Notify("La hora de termino debe ser mayor que la hora de inicio", NotificationType.Error),
+                
+                // En caso contrario, verificar si la opción seleccionada es "Personalizado" y si ComboBox1 está en blanco
                 If(
                     Dropdown2.Selected.Value = "Personalizado" && IsBlank(ComboBox1.SelectedItems),
                     Notify("Debe seleccionar los días a repetir", NotificationType.Error),
-                    Set(VarShowPopUp, true) 
+                    Set(VarShowPopUp, true) // Establecer la variable VarShowPopUp en true
                 )
             )
         RadiusBottomLeft: =50
