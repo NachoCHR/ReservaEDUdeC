@@ -7,7 +7,7 @@ Main As screen:
             Set(EspacioSeleccionado, "Cancha Hockey")
         );
         If(
-            !IsBlank(_dateSelected),
+            IsBlank(_dateSelected),
             Set(
                 _dateSelected,
                 Today()
