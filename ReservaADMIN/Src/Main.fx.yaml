@@ -376,6 +376,7 @@ Main As screen:
                 Reset (Dropdown1);
                 Reset (Dropdown1_1);
                 Set(VarInicio,false);
+                Set(FechasDistintas,false);
                 Navigate(Form)
             RadiusBottomLeft: =50
             RadiusBottomRight: =50
@@ -397,6 +398,7 @@ Main As screen:
                 Reset (Dropdown1);
                 Reset (Dropdown1_1);
                 Set(VarInicio,false);
+                Set(FechasDistintas,false);
                 Navigate(Form)
             Width: =28
             X: =1196
