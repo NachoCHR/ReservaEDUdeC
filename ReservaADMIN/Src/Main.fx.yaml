@@ -41,7 +41,7 @@ Main As screen:
         
         Set(
             EspacioSeleccionado,
-            "Cancha Hockey"
+            Text(Dropdown2_1.Selected.Value)
         );
         Set(
             FiltradoEspacio,
