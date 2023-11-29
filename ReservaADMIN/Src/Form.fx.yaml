@@ -138,9 +138,10 @@ Form As screen:
             EndYear: =Year(Today())+100
             Height: =49
             IsEditable: =true
-            OnChange: |
+            OnChange: |+
                 =Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
-                Set(FiltradoFecha, Filter(FiltradoEspacio, DateValue1.SelectedDate >= DateValue(FechaInicio) || DateValue1_1.SelectedDate <= DateValue(FechaTermino)));
+                Set(FiltradoFecha, Filter(FiltradoEspacio, DateValue1.SelectedDate <= DateValue(FechaInicio) && DateValue1_1.SelectedDate >= DateValue(FechaTermino)));
+                
             OnSelect: |-
                 =If(
                     Self.SelectedDate < Today(),
@@ -217,7 +218,7 @@ Form As screen:
             IsEditable: =true
             OnChange: |
                 =Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
-                Set(FiltradoFecha, Filter(FiltradoEspacio, DateValue1.SelectedDate >= DateValue(FechaInicio) || DateValue1_1.SelectedDate <= DateValue(FechaTermino)));
+                Set(FiltradoFecha, Filter(FiltradoEspacio, DateValue1.SelectedDate <= DateValue(FechaInicio) && DateValue1_1.SelectedDate >= DateValue(FechaTermino)));
             OnSelect: |-
                 =If(
                     Self.SelectedDate < Today(),
