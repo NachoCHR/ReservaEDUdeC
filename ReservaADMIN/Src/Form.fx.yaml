@@ -144,7 +144,8 @@ Form As screen:
                     Notify("La fecha seleccionada no puede ser anterior a hoy", NotificationType.Warning),
                     If(
                         DateValue(DateValue1.SelectedDate) <> DateValue(DateValue1_1.SelectedDate),
-                        Set(FechasDistintas, true)
+                        Set(FechasDistintas, true),
+                        Set(FechasDistintas, false)
                     )
                 );
                 If(
