@@ -10,6 +10,8 @@ Form As screen:
             Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
             Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
             Set(_dateSelected, Today());
+            Reset(DateValue1);
+            Reset(DateValue1_1);
             Navigate(Main)
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
@@ -142,7 +144,7 @@ Form As screen:
                 )
             PaddingBottom: =0
             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-            Reset: =true
+            Reset: =
             Size: =13
             StartYear: =1899
             Width: =304
