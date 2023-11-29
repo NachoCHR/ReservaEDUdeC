@@ -575,11 +575,8 @@ Form As screen:
                             TimeValue(FechaInicio) <= TimeValue(DateValue1) && TimeValue(FechaTermino) >= TimeValue(DateValue1_1)
                         )
                     ) > 0,
-                    "Reservado",
-                    "Disponible"
-                )
-                
-                Patch(
+                    Notify("El ciclo que se quiere ingresar coincide con alguna reserva registrada previamente, por favor revise las reservas.", NotificationType.Error),
+                    Patch(
                     Reservas,
                     Defaults(Reservas),
                     {
@@ -608,7 +605,10 @@ Form As screen:
                         Asunto: TextInput3.Text
                 
                     }
+                    )
                 );
+                
+                
                 
                 Set(VarShowPopUp,false);
                 Reset (TextInput3);
