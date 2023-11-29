@@ -51,10 +51,7 @@ Form As screen:
         ZIndex: =25
 
         ComboBox1 As combobox:
-            DefaultSelectedItems: |-
-                =If(!FechasDistintas,
-                    DiasDefault
-                )
+            DefaultSelectedItems: =
             DisplayFields: =["Value"]
             Height: =50
             IsSearchable: =false

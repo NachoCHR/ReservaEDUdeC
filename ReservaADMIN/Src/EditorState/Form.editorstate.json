@@ -1291,14 +1291,7 @@
           "NameMapSourceSchema": "?"
         },
         "Default",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "DefaultSelectedItems",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "DefaultSelectedItems",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
