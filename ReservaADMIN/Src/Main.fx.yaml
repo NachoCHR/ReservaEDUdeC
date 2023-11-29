@@ -545,9 +545,21 @@ Main As screen:
                                     TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value,5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5))
                             )
                         ).Asunto,
-                                ""
+                        If(
+                        CountRows(
+                            Filter(
+                                FiltradoDias,
+                                    TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value,5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5)) && !IsBlank(Asunto)
+                                )
+                            ) > 0,
+                            First(
+                                 Filter(
+                                    FiltradoDias,
+                                    TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value,5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5))
+                                )
+                            ).Usuario.DisplayName
+                        )
                     )
-                        
                 Width: =492
                 X: =41
                 Y: =61
