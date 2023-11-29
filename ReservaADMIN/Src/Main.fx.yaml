@@ -530,7 +530,7 @@ Main As screen:
             LabelUserReserva As label:
                 Height: =34
                 OnSelect: =Select(Parent)
-                Text: |
+                Text: |-
                     =
                     If(
                         CountRows(
@@ -544,21 +544,8 @@ Main As screen:
                                 FiltradoDias,
                                 (TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5))) && !IsBlank(Dias)
                             )
-                        ).Asunto,
-                        If(
-                            CountRows(
-                                Filter(
-                                    FiltradoDias,
-                                    (TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5))) && !IsBlank(Dias)
-                                )
-                            ) > 0,
-                            First(
-                                Filter(
-                                    FiltradoDias,
-                                    (TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5))) && !IsBlank(Dias)
-                                )
-                            ).Usuario.DisplayName
-                        )
+                        ).Usuario.DisplayName,
+                        ""
                     )
                 Width: =492
                 X: =41
