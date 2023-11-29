@@ -356,6 +356,8 @@ Main As screen:
             OnSelect: |-
                 =Reset (TextInput3);
                 Reset (ComboBox1);
+                Reset (Dropdown1);
+                Reset (Dropdown1_1);
                 Navigate(Form)
             RadiusBottomLeft: =50
             RadiusBottomRight: =50
@@ -374,6 +376,8 @@ Main As screen:
             OnSelect: |-
                 =Reset (TextInput3);
                 Reset (ComboBox1);
+                Reset (Dropdown1);
+                Reset (Dropdown1_1);
                 Navigate(Form)
             Width: =28
             X: =1196
