@@ -38,9 +38,11 @@ Main As screen:
             _calendarVisible,
             true
         );
-        Set(
+        If(
+            IsBlank(Dropdown2_1.Selected.Value),
+            Set(
             EspacioSeleccionado,
-            Dropdown2_1.SelectedText.Value
+            "Cancha Hockey"
         );
         
         Set(
@@ -591,12 +593,12 @@ Main As screen:
             ZIndex: =12
 
     Label15 As label:
-        Height: =53
+        Height: =34
         Size: =21
         Text: |-
             ="Valor espacio deportivo: " & Dropdown2_1.SelectedText.Value
-        Width: =548
-        X: =371
-        Y: =55
+        Width: =545
+        X: =726
+        Y: =124
         ZIndex: =16
 
