@@ -76,14 +76,15 @@
     "datasets": {
       "https://udeconce-my.sharepoint.com/personal/jchavarria2018_udec_cl": {
         "dataSources": {
-          "Prueba": {
-            "tableName": "85bb3d67-1230-4ca4-b91a-a29f8adb8f48"
+          "Reservas": {
+            "tableName": "93f5da21-7700-4bf0-9f7b-438ace867e3c"
           }
         }
       }
     },
     "dataSources": [
-      "Prueba"
+      "Reservas",
+      "EspaciosDeportivos"
     ],
     "dependencies": {},
     "dependents": [],
@@ -106,16 +107,12 @@
         "dataSources": {
           "EspaciosDeportivos": {
             "tableName": "6869ef84-b3e8-4371-8fdd-0017e762aed3"
-          },
-          "Reservas": {
-            "tableName": "93f5da21-7700-4bf0-9f7b-438ace867e3c"
           }
         }
       }
     },
     "dataSources": [
-      "EspaciosDeportivos",
-      "Reservas"
+      "EspaciosDeportivos"
     ],
     "dependencies": {},
     "dependents": [],

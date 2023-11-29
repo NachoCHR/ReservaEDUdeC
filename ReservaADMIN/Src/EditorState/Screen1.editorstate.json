@@ -2135,7 +2135,7 @@
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Value\":\"Department\"}",
+          "NameMap": "{\"Value\":\"Percentage\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },
