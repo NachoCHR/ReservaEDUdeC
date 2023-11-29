@@ -29,7 +29,7 @@ Form As screen:
                 TimeValue(Dropdown1.Selected.Value) >= TimeValue(Dropdown1_1.Selected.Value),
                 Notify("La hora de termino debe ser mayor que la hora de inicio", NotificationType.Error),
                 If(
-                    IsBlank(ComboBox1.SelectedItems),
+                    Dropdown2.Selected.Value = "Personalizado" && IsBlank(ComboBox1.SelectedItems),
                     Notify("Debe seleccionar los días a repetir", NotificationType.Error),
                     Set(VarShowPopUp, true)
                 )
