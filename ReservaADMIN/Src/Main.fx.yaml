@@ -254,7 +254,7 @@ Main As screen:
                     Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
                     Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
                     Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
-                    ClearCollect(DiasDefault,Text(_dateSelected,"dddd"));
+                    ClearCollect(DiasDefault,Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd"))));
                 Size: =12
                 TabIndex: =0
                 Text: =Day(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days))
@@ -264,6 +264,13 @@ Main As screen:
                 Width: =MonthDayGallery1_2.TemplateWidth
                 Wrap: =false
                 ZIndex: =3
+
+            Label16 As label:
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.Value
+                Width: =100.42857142857143
+                Y: =20
+                ZIndex: =4
 
     SelectorEspacioDeportivo As group:
         Height: =5
@@ -589,4 +596,13 @@ Main As screen:
         X: =726
         Y: =124
         ZIndex: =16
+
+    Label17 As label:
+        Height: =38
+        Text: |
+            ="Dia: " & Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd")))
+        Width: =238
+        X: =517
+        Y: =83
+        ZIndex: =17
 
