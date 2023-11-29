@@ -21,17 +21,33 @@ Form As screen:
 
     Button1_2 As button:
         Fill: =RGBA(0, 134, 208, 1)
-        OnSelect: |-
-            =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
+        OnSelect: |
+            =// Establecer la variable EspacioSeleccionado con el valor seleccionado de Dropdown2_1
+            Set(EspacioSeleccionado, Dropdown2_1.Selected.Value);
+            
+            // Filtrar los datos de Reservas por el espacio deportivo seleccionado
             Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
-            Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
-            Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
-            Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
+            
+            // Filtrar los datos de FiltradoEspacio por fecha dentro del rango [_dateSelected, FechaInicio, FechaTermino]
+            Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected <= DateValue(FechaTermino)));
+            
+            // Filtrar los datos de FiltradoFecha por días específicos de la semana
+            Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected, "dddd") in Dias.Value));
+            
+            // Establecer _dateSelected con la fecha actual (Today)
             Set(_dateSelected, Today());
+            
+            // Restablecer la selección en el control DateValue1
             Reset(DateValue1);
+            
+            // Restablecer la selección en el control DateValue1_1
             Reset(DateValue1_1);
+            
+            // Restablecer la selección en el control Dropdown2
             Reset(Dropdown2);
-            Navigate(Main)
+            
+            // Navegar a la pantalla Main
+            Navigate(Main),
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
         RadiusTopLeft: =50
