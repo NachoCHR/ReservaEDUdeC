@@ -169,7 +169,13 @@ Screen1 As screen:
     Icon1 As icon.ChevronLeft:
         Height: =51
         Icon: =Icon.ChevronLeft
-        OnSelect: =Navigate(Main)
+        OnSelect: |-
+            =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
+            Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
+            Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
+            Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
+            
+            Navigate(Main)
         Width: =36
         X: =24
         Y: =27
@@ -335,7 +341,7 @@ Screen1 As screen:
             Size: =16
             Visible: |
                 =If(Radio1.Selected.Value = "Departamento", true, false)
-            Width: =435
+            Width: =500
             X: =88
             Y: =212
             ZIndex: =13

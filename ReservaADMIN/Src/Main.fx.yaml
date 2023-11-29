@@ -569,13 +569,3 @@ Main As screen:
             Y: =159
             ZIndex: =12
 
-    Label15 As label:
-        Height: =34
-        Size: =21
-        Text: |-
-            ="Valor espacio deportivo: " & Dropdown2_1.SelectedText.Value
-        Width: =545
-        X: =726
-        Y: =124
-        ZIndex: =16
-
