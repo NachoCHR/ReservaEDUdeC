@@ -2,6 +2,10 @@ Main As screen:
     Fill: =
     OnVisible: |
         =/*resets calendar view and date selection to today*/
+        If(
+            IsBlank(Dropdown2_1.Selected.Value),
+            Set(EspacioSeleccionado, "Cancha Hockey")
+        );
         Set(
             _dateSelected,
             Today()
