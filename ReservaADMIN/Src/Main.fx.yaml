@@ -404,7 +404,7 @@ Main As screen:
                 Set(FechasDistintas, false);
                 
                 // Navegar a la pantalla Form
-                Navigate(Form),
+                Navigate(Form)
             RadiusBottomLeft: =50
             RadiusBottomRight: =50
             RadiusTopLeft: =50
