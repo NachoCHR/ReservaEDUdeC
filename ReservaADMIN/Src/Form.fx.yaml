@@ -142,6 +142,7 @@ Form As screen:
                 )
             PaddingBottom: =0
             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+            Reset: =true
             Size: =13
             StartYear: =1899
             Width: =304
@@ -585,10 +586,12 @@ Form As screen:
             ZIndex: =43
 
     Label16 As label:
+        Height: =54
         Text: |-
             ="_dateSelected: " &_dateSelected
-        X: =359
-        Y: =454
+        Width: =311
+        X: =704
+        Y: =576
         ZIndex: =47
 
     Repetir As group:
