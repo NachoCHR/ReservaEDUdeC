@@ -42,6 +42,7 @@ Main As screen:
             EspacioSeleccionado,
             "Cancha Tenis"
         );
+        Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
         Set(
             FiltradoEspacio,
             Filter(
