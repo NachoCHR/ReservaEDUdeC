@@ -658,47 +658,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Form.Label5_6.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Form.Label5_6.Visible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 52,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "If(\r\n    Dropdown2.SelectedText = \"Personalizado\"\r\n)"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "Form",
-                "type": "Form.Label5_6"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "1",
-              "2"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrBadArityMinimum",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Form.ComboBox1.Visible"
                 }
               ],
