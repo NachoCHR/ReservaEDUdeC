@@ -30,7 +30,7 @@ App As appinfo:
         );
         Set(
             EspacioSeleccionado,
-            Text(Dropdown2_1.Selected.Value)
+           "Cancha Hockey"
         );
         ClearCollect(
             TablaFiltrada,
