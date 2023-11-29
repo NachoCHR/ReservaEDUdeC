@@ -58,7 +58,9 @@ Form As screen:
             Tooltip: ="Todos los dias"
             Visible: |-
                 =If(
-                    Dropdown2.SelectedText = "Personalizado"
+                    Dropdown2.SelectedText.Value = "Personalizado",
+                    true,
+                    false
                 )
             Width: =305
             X: =636
