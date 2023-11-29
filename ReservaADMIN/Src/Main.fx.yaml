@@ -573,8 +573,8 @@ Main As screen:
             LabelUserReserva As label:
                 Height: =34
                 OnSelect: =Select(Parent)
-                Text: |-
-                    =
+                Text: |
+                    =// Verificar si hay alguna reserva que coincida con el rango de fechas y no tenga un asunto
                     If(
                         CountRows(
                             Filter(
@@ -582,12 +582,14 @@ Main As screen:
                                 (TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5))) && IsBlank(Asunto)
                             )
                         ) > 0,
+                        // Si hay reservas sin asunto, devolver el DisplayName del primer usuario encontrado
                         First(
                             Filter(
                                 FiltradoDias,
                                 ((TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) || TimeValue(FechaTermino) = TimeValue(Right(ThisItem.Value, 5)))) && IsBlank(Asunto)
                             )
                         ).Usuario.DisplayName,
+                        // Si no hay reservas sin asunto, devolver el asunto del primer registro encontrado con asunto
                         First(
                             Filter(
                                 FiltradoDias,
