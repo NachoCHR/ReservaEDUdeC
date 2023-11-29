@@ -99,13 +99,13 @@ Main As screen:
                 )
             Height: =50
             Icon: =Icon.BackArrow
-            OnSelect: |-
+            OnSelect: |
                 =/*changes month view to previous month*/
                 Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, -1, TimeUnit.Months));
                 Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
                 Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
                 /*collects calendar events for all days in current month view. Updates _minDate to prevent duplicate data collection if user returns to this month view*/
-                If(_minDate > _firstDayOfMonth, Set(_minDate, _firstDayOfMonth);)
+                If(_minDate > _firstDayOfMonth, Set(_minDate, _firstDayOfMonth));
             PaddingBottom: =7
             PaddingLeft: =7
             PaddingRight: =7
