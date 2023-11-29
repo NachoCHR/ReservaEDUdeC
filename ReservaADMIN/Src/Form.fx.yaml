@@ -569,9 +569,15 @@ Form As screen:
                 );
                 
                 If(
-                    // Necesito ver que fechaInicio<= Fecha Seleccionada <= Fecha termino. && Verificar el dia. 
-                    
-                );
+                    CountRows(
+                        Filter(
+                            FiltradoFecha,
+                            TimeValue(FechaInicio) <= TimeValue(DateValue1) && TimeValue(FechaTermino) >= TimeValue(DateValue1_1)
+                        )
+                    ) > 0,
+                    "Reservado",
+                    "Disponible"
+                )
                 
                 Patch(
                     Reservas,
