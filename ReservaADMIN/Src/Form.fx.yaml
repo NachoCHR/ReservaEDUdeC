@@ -476,9 +476,14 @@ Form As screen:
             FontWeight: =FontWeight.Bold
             Text: |-
                 ="Días a repetir:"
-            Visible: =VarShowPopUp
+            Visible: |-
+                =If(
+                    VarShowPopUp && FechasDistintas,
+                    true,
+                    false
+                )
             X: =392
-            Y: =486
+            Y: =493
             ZIndex: =38
 
         DDiasSeleccionados As label:
@@ -488,10 +493,15 @@ Form As screen:
                     "Todos los días",
                     Concat(ComboBox1.SelectedItems, Value,", ")
                 )
-            Visible: =VarShowPopUp
+            Visible: |-
+                =If(
+                    VarShowPopUp && FechasDistintas,
+                    true,
+                    false
+                )
             Width: =430
             X: =529
-            Y: =486
+            Y: =493
             ZIndex: =39
 
         BCancelar As button:
