@@ -592,12 +592,3 @@ Main As screen:
         Y: =124
         ZIndex: =16
 
-    Label17 As label:
-        Height: =38
-        Text: |
-            ="Dia: " & Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd")))
-        Width: =238
-        X: =517
-        Y: =83
-        ZIndex: =17
-
