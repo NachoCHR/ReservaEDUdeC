@@ -272,10 +272,8 @@ Main As screen:
 
         Dropdown2_1 As dropdown:
             Default: ="Cancha Hockey"
-            Items: |-
-                =//Choices([@Reservas].EspacioDeportivo
-                
-                ["Cancha Hockey","Cancha Tenis","Gimnacio A"]
+            Items: |
+                =Choices([@Reservas].EspacioDeportivo
             OnChange: |
                 =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
                 Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
