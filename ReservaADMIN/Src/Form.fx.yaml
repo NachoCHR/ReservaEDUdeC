@@ -28,7 +28,11 @@ Form As screen:
             =If(
                 TimeValue(Dropdown1.Selected.Value) >= TimeValue(Dropdown1_1.Selected.Value),
                 Notify("La hora de termino debe ser mayor que la hora de inicio", NotificationType.Error),
-                Set(VarShowPopUp, true)
+                If(
+                    IsBlank(ComboBox1.SelectedItems),
+                    Notify("Debe seleccionar los días a repetir", NotificationType.Error),
+                    Set(VarShowPopUp, true)
+                )
             )
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
