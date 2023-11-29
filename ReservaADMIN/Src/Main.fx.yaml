@@ -269,7 +269,7 @@ Main As screen:
         ZIndex: =13
 
         Dropdown2_1 As dropdown:
-            Default: ="Bascket"
+            Default: ="Cancha Hockey"
             Items: =Choices([@Reservas].EspacioDeportivo)
             OnChange: |
                 =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
