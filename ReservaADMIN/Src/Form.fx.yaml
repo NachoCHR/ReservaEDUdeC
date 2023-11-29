@@ -565,7 +565,8 @@ Form As screen:
         BEnvias As button:
             Fill: =RGBA(127, 178, 57, 1)
             OnSelect: |-
-                =ClearCollect(
+                =// Crear la colección DiaCorrespondiente con información sobre la fecha seleccionada
+                ClearCollect(
                     DiaCorrespondiente,
                     Table(
                         {
@@ -619,6 +620,8 @@ Form As screen:
                         }
                     )
                 );
+                
+                // Crear la colección TodosLosDias con información sobre todos los días de la semana
                 ClearCollect(
                     TodosLosDias,
                     Table(
@@ -648,6 +651,8 @@ Form As screen:
                         }
                     )
                 );
+                
+                // Verificar si el rango de fechas seleccionado se superpone con reservas existentes
                 If(
                     CountRows(
                         Filter(
@@ -659,6 +664,8 @@ Form As screen:
                         "El ciclo que se quiere ingresar coincide con alguna reserva registrada previamente, por favor revise las reservas.",
                         NotificationType.Error
                     ),
+                    // Si hay coincidencia, mostrar una notificación de error y no realizar la operación de Patch
+                    // En caso contrario, realizar una operación Patch para agregar una nueva reserva
                     Patch(
                         Reservas,
                         Defaults(Reservas),
@@ -666,7 +673,7 @@ Form As screen:
                             Usuario: {
                                 Claims: Concatenate(
                                     "i:0#.f|membership|",
-                                    User().Email// Person email
+                                    User().Email// Correo electrónico de la persona
                                 ),
                                 Department: "",
                                 DisplayName: User().FullName,
@@ -690,15 +697,24 @@ Form As screen:
                         }
                     )
                 );
-                Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
-                Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
-                Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
-                Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
                 
+                // Filtrar reservas según el espacio deportivo seleccionado
+                Set(EspacioSeleccionado, Dropdown2_1.Selected.Value);
+                Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
+                
+                // Filtrar reservas según el rango de fechas seleccionado
+                Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected <= DateValue(FechaTermino)));
+                
+                // Filtrar reservas según los días específicos de la semana
+                Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected, "dddd") in Dias.Value));
+                
+                // Establecer la variable VarShowPopUp en false
                 Set(
                     VarShowPopUp,
                     false
                 );
+                
+                // Restablecer los controles TextInput3, ComboBox1, Dropdown1 y Dropdown1_1
                 Reset (TextInput3);
                 Reset (ComboBox1);
                 Reset (Dropdown1);
