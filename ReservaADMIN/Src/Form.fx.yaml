@@ -528,10 +528,10 @@ Form As screen:
                     DiaCorrespondiente,
                     Table(
                         {
-                            Fecha: _dateSelected,
-                            NombreDia: Text(_dateSelected, "dddd"),
+                            Fecha: DateValue1.SelectedDate,
+                            NombreDia: Text(DateValue1.SelectedDate, "dddd"),
                             ID: Switch(
-                                Text(_dateSelected, "dddd"),
+                                Text(DateValue1.SelectedDate, "dddd"),
                                 "lunes", 0,
                                 "martes", 1,
                                 "miércoles", 2,
@@ -542,7 +542,7 @@ Form As screen:
                                 -1  // Valor por defecto en caso de que el día no coincida con ninguno de los anteriores
                             ),
                             Value: Switch(
-                                Text(_dateSelected, "dddd"),
+                                Text(DateValue1.SelectedDate, "dddd"),
                                 "lunes", "Lunes",
                                 "martes", "Martes",
                                 "miércoles", "Miércoles",
@@ -610,8 +610,8 @@ Form As screen:
             RadiusTopRight: =50
             Text: ="Enviar"
             Visible: =VarShowPopUp
-            X: =723
-            Y: =605
+            X: =715
+            Y: =577
             ZIndex: =41
 
         TEspacioDeportivo As label:
