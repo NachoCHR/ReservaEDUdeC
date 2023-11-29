@@ -405,8 +405,8 @@ Form As screen:
             Text: |-
                 ="Fecha De inicio:"
             Visible: =VarShowPopUp
-            X: =389
-            Y: =377
+            X: =388
+            Y: =378
             ZIndex: =30
 
         DFechaInicio As label:
@@ -443,7 +443,7 @@ Form As screen:
             Visible: =VarShowPopUp
             Width: =170
             X: =389
-            Y: =431
+            Y: =436
             ZIndex: =34
 
         DFechaTermino As label:
@@ -451,8 +451,8 @@ Form As screen:
             Text: =DateValue1_1.SelectedDate
             Visible: =VarShowPopUp
             Width: =181
-            X: =551
-            Y: =431
+            X: =554
+            Y: =433
             ZIndex: =35
 
         THoraTermino As label:
@@ -462,14 +462,14 @@ Form As screen:
             Visible: =VarShowPopUp
             Width: =80
             X: =732
-            Y: =433
+            Y: =436
             ZIndex: =36
 
         DHoraTermino As label:
             Text: =Dropdown1_1.Selected.Value & " hrs."
             Visible: =VarShowPopUp
             X: =785
-            Y: =433
+            Y: =436
             ZIndex: =37
 
         TDiasRepetir As label:

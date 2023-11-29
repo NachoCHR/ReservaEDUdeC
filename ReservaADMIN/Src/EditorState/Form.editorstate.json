@@ -2886,7 +2886,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DFechaInicio",
-      "ParentIndex": 28,
+      "ParentIndex": 27,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3161,7 +3161,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DFechaTermino",
-      "ParentIndex": 32,
+      "ParentIndex": 31,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3436,7 +3436,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DHoraInicio",
-      "ParentIndex": 30,
+      "ParentIndex": 29,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11592,7 +11592,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TFechaInicio",
-      "ParentIndex": 27,
+      "ParentIndex": 30,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11874,7 +11874,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TFechaTermino",
-      "ParentIndex": 31,
+      "ParentIndex": 32,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12156,7 +12156,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "THoraInicio",
-      "ParentIndex": 29,
+      "ParentIndex": 28,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
