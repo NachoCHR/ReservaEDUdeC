@@ -2,10 +2,7 @@ App As appinfo:
     BackEnabled: =true
     Formulas: =
     OnStart: |
-        =Set(
-            EspacioSeleccionado,
-           "Cancha Hockey"
-        );
+        =
         ClearCollect(
             HorasDisponibles,
             [
