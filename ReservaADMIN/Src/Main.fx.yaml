@@ -452,7 +452,7 @@ Main As screen:
                             If(
                                 Subtitle2.Text = "Reservado por admin",
                                 RGBA(246, 88, 16, 1),
-                                RGBA(15, 203, 0, 1),  // Caso en que no entre en ningun if
+                                RGBA(15, 203, 0, 1)  // Caso en que no entre en ningun if
                             )
                         )
                     )
