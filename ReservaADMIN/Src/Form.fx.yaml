@@ -533,8 +533,9 @@ Form As screen:
                         EspacioDeportivo: EDeportivo.Selected,
                         Dias: If(
                                 Dropdown2.Selected.Value = "Personalizado",
-                                
-                                ComboBox1.SelectedItems,
+                                TodosLosDias,
+                                ComboBox1.SelectedItems
+                        ),
                         Asunto: TextInput3.Text
                 
                     }
