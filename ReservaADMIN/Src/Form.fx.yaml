@@ -20,7 +20,7 @@ Form As screen:
         Text: ="Volver"
         X: =224
         Y: =681
-        ZIndex: =3
+        ZIndex: =5
 
     Button1 As button:
         Fill: =RGBA(0, 134, 208, 1)
@@ -37,7 +37,7 @@ Form As screen:
         Text: ="Reservar"
         X: =962
         Y: =681
-        ZIndex: =9
+        ZIndex: =11
 
     DiasRepetir As group:
         Height: =5
@@ -68,7 +68,7 @@ Form As screen:
             Width: =305
             X: =636
             Y: =483
-            ZIndex: =8
+            ZIndex: =10
 
         Label5_6 As label:
             Fill: =RGBA(0, 134, 208, 1)
@@ -86,7 +86,7 @@ Form As screen:
             Width: =305
             X: =636
             Y: =442
-            ZIndex: =20
+            ZIndex: =22
 
     HoraTermino As group:
         Height: =5
@@ -102,7 +102,7 @@ Form As screen:
             Width: =147
             X: =975
             Y: =347
-            ZIndex: =7
+            ZIndex: =9
 
         Label5_5 As label:
             Fill: =RGBA(0, 134, 208, 1)
@@ -114,7 +114,7 @@ Form As screen:
             Width: =147
             X: =975
             Y: =306
-            ZIndex: =19
+            ZIndex: =21
 
     FechaTermino As group:
         Height: =5
@@ -150,7 +150,7 @@ Form As screen:
             Width: =304
             X: =631
             Y: =348
-            ZIndex: =11
+            ZIndex: =13
 
         Label5_4 As label:
             Fill: =RGBA(0, 134, 208, 1)
@@ -161,7 +161,7 @@ Form As screen:
             Width: =305
             X: =630
             Y: =308
-            ZIndex: =18
+            ZIndex: =20
 
     HoraInicio As group:
         Height: =5
@@ -176,7 +176,7 @@ Form As screen:
             Width: =147
             X: =975
             Y: =212
-            ZIndex: =6
+            ZIndex: =8
 
         Label5_3 As label:
             Fill: =RGBA(0, 134, 208, 1)
@@ -188,7 +188,7 @@ Form As screen:
             Width: =147
             X: =975
             Y: =170
-            ZIndex: =17
+            ZIndex: =19
 
     FechaInicio As group:
         Height: =5
@@ -223,7 +223,7 @@ Form As screen:
             Width: =304
             X: =631
             Y: =210
-            ZIndex: =10
+            ZIndex: =12
 
         Label5_2 As label:
             Fill: =RGBA(0, 134, 208, 1)
@@ -234,7 +234,7 @@ Form As screen:
             Width: =305
             X: =630
             Y: =170
-            ZIndex: =16
+            ZIndex: =18
 
     QuienReserva As group:
         Height: =5
@@ -250,7 +250,7 @@ Form As screen:
             Width: =305
             X: =224
             Y: =209
-            ZIndex: =4
+            ZIndex: =6
 
         Label5 As label:
             Fill: =RGBA(0, 134, 208, 1)
@@ -262,7 +262,7 @@ Form As screen:
             Width: =305
             X: =224
             Y: =170
-            ZIndex: =14
+            ZIndex: =16
 
     Header As group:
         Height: =5
@@ -282,7 +282,7 @@ Form As screen:
             Text: ="Agregar reserva"
             Width: =1350
             X: =10
-            ZIndex: =12
+            ZIndex: =14
 
         Icon6 As icon.Add:
             Color: =RGBA(255, 255, 255, 1)
@@ -293,7 +293,7 @@ Form As screen:
             Width: =31
             X: =568
             Y: =9
-            ZIndex: =13
+            ZIndex: =15
 
     EspacioDeportivo As group:
         Height: =5
@@ -309,7 +309,7 @@ Form As screen:
             Width: =306
             X: =224
             Y: =350
-            ZIndex: =2
+            ZIndex: =4
 
         Label5_1 As label:
             Fill: =RGBA(0, 134, 208, 1)
@@ -321,7 +321,7 @@ Form As screen:
             Width: =305
             X: =224
             Y: =312
-            ZIndex: =15
+            ZIndex: =17
 
     PopUp As group:
         Height: =5
@@ -335,7 +335,7 @@ Form As screen:
             Height: =768
             Visible: =VarShowPopUp
             Width: =1366
-            ZIndex: =21
+            ZIndex: =23
 
         Rectangle6 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
@@ -344,7 +344,7 @@ Form As screen:
             Width: =696
             X: =337
             Y: =116
-            ZIndex: =22
+            ZIndex: =24
 
         Label6 As label:
             Align: =Align.Center
@@ -359,7 +359,7 @@ Form As screen:
             Width: =696
             X: =337
             Y: =65
-            ZIndex: =23
+            ZIndex: =25
 
         ReservadoPor As label:
             FontWeight: =FontWeight.Bold
@@ -370,7 +370,7 @@ Form As screen:
             Width: =149
             X: =389
             Y: =224
-            ZIndex: =24
+            ZIndex: =26
 
         Correo As label:
             FontWeight: =FontWeight.Bold
@@ -380,7 +380,7 @@ Form As screen:
             Width: =91
             X: =389
             Y: =272
-            ZIndex: =25
+            ZIndex: =27
 
         "'User.FullName' As label":
             Height: =37
@@ -389,7 +389,7 @@ Form As screen:
             Width: =465
             X: =530
             Y: =228
-            ZIndex: =26
+            ZIndex: =28
 
         "'User.Correo' As label":
             Text: =User().Email
@@ -397,7 +397,7 @@ Form As screen:
             Width: =504
             X: =471
             Y: =272
-            ZIndex: =27
+            ZIndex: =29
 
         TFechaInicio As label:
             FontWeight: =FontWeight.Bold
@@ -406,7 +406,7 @@ Form As screen:
             Visible: =VarShowPopUp
             X: =389
             Y: =377
-            ZIndex: =28
+            ZIndex: =30
 
         DFechaInicio As label:
             Text: =DateValue1.SelectedDate
@@ -414,7 +414,7 @@ Form As screen:
             Width: =191
             X: =544
             Y: =378
-            ZIndex: =29
+            ZIndex: =31
 
         THoraInicio As label:
             FontWeight: =FontWeight.Bold
@@ -425,14 +425,14 @@ Form As screen:
             Width: =80
             X: =732
             Y: =378
-            ZIndex: =30
+            ZIndex: =32
 
         DHoraInicio As label:
             Text: =Dropdown1.Selected.Value & " hrs."
             Visible: =VarShowPopUp
             X: =785
             Y: =378
-            ZIndex: =31
+            ZIndex: =33
 
         TFechaTermino As label:
             FontWeight: =FontWeight.Bold
@@ -443,7 +443,7 @@ Form As screen:
             Width: =170
             X: =389
             Y: =431
-            ZIndex: =32
+            ZIndex: =34
 
         DFechaTermino As label:
             Height: =45
@@ -452,7 +452,7 @@ Form As screen:
             Width: =181
             X: =551
             Y: =431
-            ZIndex: =33
+            ZIndex: =35
 
         THoraTermino As label:
             FontWeight: =FontWeight.Bold
@@ -462,14 +462,14 @@ Form As screen:
             Width: =80
             X: =732
             Y: =433
-            ZIndex: =34
+            ZIndex: =36
 
         DHoraTermino As label:
             Text: =Dropdown1_1.Selected.Value & " hrs."
             Visible: =VarShowPopUp
             X: =785
             Y: =433
-            ZIndex: =35
+            ZIndex: =37
 
         TDiasRepetir As label:
             FontWeight: =FontWeight.Bold
@@ -478,20 +478,20 @@ Form As screen:
             Visible: =VarShowPopUp
             X: =392
             Y: =486
-            ZIndex: =36
+            ZIndex: =38
 
         DDiasSeleccionados As label:
             Text: |-
                 =If(
-                    CountRows(ComboBox1.SelectedItems) > 0,
-                    Concat(ComboBox1.SelectedItems, Value,", "),
-                    "No hay días seleccionados."
+                    Dropdown2.Selected.Value = "Todos los días",
+                    "Todos los días",
+                    Concat(ComboBox1.SelectedItems, Value,", ")
                 )
             Visible: =VarShowPopUp
             Width: =430
             X: =529
             Y: =486
-            ZIndex: =37
+            ZIndex: =39
 
         BCancelar As button:
             Fill: =RGBA(255, 0, 0, 1)
@@ -504,7 +504,7 @@ Form As screen:
             Visible: =VarShowPopUp
             X: =456
             Y: =577
-            ZIndex: =38
+            ZIndex: =40
 
         BEnvias As button:
             Fill: =RGBA(127, 178, 57, 1)
@@ -546,7 +546,7 @@ Form As screen:
             Visible: =VarShowPopUp
             X: =723
             Y: =577
-            ZIndex: =39
+            ZIndex: =41
 
         TEspacioDeportivo As label:
             FontWeight: =FontWeight.Bold
@@ -557,14 +557,14 @@ Form As screen:
             Width: =184
             X: =389
             Y: =326
-            ZIndex: =40
+            ZIndex: =42
 
         Label24 As label:
             Text: =EDeportivo.Selected.Value
             Visible: =VarShowPopUp
             X: =564
             Y: =326
-            ZIndex: =41
+            ZIndex: =43
 
         Label1 As label:
             FontWeight: =FontWeight.Bold
@@ -575,7 +575,7 @@ Form As screen:
             Width: =82
             X: =389
             Y: =162
-            ZIndex: =42
+            ZIndex: =44
 
         Label14 As label:
             BorderThickness: =1
@@ -584,7 +584,7 @@ Form As screen:
             Width: =493
             X: =466
             Y: =160
-            ZIndex: =43
+            ZIndex: =45
 
     Repetir As group:
         Height: =5
@@ -600,7 +600,7 @@ Form As screen:
             Width: =306
             X: =224
             Y: =480
-            ZIndex: =44
+            ZIndex: =1
 
         Label5_7 As label:
             Fill: =RGBA(0, 134, 208, 1)
@@ -612,7 +612,7 @@ Form As screen:
             Width: =305
             X: =224
             Y: =440
-            ZIndex: =46
+            ZIndex: =2
 
     Asunto As group:
         Height: =5
@@ -630,7 +630,7 @@ Form As screen:
             Width: =638
             X: =404
             Y: =76
-            ZIndex: =1
+            ZIndex: =3
 
         Label2 As label:
             Font: =Font.'Lato Black'
@@ -642,5 +642,5 @@ Form As screen:
             Width: =98
             X: =306
             Y: =76
-            ZIndex: =5
+            ZIndex: =7
 
