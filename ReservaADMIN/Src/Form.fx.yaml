@@ -1,10 +1,20 @@
 Form As screen:
     OnVisible: |+
-        =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
+        =// Establecer la variable EspacioSeleccionado con el valor seleccionado del Dropdown2_1
+        Set(EspacioSeleccionado, Dropdown2_1.Selected.Value);
+        
+        // Filtrar los datos de Reservas por el espacio deportivo seleccionado
         Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
+        
+        // Filtrar los datos de FiltradoEspacio por fecha dentro del rango [_dateSelected, FechaInicio, FechaTermino]
         Set(FiltradoFecha, Filter(FiltradoEspacio, DateValue(_dateSelected) >= DateValue(FechaInicio) && DateValue(_dateSelected) <= DateValue(FechaTermino)));
-        Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
-        ClearCollect(DiaSeleccionado,Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd"))));
+        
+        // Filtrar los datos de FiltradoFecha por días específicos de la semana
+        Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected, "dddd") in Dias.Value));
+        
+        // Crear una colección DiaSeleccionado con el día de la semana actual (primera letra en mayúscula)
+        ClearCollect(DiaSeleccionado, Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd"))));
+        
         
         
         
