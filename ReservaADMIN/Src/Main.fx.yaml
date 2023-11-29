@@ -471,12 +471,11 @@ Main As screen:
                 PaddingTop: =0
                 Size: =13
                 Text: |
-                    =
-                    If(
+                    =If(
                         CountRows(
                             Filter(
                                 FiltradoFecha,
-                                TimeValue(FechaInicio) <= TimeValue(Left(ThisItem.Value, 5)) && TimeValue(FechaTermino) >= TimeValue(Right(ThisItem.Value, 5))
+                                TimeValue(FechaInicio) <= TimeValue(Left(ThisItem.Value, 5)) && TimeValue(FechaTermino) >= TimeValue(Right(ThisItem.Value, 5)) && Lower(Dias) = Text(_dateSelected,"dddd")
                             )
                         ) > 0,
                         "Reservado",
