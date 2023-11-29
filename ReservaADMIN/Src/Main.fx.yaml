@@ -488,7 +488,7 @@ Main As screen:
                                 )
                             ) > 0,
                             "Reservado por admin",
-                            "Disponible algo"
+                            "Disponible"
                         ),
                         "Fue bien",
                         "Fue mal"
