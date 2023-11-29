@@ -1,17 +1,6 @@
 Form As screen:
     OnVisible: =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
 
-    TextInput3 As text:
-        Clear: =true
-        Default: =""
-        Font: =Font.Arial
-        Height: =47
-        HintText: ="Agrega un asunto aquí."
-        Width: =638
-        X: =404
-        Y: =76
-        ZIndex: =1
-
     Button1_2 As button:
         Fill: =RGBA(0, 134, 208, 1)
         OnSelect: |-
@@ -29,18 +18,6 @@ Form As screen:
         X: =224
         Y: =681
         ZIndex: =3
-
-    Label2 As label:
-        Font: =Font.'Lato Black'
-        FontWeight: =FontWeight.Bold
-        Height: =47
-        Size: =14
-        Text: |-
-            ="Asunto: "
-        Width: =98
-        X: =306
-        Y: =76
-        ZIndex: =5
 
     Button1 As button:
         Fill: =RGBA(0, 134, 208, 1)
@@ -333,14 +310,6 @@ Form As screen:
             Y: =306
             ZIndex: =15
 
-    Dropdown2 As dropdown:
-        Height: =53
-        Items: =["Todos los días","Personalizado"]
-        Width: =306
-        X: =224
-        Y: =473
-        ZIndex: =44
-
     PopUp As group:
         Height: =5
         Width: =5
@@ -604,14 +573,59 @@ Form As screen:
             Y: =160
             ZIndex: =43
 
-    Label5_7 As label:
-        Fill: =RGBA(0, 134, 208, 1)
-        Font: =Font.'Lato Black'
-        Size: =14
-        Text: |-
-            ="Repetir:"
-        Width: =305
-        X: =224
-        Y: =432
-        ZIndex: =46
+    Repetir As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =47
+
+        Dropdown2 As dropdown:
+            Height: =53
+            Items: =["Todos los días","Personalizado"]
+            Width: =306
+            X: =224
+            Y: =473
+            ZIndex: =44
+
+        Label5_7 As label:
+            Fill: =RGBA(0, 134, 208, 1)
+            Font: =Font.'Lato Black'
+            Size: =14
+            Text: |-
+                ="Repetir:"
+            Width: =305
+            X: =224
+            Y: =432
+            ZIndex: =46
+
+    Asunto As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =47
+
+        TextInput3 As text:
+            Clear: =true
+            Default: =""
+            Font: =Font.Arial
+            Height: =47
+            HintText: ="Agrega un asunto aquí."
+            Width: =638
+            X: =404
+            Y: =76
+            ZIndex: =1
+
+        Label2 As label:
+            Font: =Font.'Lato Black'
+            FontWeight: =FontWeight.Bold
+            Height: =47
+            Size: =14
+            Text: |-
+                ="Asunto: "
+            Width: =98
+            X: =306
+            Y: =76
+            ZIndex: =5
 

@@ -3,6 +3,7 @@
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
     "App": 1,
+    "Asunto": 149,
     "BCancelar": 131,
     "BEnvias": 132,
     "Button1": 134,
@@ -116,6 +117,7 @@
     "Rectangle3": 36,
     "Rectangle5": 92,
     "Rectangle6": 98,
+    "Repetir": 148,
     "ReservadoPor": 107,
     "Screen1": 67,
     "SelectorEspacioDeportivo": 55,
@@ -148,7 +150,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/29/2023 17:31:29",
+  "HeaderLastSavedDateTimeUTC": "11/29/2023 17:32:19",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "4c352f40-aa62-4a4e-9744-a74c22565a3b": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/66771953837f4dd98a962dafc0abc1f6\"",
@@ -188,6 +190,10 @@
     "UsuariosdeOffice365": 2
   },
   "OrderGroupControls": {
+    "Asunto": {
+      "Label2": 1,
+      "TextInput3": 0
+    },
     "ButtonReserva": {
       "Button2": 1,
       "Icon5": 0
@@ -278,6 +284,10 @@
       "Label5": 1,
       "LabelUsuario": 0
     },
+    "Repetir": {
+      "Dropdown2": 1,
+      "Label5_7": 0
+    },
     "SelectorEspacioDeportivo": {
       "Dropdown2_1": 0,
       "Label1_1": 1
@@ -302,6 +312,7 @@
   },
   "OverridablePropertiesEntry": {
     "App": {},
+    "Asunto": {},
     "BCancelar": {},
     "BEnvias": {},
     "Button1": {},
@@ -415,6 +426,7 @@
     "Rectangle3": {},
     "Rectangle5": {},
     "Rectangle6": {},
+    "Repetir": {},
     "ReservadoPor": {},
     "Screen1": {},
     "SelectorEspacioDeportivo": {},
@@ -449,6 +461,7 @@
   "PCFTemplateEntry": {},
   "PublishOrderIndices": {
     "App": 0,
+    "Asunto": 0,
     "BCancelar": 50,
     "BEnvias": 51,
     "Button1": 53,
@@ -562,6 +575,7 @@
     "Rectangle3": 70,
     "Rectangle5": 0,
     "Rectangle6": 8,
+    "Repetir": 0,
     "ReservadoPor": 20,
     "Screen1": 0,
     "SelectorEspacioDeportivo": 63,
