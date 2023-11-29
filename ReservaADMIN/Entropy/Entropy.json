@@ -145,7 +145,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/29/2023 05:18:34",
+  "HeaderLastSavedDateTimeUTC": "11/29/2023 05:20:31",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "4c352f40-aa62-4a4e-9744-a74c22565a3b": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/66771953837f4dd98a962dafc0abc1f6\"",
@@ -169,8 +169,8 @@
     "DatosGrafico2Unicos": 21,
     "DropDownSample": 5,
     "EspaciosDeportivos": 6,
-    "HorasDisponibles": 12,
-    "HorasDropdown": 15,
+    "HorasDisponibles": 16,
+    "HorasDropdown": 14,
     "LegendSample": 10,
     "ListboxSample": 7,
     "NuevaColeccion": 13,
@@ -179,8 +179,8 @@
     "powerapps": 1,
     "RadioSample": 11,
     "Reservas": 8,
-    "ResultadosFiltrados": 14,
-    "TablaFiltrada": 16,
+    "ResultadosFiltrados": 12,
+    "TablaFiltrada": 15,
     "UsuariosdeOffice365": 2
   },
   "OrderGroupControls": {

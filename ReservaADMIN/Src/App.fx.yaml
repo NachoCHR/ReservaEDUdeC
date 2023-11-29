@@ -2,7 +2,7 @@ App As appinfo:
     BackEnabled: =true
     Formulas: =
     OnStart: |
-        =
+        =Set(VarInicio, true);
         ClearCollect(
             HorasDisponibles,
             [

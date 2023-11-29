@@ -24,7 +24,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 1015,
+                  "charOffset": 1037,
                   "snippet": {
                     "text": "!"
                   }
@@ -64,7 +64,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1030,
+                  "charOffset": 1052,
                   "snippet": {
                     "text": "&&"
                   }
@@ -1636,36 +1636,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.NombreUsuario"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.NombreUsuario",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "NombreUsuario",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.CorreoUsuario"
                 }
               ],
@@ -1696,6 +1666,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.VarInicio"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.VarInicio",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "VarInicio",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.DepartamentoSeleccionado"
                 }
               ],
@@ -1707,6 +1707,36 @@
               },
               "properties": {
                 "member": "DepartamentoSeleccionado",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.NombreUsuario"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.NombreUsuario",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "NombreUsuario",
                 "module": "App",
                 "type": "App"
               }
