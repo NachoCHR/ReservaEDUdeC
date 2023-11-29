@@ -355,6 +355,7 @@ Main As screen:
             Height: =41
             OnSelect: |-
                 =Reset (TextInput3);
+                Reset (ComboBox1);
                 Navigate(Form)
             RadiusBottomLeft: =50
             RadiusBottomRight: =50
@@ -372,6 +373,7 @@ Main As screen:
             Icon: =Icon.Add
             OnSelect: |-
                 =Reset (TextInput3);
+                Reset (ComboBox1);
                 Navigate(Form)
             Width: =28
             X: =1196
