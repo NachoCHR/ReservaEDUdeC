@@ -1,6 +1,6 @@
 Main As screen:
     Fill: =
-    OnVisible: |+
+    OnVisible: |
         =/*resets calendar view and date selection to today*/
         Set(
             _dateSelected,
@@ -42,12 +42,30 @@ Main As screen:
             EspacioSeleccionado,
             "Cancha Hockey"
         );
-        Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
-        Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
-        Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
-        
-        
-        
+        Set(
+            FiltradoEspacio,
+            Filter(
+                Reservas,
+                EspacioDeportivo.Value = EspacioSeleccionado
+            )
+        );
+        Set(
+            FiltradoFecha,
+            Filter(
+                FiltradoEspacio,
+                _dateSelected >= DateValue(FechaInicio) && _dateSelected <= DateValue(FechaTermino)
+            )
+        );
+        Set(
+            FiltradoDias,
+            Filter(
+                FiltradoFecha,
+                !IsBlank(Dias) && Text(
+                    _dateSelected,
+                    "dddd"
+                ) in Dias.Value
+            )
+        );
 
     Calendario As group:
         Height: =5
@@ -460,7 +478,7 @@ Main As screen:
                             )
                         ) > 0,
                         "Reservado",
-                        "Disponible"
+                        "Disponible nada"
                         ),
                         If(
                             CountRows(
@@ -470,7 +488,7 @@ Main As screen:
                                 )
                             ) > 0,
                             "Reservado por admin",
-                            "Disponible"
+                            "Disponible algo"
                         )
                     )
                 VerticalAlign: =VerticalAlign.Top
