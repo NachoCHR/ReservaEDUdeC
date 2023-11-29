@@ -2,7 +2,7 @@ Form As screen:
     OnVisible: |+
         =Set(EspacioSeleccionado,Dropdown2_1.Selected.Value);
         Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
-        Set(FiltradoFecha, Filter(FiltradoEspacio, DateValue1.SelectedDate >= DateValue(FechaInicio) && DateValue1_1.SelectedDate <= DateValue(FechaTermino)));
+        Set(FiltradoFecha, Filter(FiltradoEspacio, DateValue(_dateSelected) >= DateValue(FechaInicio) && DateValue(_dateSelected) <= DateValue(FechaTermino)));
         Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
         ClearCollect(DiaSeleccionado,Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd"))));
         
