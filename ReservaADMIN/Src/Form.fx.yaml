@@ -612,7 +612,7 @@ Form As screen:
                     CountRows(
                         Filter(
                             FiltradoFecha,
-                            TimeValue(FechaInicio) <= TimeValue(Dropdown1.Selected.Value) && TimeValue(FechaTermino) >= TimeValue(Dropdown1_1.Selected.Value)
+                            TimeValue(FechaInicio) <= TimeValue(Dropdown1.Selected.Value) && TimeValue(FechaTermino) >= TimeValue(Dropdown1_1.Selected.Value) || TimeValue(FechaInicio) >= TimeValue(Dropdown1.Selected.Value) && TimeValue(FechaTermino) <= TimeValue(Dropdown1_1.Selected.Value)
                         )
                     ) > 0,
                     Notify(
@@ -705,14 +705,6 @@ Form As screen:
             X: =466
             Y: =160
             ZIndex: =45
-
-    Label17 As label:
-        Height: =33
-        Text: =TimeValue(Dropdown1.Selected.Value) &"  "& TimeValue(Dropdown1_1.Selected.Value)
-        Width: =138
-        X: =392
-        Y: =483
-        ZIndex: =47
 
     Repetir As group:
         Height: =5
