@@ -149,7 +149,7 @@ Form As screen:
             Height: =41
             Size: =14
             Text: |-
-                ="Hora Termino:"
+                ="Hora Término:"
             Width: =147
             X: =975
             Y: =306
@@ -200,7 +200,7 @@ Form As screen:
             Font: =Font.'Lato Black'
             Size: =14
             Text: |-
-                ="Fecha de termino:"
+                ="Fecha de término:"
             Width: =305
             X: =630
             Y: =308
