@@ -342,7 +342,7 @@ Main As screen:
         RadiusBottomRight: =50
         RadiusTopLeft: =50
         RadiusTopRight: =50
-        Text: ="Metricas"
+        Text: ="Métricas"
         Width: =191
         X: =966
         Y: =66
