@@ -112,13 +112,13 @@
     "Id": "d596d6c4-dd3d-4754-98dd-a3f8f58f5490",
     "InstrumentationKey": "",
     "ManualOfflineProfileId": "",
-    "Name": "Reserva-espacios-deportivos-UdeC--ADMIN",
+    "Name": "Reserva ED UdeC ADMIN",
     "OriginatingVersion": "1.335",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "Reserva-espacios-deportivos-UdeC--ADMIN",
+    "AppName": "Reserva ED UdeC ADMIN",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
